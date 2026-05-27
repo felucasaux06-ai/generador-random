@@ -120,7 +120,7 @@ export default function GeneradorHistorias() {
         </div>
 
         {/* Ad Superior */}
-        <AdBlock slot="8901234567" format="horizontal" className="mb-8" />
+        <AdBlock slot="8901234567" className="mb-8" />
 
         {/* Selector de tema */}
         <div className="mb-6">
@@ -230,7 +230,7 @@ export default function GeneradorHistorias() {
         <FaqSection faqs={FAQS_HISTORIAS} titulo="Preguntas sobre el Generador de Historias" />
 
         {/* Ad Inferior */}
-        <AdBlock slot="9012345678" format="horizontal" />
+        <AdBlock slot="9012345678" />
       </div>
     </div>
   )

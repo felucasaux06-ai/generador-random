@@ -99,14 +99,13 @@ export default function GeneradorColores() {
         </div>
 
         {/* Ad Superior */}
-        <AdBlock slot="6789012345" format="horizontal" className="mb-8" />
+        <AdBlock slot="6789012345" className="mb-8" />
 
         {/* Paleta principal */}
         <div className="bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden mb-6">
           {/* Vista paleta */}
           <div className="flex h-40 md:h-56" role="list" aria-label="Paleta de colores generada">
             {paleta.map((hex) => {
-              const { r, g, b } = hexARgb(hex)
               const textoClaro = esColorClaro(hex)
               return (
                 <div
@@ -243,7 +242,7 @@ export default function GeneradorColores() {
         <FaqSection faqs={FAQS_COLORES} titulo="Preguntas sobre el Generador de Colores" />
 
         {/* Ad Inferior */}
-        <AdBlock slot="7890123456" format="horizontal" />
+        <AdBlock slot="7890123456" />
       </div>
     </div>
   )

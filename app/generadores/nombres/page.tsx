@@ -19,7 +19,7 @@ const FAQS_NOMBRES = [
   },
   {
     pregunta: '¿Qué categorías de nombres incluye?',
-    respuesta: 'El generador incluye cuatro categorías: nombres de personas (más de 100 nombres en español), apellidos (más de 100), nombres de empresas (50+) y nombres para mascotas (50+).',
+    respuesta: 'El generador incluye cuatro categorías: nombres de personas en español, apellidos, nombres de empresas y nombres para mascotas.',
   },
   {
     pregunta: '¿Es gratis usar este generador de nombres?',
@@ -90,7 +90,7 @@ export default function GeneradorNombres() {
         </div>
 
         {/* Ad Superior */}
-        <AdBlock slot="2345678901" format="horizontal" className="mb-8" />
+        <AdBlock slot="2345678901" className="mb-8" />
 
         {/* Selector de categoría */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8" role="group" aria-label="Categoría de nombre">
@@ -179,7 +179,7 @@ export default function GeneradorNombres() {
         <FaqSection faqs={FAQS_NOMBRES} titulo="Preguntas sobre el Generador de Nombres" />
 
         {/* Ad Inferior */}
-        <AdBlock slot="3456789012" format="horizontal" className="mt-8" />
+        <AdBlock slot="3456789012" className="mt-8" />
       </div>
     </div>
   )

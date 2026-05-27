@@ -78,7 +78,7 @@ export default function GeneradorContrasenas() {
         </div>
 
         {/* Ad Superior */}
-        <AdBlock slot="4567890123" format="horizontal" className="mb-8" />
+        <AdBlock slot="4567890123" className="mb-8" />
 
         {/* Resultado */}
         <div className="bg-gray-800 border border-gray-700 rounded-2xl p-6 mb-6">
@@ -219,7 +219,7 @@ export default function GeneradorContrasenas() {
         <FaqSection faqs={FAQS_CONTRASENAS} titulo="Preguntas sobre Contraseñas Seguras" />
 
         {/* Ad Inferior */}
-        <AdBlock slot="5678901234" format="horizontal" />
+        <AdBlock slot="5678901234" />
       </div>
     </div>
   )

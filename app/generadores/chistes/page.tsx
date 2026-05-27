@@ -94,7 +94,7 @@ export default function GeneradorChistes() {
         </div>
 
         {/* Ad Superior */}
-        <AdBlock slot="0123456789" format="horizontal" className="mb-8" />
+        <AdBlock slot="0123456789" className="mb-8" />
 
         {/* Botón generar */}
         <button
@@ -252,7 +252,7 @@ export default function GeneradorChistes() {
         <FaqSection faqs={FAQS_CHISTES} titulo="Preguntas sobre el Generador de Chistes" />
 
         {/* Ad Inferior */}
-        <AdBlock slot="1357924680" format="horizontal" />
+        <AdBlock slot="1357924680" />
       </div>
     </div>
   )
