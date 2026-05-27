@@ -6,7 +6,10 @@ const HERRAMIENTAS = [
   { href: '/generadores/colores',            label: 'Generador de Colores' },
   { href: '/generadores/historias',          label: 'Generador de Historias' },
   { href: '/generadores/chistes',            label: 'Generador de Chistes' },
-  { href: '/generadores/chistes-argentinos', label: '🇦🇷 Chistes Argentinos' },
+  { href: '/generadores/chistes-argentinos', label: 'Chistes Argentinos' },
+  { href: '/generadores/ruleta',             label: 'Ruleta Aleatoria' },
+  { href: '/generadores/numeros',            label: 'Número al Azar' },
+  { href: '/generadores/moneda',             label: 'Cara o Cruz' },
 ]
 
 export default function Footer() {

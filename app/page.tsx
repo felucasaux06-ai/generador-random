@@ -4,9 +4,9 @@ import AdBlock from './components/AdBlock'
 import FlagArg from './components/FlagArg'
 
 export const metadata: Metadata = {
-  title: 'GeneradorRandom — 5 Herramientas Creativas Gratuitas Online',
+  title: 'GeneradorRandom — 9 Herramientas Creativas Gratuitas Online',
   description:
-    'Genera nombres aleatorios, contraseñas seguras, paletas de colores, historias y chistes al instante. 100% gratis, sin registro.',
+    'Genera nombres, contraseñas, colores, historias, chistes, ruleta, números al azar y más. 100% gratis, sin registro.',
 }
 
 const HERRAMIENTAS = [
@@ -55,9 +55,33 @@ const HERRAMIENTAS = [
     emoji: null,
     titulo: 'Chistes Argentinos',
     desc: 'Con lunfardo, mate, asado e inflación. Sin filtro.',
-    badge: '🇦🇷 Nuevo',
+    badge: '🇦🇷',
     color: 'sky',
     flag: true,
+  },
+  {
+    href: '/generadores/ruleta',
+    emoji: '🎡',
+    titulo: 'Ruleta',
+    desc: 'Agregá opciones, girá y dejá que la suerte decida.',
+    badge: 'Nuevo',
+    color: 'green',
+  },
+  {
+    href: '/generadores/numeros',
+    emoji: '🎲',
+    titulo: 'Número al Azar',
+    desc: 'Elegí el rango y generá números aleatorios al instante.',
+    badge: 'Nuevo',
+    color: 'violet',
+  },
+  {
+    href: '/generadores/moneda',
+    emoji: '🪙',
+    titulo: 'Cara o Cruz',
+    desc: 'Tirá la moneda virtual. 50/50 garantizado.',
+    badge: 'Nuevo',
+    color: 'yellow',
   },
 ]
 
@@ -68,6 +92,9 @@ const BORDER: Record<string, string> = {
   amber:   'hover:border-amber-600/40',
   rose:    'hover:border-rose-600/40',
   sky:     'hover:border-sky-600/40',
+  green:   'hover:border-green-600/40',
+  violet:  'hover:border-violet-600/40',
+  yellow:  'hover:border-yellow-600/40',
 }
 
 const ICON_BG: Record<string, string> = {
@@ -77,6 +104,9 @@ const ICON_BG: Record<string, string> = {
   amber:   'bg-amber-600/15 text-amber-400',
   rose:    'bg-rose-600/15 text-rose-400',
   sky:     'bg-sky-600/15 text-sky-400',
+  green:   'bg-green-600/15 text-green-400',
+  violet:  'bg-violet-600/15 text-violet-400',
+  yellow:  'bg-yellow-600/15 text-yellow-400',
 }
 
 export default function HomePage() {
@@ -100,7 +130,7 @@ export default function HomePage() {
           </h1>
 
           <p className="text-slate-400 text-base md:text-xl mb-8 max-w-xl mx-auto leading-relaxed px-2">
-            6 herramientas creativas en un solo lugar. Úsalas todas, sin límites.
+            9 herramientas creativas en un solo lugar. Úsalas todas, sin límites.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center px-4 sm:px-0">

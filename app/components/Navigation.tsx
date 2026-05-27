@@ -11,7 +11,10 @@ const LINKS = [
   { href: '/generadores/colores',            label: 'Colores',            emoji: '🎨', flag: false },
   { href: '/generadores/historias',          label: 'Historias',          emoji: '📖', flag: false },
   { href: '/generadores/chistes',            label: 'Chistes',            emoji: '😂', flag: false },
-  { href: '/generadores/chistes-argentinos', label: 'Chistes Argentinos', emoji: '',   flag: true  },
+  { href: '/generadores/chistes-argentinos', label: 'Chistes Arg.',       emoji: '',   flag: true  },
+  { href: '/generadores/ruleta',             label: 'Ruleta',             emoji: '🎡', flag: false },
+  { href: '/generadores/numeros',            label: 'Números',            emoji: '🎲', flag: false },
+  { href: '/generadores/moneda',             label: 'Moneda',             emoji: '🪙', flag: false },
 ]
 
 export default function Navigation() {
