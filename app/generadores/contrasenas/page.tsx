@@ -1,0 +1,199 @@
+'use client'
+
+import { useState, useCallback, useEffect } from 'react'
+import AdBlock from '../../components/AdBlock'
+import { generarContrasena, evaluarFuerza, copiarAlPortapapeles } from '../../lib/utils'
+
+export default function GeneradorContrasenas() {
+  const [longitud, setLongitud] = useState(16)
+  const [mayusculas, setMayusculas] = useState(true)
+  const [numeros, setNumeros] = useState(true)
+  const [simbolos, setSimbolos] = useState(false)
+  const [contrasena, setContrasena] = useState('')
+  const [copiado, setCopiado] = useState(false)
+  const [mostrarContrasena, setMostrarContrasena] = useState(true)
+
+  const generar = useCallback(() => {
+    const nueva = generarContrasena({ longitud, mayusculas, numeros, simbolos })
+    setContrasena(nueva)
+    setCopiado(false)
+  }, [longitud, mayusculas, numeros, simbolos])
+
+  useEffect(() => {
+    generar()
+  }, [])
+
+  const copiar = async () => {
+    if (!contrasena) return
+    const ok = await copiarAlPortapapeles(contrasena)
+    if (ok) {
+      setCopiado(true)
+      setTimeout(() => setCopiado(false), 2500)
+    }
+  }
+
+  const fuerza = contrasena ? evaluarFuerza(contrasena) : null
+
+  const COLORES_FUERZA: Record<string, string> = {
+    'Débil': 'text-red-400',
+    'Media': 'text-yellow-400',
+    'Fuerte': 'text-blue-400',
+    'Muy fuerte': 'text-green-400',
+  }
+
+  return (
+    <div className="min-h-screen py-10 px-4">
+      <div className="max-w-2xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-10">
+          <div className="text-5xl mb-4" aria-hidden="true">🔒</div>
+          <h1 className="text-4xl font-extrabold text-white mb-3">Generador de Contraseñas</h1>
+          <p className="text-gray-400 text-lg">
+            Crea contraseñas seguras y personalizadas. Todo se genera en tu navegador.
+          </p>
+        </div>
+
+        {/* Ad Superior */}
+        <AdBlock slot="4567890123" format="horizontal" className="mb-8" />
+
+        {/* Resultado */}
+        <div className="bg-gray-800 border border-gray-700 rounded-2xl p-6 mb-6">
+          <div className="flex items-center gap-3 mb-4">
+            <div
+              className="flex-1 bg-gray-900 rounded-xl p-4 font-mono text-lg text-white break-all min-h-[60px] flex items-center leading-relaxed"
+              aria-live="polite"
+              aria-label={`Contraseña generada: ${mostrarContrasena ? contrasena : '•'.repeat(contrasena.length)}`}
+            >
+              {contrasena
+                ? mostrarContrasena
+                  ? contrasena
+                  : '•'.repeat(contrasena.length)
+                : <span className="text-gray-500">Genera tu contraseña...</span>}
+            </div>
+            <button
+              onClick={() => setMostrarContrasena(!mostrarContrasena)}
+              className="p-3 rounded-xl bg-gray-700 hover:bg-gray-600 text-gray-300 hover:text-white transition-colors flex-shrink-0"
+              aria-label={mostrarContrasena ? 'Ocultar contraseña' : 'Mostrar contraseña'}
+            >
+              {mostrarContrasena ? '👁️' : '🙈'}
+            </button>
+          </div>
+
+          {/* Barra de fuerza */}
+          {fuerza && (
+            <div className="mb-4" aria-label={`Fuerza de la contraseña: ${fuerza.fuerza}`}>
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-gray-400 text-sm">Fuerza:</span>
+                <span className={`font-bold text-sm ${COLORES_FUERZA[fuerza.fuerza] || 'text-white'}`}>
+                  {fuerza.fuerza}
+                </span>
+              </div>
+              <div className="w-full bg-gray-700 rounded-full h-2.5" role="progressbar" aria-valuenow={fuerza.porcentaje} aria-valuemin={0} aria-valuemax={100}>
+                <div
+                  className={`h-2.5 rounded-full transition-all duration-500 ${fuerza.color}`}
+                  style={{ width: `${fuerza.porcentaje}%` }}
+                />
+              </div>
+            </div>
+          )}
+
+          <div className="flex flex-col sm:flex-row gap-3">
+            <button
+              onClick={generar}
+              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-200 hover:scale-105 active:scale-95"
+              aria-label="Generar nueva contraseña"
+            >
+              🔄 Generar nueva
+            </button>
+            <button
+              onClick={copiar}
+              disabled={!contrasena}
+              className={`flex-1 font-bold py-3 px-6 rounded-xl border-2 transition-all duration-200 ${
+                copiado
+                  ? 'border-green-500 bg-green-600/20 text-green-400'
+                  : 'border-gray-600 bg-gray-700 text-gray-300 hover:border-gray-500 hover:text-white'
+              }`}
+              aria-label="Copiar contraseña al portapapeles"
+            >
+              {copiado ? '✅ ¡Copiada!' : '📋 Copiar'}
+            </button>
+          </div>
+        </div>
+
+        {/* Opciones */}
+        <div className="bg-gray-800 border border-gray-700 rounded-2xl p-6 mb-6 space-y-6">
+          <h2 className="text-white font-bold text-lg">⚙️ Personalizar</h2>
+
+          {/* Longitud */}
+          <div>
+            <div className="flex justify-between mb-3">
+              <label htmlFor="longitud" className="text-gray-300 font-medium">
+                Longitud
+              </label>
+              <span className="text-blue-400 font-bold text-xl">{longitud}</span>
+            </div>
+            <input
+              id="longitud"
+              type="range"
+              min={8}
+              max={32}
+              value={longitud}
+              onChange={(e) => setLongitud(Number(e.target.value))}
+              className="w-full h-2 bg-gray-700 rounded-full appearance-none cursor-pointer accent-blue-600"
+              aria-label={`Longitud de contraseña: ${longitud} caracteres`}
+            />
+            <div className="flex justify-between text-xs text-gray-500 mt-1">
+              <span>8 (mínimo)</span>
+              <span>32 (máximo)</span>
+            </div>
+          </div>
+
+          {/* Checkboxes */}
+          <div className="space-y-4">
+            {[
+              { id: 'mayusculas', label: 'Mayúsculas', descripcion: 'ABC...Z', value: mayusculas, setter: setMayusculas },
+              { id: 'numeros', label: 'Números', descripcion: '0-9', value: numeros, setter: setNumeros },
+              { id: 'simbolos', label: 'Símbolos', descripcion: '!@#$%^&*', value: simbolos, setter: setSimbolos },
+            ].map((opt) => (
+              <label
+                key={opt.id}
+                className="flex items-center justify-between p-4 bg-gray-700/50 rounded-xl cursor-pointer hover:bg-gray-700 transition-colors group"
+              >
+                <div>
+                  <span className="text-white font-medium">{opt.label}</span>
+                  <span className="text-gray-500 text-sm ml-2 font-mono">{opt.descripcion}</span>
+                </div>
+                <div className="relative">
+                  <input
+                    type="checkbox"
+                    id={opt.id}
+                    checked={opt.value}
+                    onChange={(e) => opt.setter(e.target.checked)}
+                    className="sr-only"
+                  />
+                  <div className={`w-12 h-6 rounded-full transition-colors duration-200 ${opt.value ? 'bg-blue-600' : 'bg-gray-600'}`}>
+                    <div className={`w-5 h-5 bg-white rounded-full shadow-md transform transition-transform duration-200 mt-0.5 ${opt.value ? 'translate-x-6 ml-0.5' : 'translate-x-0.5'}`} />
+                  </div>
+                </div>
+              </label>
+            ))}
+          </div>
+        </div>
+
+        {/* Tips de seguridad */}
+        <div className="bg-emerald-900/20 border border-emerald-700/50 rounded-xl p-5 text-sm text-emerald-300 mb-8">
+          <h2 className="font-bold mb-2 text-emerald-200">🛡️ Consejos de seguridad</h2>
+          <ul className="space-y-1 text-emerald-300/80">
+            <li>• Usa contraseñas únicas para cada cuenta</li>
+            <li>• Mínimo 12 caracteres para cuentas importantes</li>
+            <li>• Usa un gestor de contraseñas (Bitwarden, 1Password)</li>
+            <li>• Activa la autenticación en dos factores siempre que puedas</li>
+          </ul>
+        </div>
+
+        {/* Ad Inferior */}
+        <AdBlock slot="5678901234" format="horizontal" />
+      </div>
+    </div>
+  )
+}

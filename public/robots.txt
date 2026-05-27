@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://generadorrandom.com/sitemap.xml
