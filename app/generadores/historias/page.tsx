@@ -2,6 +2,30 @@
 
 import { useState, useCallback } from 'react'
 import AdBlock from '../../components/AdBlock'
+import FaqSection from '../../components/FaqSection'
+
+const FAQS_HISTORIAS = [
+  {
+    pregunta: '¿Cómo se generan las historias?',
+    respuesta: 'Cada historia se crea combinando plantillas narrativas con personajes aleatorios. El resultado es una historia diferente cada vez, con un protagonista único y una trama del género que elijas.',
+  },
+  {
+    pregunta: '¿Puedo usar las historias generadas en mis proyectos?',
+    respuesta: 'Sí, todas las historias generadas son de uso libre. Puedes usarlas como inspiración, punto de partida para tu novela, material de práctica para escritura creativa o simplemente para leer algo diferente.',
+  },
+  {
+    pregunta: '¿Cómo funciona la opción de leer en voz alta?',
+    respuesta: 'Usa la Web Speech API integrada en tu navegador. Funciona en Chrome, Edge y Safari. Selecciona automáticamente una voz en español si está disponible en tu sistema operativo.',
+  },
+  {
+    pregunta: '¿Qué géneros literarios están disponibles?',
+    respuesta: 'Hay cuatro géneros: Aventura (exploraciones, rescates, desafíos extremos), Romance (encuentros y conexiones inesperadas), Misterio (enigmas y descubrimientos), y Fantasía (mundos mágicos y lo sobrenatural).',
+  },
+  {
+    pregunta: '¿Para qué sirve un generador de historias?',
+    respuesta: 'Es útil para superar el bloqueo del escritor, como ejercicio de escritura creativa, para profesores que necesitan ejemplos narrativos, para jugadores de rol que buscan inspiración, o simplemente para entretenerse leyendo algo diferente cada día.',
+  },
+]
 import {
   TEMPLATES_HISTORIAS,
   PROTAGONISTAS,
@@ -201,6 +225,9 @@ export default function GeneradorHistorias() {
             personajes y situaciones aleatorias. La función de voz alta usa la Web Speech API de tu navegador.
           </p>
         </div>
+
+        {/* FAQ */}
+        <FaqSection faqs={FAQS_HISTORIAS} titulo="Preguntas sobre el Generador de Historias" />
 
         {/* Ad Inferior */}
         <AdBlock slot="9012345678" format="horizontal" />

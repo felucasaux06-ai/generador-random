@@ -2,7 +2,31 @@
 
 import { useState, useCallback } from 'react'
 import AdBlock from '../../components/AdBlock'
+import FaqSection from '../../components/FaqSection'
 import { CHISTES } from '../../lib/data'
+
+const FAQS_CHISTES = [
+  {
+    pregunta: '¿Cuántos chistes tiene el generador?',
+    respuesta: 'El generador cuenta con más de 30 chistes malos en español, cuidadosamente seleccionados para garantizar una sonrisa o al menos un buen groaning. Se van añadiendo más regularmente.',
+  },
+  {
+    pregunta: '¿Puedo compartir los chistes en WhatsApp?',
+    respuesta: 'Sí, hay un botón directo de WhatsApp que abre una conversación con el chiste ya escrito y listo para enviar. También puedes compartirlos en Twitter/X con un solo clic.',
+  },
+  {
+    pregunta: '¿Para qué sirve el sistema de votación?',
+    respuesta: 'Puedes votar si cada chiste te hizo reír o no. El sistema muestra estadísticas de tu sesión: cuántos chistes viste y qué porcentaje de efectividad cómica tienen. Es solo para diversión.',
+  },
+  {
+    pregunta: '¿Qué son los chistes malos?',
+    respuesta: 'Los chistes malos (también llamados "dad jokes" en inglés) son chistes de humor inocente que suelen ser predecibles, con juegos de palabras o respuestas absurdas. Su gracia está precisamente en lo malos que son.',
+  },
+  {
+    pregunta: '¿Puedo copiar los chistes?',
+    respuesta: 'Sí, hay un botón de copiar que guarda el chiste completo (pregunta y remate) en tu portapapeles, listo para pegar donde quieras.',
+  },
+]
 import { generarAleatorio, copiarAlPortapapeles } from '../../lib/utils'
 
 export default function GeneradorChistes() {
@@ -223,6 +247,9 @@ export default function GeneradorChistes() {
             Perfectos para romper el hielo en cualquier situación.
           </p>
         </div>
+
+        {/* FAQ */}
+        <FaqSection faqs={FAQS_CHISTES} titulo="Preguntas sobre el Generador de Chistes" />
 
         {/* Ad Inferior */}
         <AdBlock slot="1357924680" format="horizontal" />

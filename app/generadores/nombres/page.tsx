@@ -1,8 +1,31 @@
 'use client'
 
 import { useState, useCallback } from 'react'
-import type { Metadata } from 'next'
 import AdBlock from '../../components/AdBlock'
+import FaqSection from '../../components/FaqSection'
+
+const FAQS_NOMBRES = [
+  {
+    pregunta: '¿Para qué sirve un generador de nombres aleatorios?',
+    respuesta: 'Es útil para escritores que necesitan nombres para personajes, desarrolladores que quieren datos de prueba, diseñadores que crean maquetas, jugadores de rol, o cualquier persona que necesite inspiración para elegir un nombre creativo.',
+  },
+  {
+    pregunta: '¿Los nombres generados son únicos?',
+    respuesta: 'Sí, cada nombre se selecciona aleatoriamente de una base de datos de más de 400 opciones. Puedes generar tantos como quieras hasta encontrar el perfecto.',
+  },
+  {
+    pregunta: '¿Puedo usar estos nombres para mi novela o juego?',
+    respuesta: 'Absolutamente. Todos los nombres generados son de uso libre. Perfectos para personajes de novelas, videojuegos, juegos de rol, guiones, cómics o cualquier proyecto creativo.',
+  },
+  {
+    pregunta: '¿Qué categorías de nombres incluye?',
+    respuesta: 'El generador incluye cuatro categorías: nombres de personas (más de 100 nombres en español), apellidos (más de 100), nombres de empresas (50+) y nombres para mascotas (50+).',
+  },
+  {
+    pregunta: '¿Es gratis usar este generador de nombres?',
+    respuesta: 'Sí, es completamente gratuito. No necesitas registrarte, crear una cuenta ni pagar nada. Solo abre la página y empieza a generar.',
+  },
+]
 import { NOMBRES_PERSONAS, APELLIDOS, NOMBRES_EMPRESAS, NOMBRES_MASCOTAS } from '../../lib/data'
 import { generarAleatorio, copiarAlPortapapeles } from '../../lib/utils'
 
@@ -162,6 +185,9 @@ export default function GeneradorNombres() {
             que necesitan datos de prueba, creadores de personajes o simplemente cuando buscas inspiración.
           </p>
         </div>
+
+        {/* FAQ */}
+        <FaqSection faqs={FAQS_NOMBRES} titulo="Preguntas sobre el Generador de Nombres" />
 
         {/* Ad Inferior */}
         <AdBlock slot="3456789012" format="horizontal" className="mt-8" />

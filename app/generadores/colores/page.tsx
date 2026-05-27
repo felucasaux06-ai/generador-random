@@ -2,7 +2,31 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import AdBlock from '../../components/AdBlock'
+import FaqSection from '../../components/FaqSection'
 import { generarPaleta, hexARgb, esColorClaro, copiarAlPortapapeles } from '../../lib/utils'
+
+const FAQS_COLORES = [
+  {
+    pregunta: '¿Qué es un código HEX de color?',
+    respuesta: 'Un código HEX es una forma de representar colores usando 6 caracteres (letras y números), por ejemplo #3b82f6. Es el formato más usado en diseño web y CSS. El código tiene tres partes: dos caracteres para rojo, dos para verde y dos para azul.',
+  },
+  {
+    pregunta: '¿Cuál es la diferencia entre HEX y RGB?',
+    respuesta: 'Son dos formas de representar el mismo color. HEX usa caracteres hexadecimales (#FF5733) y es más común en diseño web. RGB usa números del 0 al 255 para cada componente de color (rgb(255, 87, 51)) y es más intuitivo para algunos diseñadores.',
+  },
+  {
+    pregunta: '¿Puedo usar estas paletas en mis proyectos comerciales?',
+    respuesta: 'Sí, los colores generados son completamente libres de usar en cualquier proyecto, comercial o personal. Los colores en sí no tienen derechos de autor.',
+  },
+  {
+    pregunta: '¿Cómo guardo mis colores favoritos?',
+    respuesta: 'Haz clic en el botón de estrella ⭐ junto a cualquier color para guardarlo. Los colores se almacenan en tu navegador (localStorage) y estarán disponibles la próxima vez que visites la página desde el mismo dispositivo.',
+  },
+  {
+    pregunta: '¿Para qué sirve un generador de paletas de colores?',
+    respuesta: 'Es útil para diseñadores gráficos, desarrolladores web, artistas digitales e ilustradores que necesitan inspiración de color. También es perfecto para proyectos de branding, decoración, moda o cualquier proyecto creativo.',
+  },
+]
 
 interface ColorGuardado {
   hex: string
@@ -214,6 +238,9 @@ export default function GeneradorColores() {
             Guarda tus paletas favoritas directamente en tu navegador.
           </p>
         </div>
+
+        {/* FAQ */}
+        <FaqSection faqs={FAQS_COLORES} titulo="Preguntas sobre el Generador de Colores" />
 
         {/* Ad Inferior */}
         <AdBlock slot="7890123456" format="horizontal" />

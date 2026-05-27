@@ -2,7 +2,31 @@
 
 import { useState, useCallback, useEffect } from 'react'
 import AdBlock from '../../components/AdBlock'
+import FaqSection from '../../components/FaqSection'
 import { generarContrasena, evaluarFuerza, copiarAlPortapapeles } from '../../lib/utils'
+
+const FAQS_CONTRASENAS = [
+  {
+    pregunta: '¿Es seguro generar contraseñas aquí?',
+    respuesta: 'Sí, completamente. Todas las contraseñas se generan directamente en tu navegador usando JavaScript. Nunca se envían a ningún servidor ni se almacenan en ningún lugar. Nadie más puede ver tu contraseña.',
+  },
+  {
+    pregunta: '¿Qué longitud debe tener una contraseña segura?',
+    respuesta: 'Para cuentas importantes como email o banco, se recomienda mínimo 16 caracteres. Para redes sociales, 12 caracteres es suficiente. Cuanto más larga, más difícil de descifrar.',
+  },
+  {
+    pregunta: '¿Debo usar símbolos en mis contraseñas?',
+    respuesta: 'Sí, agregar símbolos (!@#$%) aumenta enormemente la seguridad. Una contraseña de 12 caracteres con símbolos es exponencialmente más segura que una de 16 caracteres solo con letras.',
+  },
+  {
+    pregunta: '¿Cómo recuerdo contraseñas tan complejas?',
+    respuesta: 'La solución es usar un gestor de contraseñas como Bitwarden (gratis) o 1Password. Solo necesitas recordar una contraseña maestra y el gestor guarda todas las demás de forma segura.',
+  },
+  {
+    pregunta: '¿Con qué frecuencia debo cambiar mis contraseñas?',
+    respuesta: 'Los expertos actuales recomiendan cambiar la contraseña solo si sospechas que fue comprometida, no regularmente. Lo más importante es tener contraseñas únicas para cada cuenta.',
+  },
+]
 
 export default function GeneradorContrasenas() {
   const [longitud, setLongitud] = useState(16)
@@ -190,6 +214,9 @@ export default function GeneradorContrasenas() {
             <li>• Activa la autenticación en dos factores siempre que puedas</li>
           </ul>
         </div>
+
+        {/* FAQ */}
+        <FaqSection faqs={FAQS_CONTRASENAS} titulo="Preguntas sobre Contraseñas Seguras" />
 
         {/* Ad Inferior */}
         <AdBlock slot="5678901234" format="horizontal" />
