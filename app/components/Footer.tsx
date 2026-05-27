@@ -1,78 +1,77 @@
 import Link from 'next/link'
 
-export default function Footer() {
-  const anio = new Date().getFullYear()
+const HERRAMIENTAS = [
+  { href: '/generadores/nombres',     label: 'Generador de Nombres' },
+  { href: '/generadores/contrasenas', label: 'Generador de Contraseñas' },
+  { href: '/generadores/colores',     label: 'Generador de Colores' },
+  { href: '/generadores/historias',   label: 'Generador de Historias' },
+  { href: '/generadores/chistes',     label: 'Generador de Chistes' },
+]
 
+export default function Footer() {
+  const year = new Date().getFullYear()
   return (
-    <footer className="bg-dark border-t border-gray-700 mt-16" role="contentinfo">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Marca */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-2xl" aria-hidden="true">🎲</span>
-              <span className="text-white font-bold text-lg">GeneradorRandom</span>
-            </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Tu suite de herramientas creativas online. Genera nombres, contraseñas seguras,
-              paletas de colores, historias e incluso chistes, todo en un solo lugar.
+    <footer className="border-t border-slate-800 bg-slate-950 mt-20" role="contentinfo">
+      <div className="max-w-6xl mx-auto px-4 py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        {/* Marca */}
+        <div>
+          <div className="flex items-center gap-2.5 mb-4">
+            <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-sm font-bold text-white">GR</div>
+            <span className="font-semibold text-white">generadorrandom.com</span>
+          </div>
+          <p className="text-slate-500 text-sm leading-relaxed">
+            Herramientas creativas gratuitas para nombres, contraseñas, colores, historias y humor.
+            Sin registro. Sin límites.
+          </p>
+        </div>
+
+        {/* Herramientas */}
+        <div>
+          <h3 className="text-slate-300 font-semibold text-sm mb-4 uppercase tracking-wider">Herramientas</h3>
+          <ul className="space-y-2.5">
+            {HERRAMIENTAS.map((h) => (
+              <li key={h.href}>
+                <Link href={h.href} className="text-slate-500 hover:text-blue-400 text-sm transition-colors">
+                  {h.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Legal */}
+        <div>
+          <h3 className="text-slate-300 font-semibold text-sm mb-4 uppercase tracking-wider">Legal</h3>
+          <ul className="space-y-2.5">
+            <li>
+              <Link href="/privacidad" className="text-slate-500 hover:text-blue-400 text-sm transition-colors">
+                Política de Privacidad
+              </Link>
+            </li>
+            <li>
+              <Link href="/terminos" className="text-slate-500 hover:text-blue-400 text-sm transition-colors">
+                Términos de Uso
+              </Link>
+            </li>
+            <li>
+              <Link href="/acerca" className="text-slate-500 hover:text-blue-400 text-sm transition-colors">
+                Acerca de
+              </Link>
+            </li>
+          </ul>
+          <div className="mt-6 p-3 bg-slate-900 rounded-lg border border-slate-800">
+            <p className="text-slate-500 text-xs">
+              ✅ Gratis · ✅ Sin registro · ✅ Privado
             </p>
           </div>
-
-          {/* Herramientas */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Herramientas</h3>
-            <ul className="space-y-2">
-              {[
-                { href: '/generadores/nombres', label: '👤 Generador de Nombres' },
-                { href: '/generadores/contrasenas', label: '🔒 Generador de Contraseñas' },
-                { href: '/generadores/colores', label: '🎨 Generador de Colores' },
-                { href: '/generadores/historias', label: '📖 Generador de Historias' },
-                { href: '/generadores/chistes', label: '😂 Generador de Chistes' },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-blue-400 text-sm transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Info */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Información</h3>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li>✅ 100% Gratuito</li>
-              <li>✅ Sin registro requerido</li>
-              <li>✅ Funciona en móvil y escritorio</li>
-              <li>✅ Actualizado constantemente</li>
-            </ul>
-            <div className="mt-6">
-              <p className="text-xs text-gray-500">
-                ¿Tienes sugerencias?{' '}
-                <a
-                  href="mailto:contacto@generadorrandom.com"
-                  className="text-blue-400 hover:underline"
-                >
-                  Contáctanos
-                </a>
-              </p>
-            </div>
-          </div>
         </div>
+      </div>
 
-        <div className="mt-10 pt-6 border-t border-gray-700 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-gray-500 text-sm">
-            © {anio} GeneradorRandom.com · Todos los derechos reservados
-          </p>
-          <p className="text-gray-600 text-xs">
-            Hecho con ❤️ para creativos, desarrolladores y gente curiosa
-          </p>
-        </div>
+      <div className="border-t border-slate-800 py-5 px-4">
+        <p className="text-center text-slate-600 text-xs">
+          © {year} generadorrandom.com — Todos los derechos reservados
+        </p>
       </div>
     </footer>
   )

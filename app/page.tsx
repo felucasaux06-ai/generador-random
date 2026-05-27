@@ -3,194 +3,203 @@ import Link from 'next/link'
 import AdBlock from './components/AdBlock'
 
 export const metadata: Metadata = {
-  title: 'Generador Random - Herramientas Creativas Gratuitas Online',
+  title: 'GeneradorRandom — 5 Herramientas Creativas Gratuitas Online',
   description:
-    'Genera nombres aleatorios, contraseñas seguras, paletas de colores, historias cortas y chistes al instante. 100% gratis, sin registro.',
+    'Genera nombres aleatorios, contraseñas seguras, paletas de colores, historias y chistes al instante. 100% gratis, sin registro, funciona en segundos.',
 }
 
 const HERRAMIENTAS = [
   {
     href: '/generadores/nombres',
     emoji: '👤',
-    titulo: 'Generador de Nombres',
-    descripcion: 'Genera nombres de personas, apellidos, empresas y mascotas al instante.',
-    color: 'from-blue-600 to-blue-800',
-    badge: '100+ nombres',
+    titulo: 'Nombres',
+    desc: 'Personas, apellidos, empresas y mascotas. Más de 400 opciones.',
+    badge: '400+ nombres',
+    color: 'blue',
   },
   {
     href: '/generadores/contrasenas',
     emoji: '🔒',
-    titulo: 'Generador de Contraseñas',
-    descripcion: 'Crea contraseñas seguras con longitud y complejidad personalizables.',
-    color: 'from-emerald-600 to-emerald-800',
+    titulo: 'Contraseñas',
+    desc: 'Seguras y personalizables. Longitud, mayúsculas, números y símbolos.',
     badge: 'Ultra seguras',
+    color: 'emerald',
   },
   {
     href: '/generadores/colores',
     emoji: '🎨',
-    titulo: 'Generador de Colores',
-    descripcion: 'Genera paletas de 5 colores únicos con códigos HEX y RGB listos para copiar.',
-    color: 'from-purple-600 to-purple-800',
+    titulo: 'Colores',
+    desc: 'Paletas de 5 colores con HEX y RGB. Guarda tus favoritos.',
     badge: 'Para diseñadores',
+    color: 'purple',
   },
   {
     href: '/generadores/historias',
     emoji: '📖',
-    titulo: 'Generador de Historias',
-    descripcion: 'Historias cortas de aventura, romance, misterio y fantasía generadas al azar.',
-    color: 'from-amber-600 to-amber-800',
+    titulo: 'Historias',
+    desc: 'Aventura, romance, misterio y fantasía. Con lectura en voz alta.',
     badge: '4 géneros',
+    color: 'amber',
   },
   {
     href: '/generadores/chistes',
     emoji: '😂',
-    titulo: 'Generador de Chistes',
-    descripcion: 'Chistes malos garantizados. Revela el remate, comparte y vota si te hizo reír.',
-    color: 'from-rose-600 to-rose-800',
+    titulo: 'Chistes',
+    desc: 'Chistes malos garantizados. Vota y comparte en WhatsApp.',
     badge: '30+ chistes',
+    color: 'rose',
   },
 ]
 
-const STATS = [
-  { valor: '5', label: 'Herramientas' },
-  { valor: '400+', label: 'Items de datos' },
-  { valor: '100%', label: 'Gratis' },
-  { valor: '0', label: 'Registro requerido' },
-]
+const COLOR_MAP: Record<string, string> = {
+  blue:    'group-hover:bg-blue-600/10 group-hover:border-blue-600/40 text-blue-400',
+  emerald: 'group-hover:bg-emerald-600/10 group-hover:border-emerald-600/40 text-emerald-400',
+  purple:  'group-hover:bg-purple-600/10 group-hover:border-purple-600/40 text-purple-400',
+  amber:   'group-hover:bg-amber-600/10 group-hover:border-amber-600/40 text-amber-400',
+  rose:    'group-hover:bg-rose-600/10 group-hover:border-rose-600/40 text-rose-400',
+}
+
+const ICON_BG: Record<string, string> = {
+  blue:    'bg-blue-600/15 text-blue-400',
+  emerald: 'bg-emerald-600/15 text-emerald-400',
+  purple:  'bg-purple-600/15 text-purple-400',
+  amber:   'bg-amber-600/15 text-amber-400',
+  rose:    'bg-rose-600/15 text-rose-400',
+}
 
 export default function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-gray-900 via-dark to-gray-900 py-20 px-4 text-center">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-6xl mb-6" aria-hidden="true">🎲</div>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-            Tu Suite de{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-              Herramientas Creativas
-            </span>
+      <section className="relative overflow-hidden py-24 px-4">
+        {/* Background glow */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/10 rounded-full blur-3xl" />
+        </div>
+
+        <div className="relative max-w-3xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 bg-slate-900 border border-slate-800 rounded-full px-4 py-1.5 text-xs text-slate-400 mb-8">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true" />
+            Gratis · Sin registro · Funciona al instante
+          </div>
+
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-5 leading-tight tracking-tight">
+            Todo lo que necesitas<br />
+            <span className="gradient-text">generar al azar</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-            5 generadores en un solo lugar. Nombres, contraseñas, colores, historias y chistes.
-            Todo gratis, todo al instante, sin registro.
+
+          <p className="text-slate-400 text-lg md:text-xl mb-10 max-w-xl mx-auto leading-relaxed">
+            5 herramientas creativas en un solo lugar. Úsalas todas, sin límites.
           </p>
-          <Link
-            href="/generadores/nombres"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
-            aria-label="Comenzar con el generador de nombres"
-          >
-            Empezar Gratis →
-          </Link>
+
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link
+              href="/generadores/nombres"
+              className="btn-primary text-base"
+              aria-label="Empezar con el generador de nombres"
+            >
+              Empezar gratis →
+            </Link>
+            <Link
+              href="/generadores/contrasenas"
+              className="btn-secondary text-base"
+              aria-label="Ir al generador de contraseñas"
+            >
+              🔒 Generar contraseña
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Ad Superior */}
-      <div className="max-w-7xl mx-auto px-4 py-6">
+      {/* Ad */}
+      <div className="max-w-4xl mx-auto px-4 mb-4">
         <AdBlock slot="1234567890" format="horizontal" />
       </div>
 
-      {/* Stats */}
-      <section className="py-10 px-4" aria-label="Estadísticas del sitio">
-        <div className="max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
-          {STATS.map((stat) => (
-            <div key={stat.label} className="text-center bg-gray-800/50 rounded-xl p-4 border border-gray-700/50">
-              <div className="text-3xl font-extrabold text-blue-400">{stat.valor}</div>
-              <div className="text-gray-400 text-sm mt-1">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* Herramientas */}
+      <section className="py-16 px-4" aria-labelledby="herramientas-h2">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 id="herramientas-h2" className="text-2xl md:text-3xl font-bold text-white mb-3">
+              Elige tu herramienta
+            </h2>
+            <p className="text-slate-500 max-w-md mx-auto">
+              Haz clic y empieza en segundos. Sin formularios, sin esperas.
+            </p>
+          </div>
 
-      {/* Herramientas Grid */}
-      <section className="py-12 px-4" aria-labelledby="herramientas-titulo">
-        <div className="max-w-7xl mx-auto">
-          <h2 id="herramientas-titulo" className="text-3xl font-bold text-white text-center mb-4">
-            Elige tu Herramienta
-          </h2>
-          <p className="text-gray-400 text-center mb-12 max-w-xl mx-auto">
-            Haz clic en cualquier generador y empieza a crear al instante.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {HERRAMIENTAS.map((h) => (
               <Link
                 key={h.href}
                 href={h.href}
-                className="group relative bg-gray-800 hover:bg-gray-750 border border-gray-700 hover:border-gray-600 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/30"
+                className={`group relative bg-slate-900 border border-slate-800 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 ${COLOR_MAP[h.color]}`}
                 aria-label={`Ir a ${h.titulo}`}
               >
-                <div className={`w-14 h-14 bg-gradient-to-br ${h.color} rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform duration-300`} aria-hidden="true">
-                  {h.emoji}
+                <div className="flex items-start justify-between mb-4">
+                  <div className={`w-11 h-11 rounded-xl flex items-center justify-center text-xl ${ICON_BG[h.color]} transition-all duration-300`}>
+                    {h.emoji}
+                  </div>
+                  <span className="text-xs text-slate-500 bg-slate-800 px-2 py-1 rounded-full border border-slate-700">
+                    {h.badge}
+                  </span>
                 </div>
-                <span className="absolute top-4 right-4 text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded-full">
-                  {h.badge}
-                </span>
-                <h3 className="text-white font-bold text-lg mb-2 group-hover:text-blue-400 transition-colors">
-                  {h.titulo}
-                </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{h.descripcion}</p>
-                <div className="mt-4 text-blue-400 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
-                  Abrir herramienta <span aria-hidden="true">→</span>
+                <h3 className="text-white font-semibold text-lg mb-1.5">{h.titulo}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed">{h.desc}</p>
+                <div className="mt-4 text-sm font-medium flex items-center gap-1 text-slate-600 group-hover:text-current transition-colors">
+                  Abrir <span aria-hidden="true">→</span>
                 </div>
               </Link>
             ))}
 
-            {/* Card CTA extra */}
-            <div className="bg-gradient-to-br from-blue-600/20 to-emerald-600/20 border border-blue-500/30 rounded-2xl p-6 flex flex-col items-center justify-center text-center">
-              <div className="text-4xl mb-3" aria-hidden="true">✨</div>
-              <h3 className="text-white font-bold text-lg mb-2">¡Todo Gratis!</h3>
-              <p className="text-gray-400 text-sm">
-                Sin suscripción, sin límites, sin anuncios intrusivos. Solo herramientas útiles.
-              </p>
+            {/* Promo card */}
+            <div className="bg-gradient-to-br from-blue-950/60 to-slate-900 border border-blue-900/40 rounded-2xl p-6 flex flex-col justify-between">
+              <div>
+                <div className="text-2xl mb-3" aria-hidden="true">✨</div>
+                <h3 className="text-white font-semibold text-lg mb-2">100% Gratuito</h3>
+                <p className="text-slate-500 text-sm leading-relaxed">
+                  Sin suscripción, sin límites de uso, sin datos personales. Solo herramientas que funcionan.
+                </p>
+              </div>
+              <div className="mt-6 flex flex-col gap-1.5">
+                {['Sin registro', 'Sin límites', 'Funciona offline'].map((item) => (
+                  <div key={item} className="flex items-center gap-2 text-xs text-slate-500">
+                    <span className="text-emerald-400" aria-hidden="true">✓</span> {item}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Ad Inferior */}
-      <div className="max-w-7xl mx-auto px-4 py-6">
+      {/* Por qué */}
+      <section className="py-16 px-4 bg-slate-900/40 border-y border-slate-800/60" aria-labelledby="porque-h2">
+        <div className="max-w-5xl mx-auto">
+          <h2 id="porque-h2" className="text-2xl font-bold text-white text-center mb-12">
+            ¿Por qué GeneradorRandom?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { icon: '⚡', titulo: 'Instantáneo', desc: 'Resultado en menos de un segundo, sin esperas ni carga.' },
+              { icon: '🔐', titulo: 'Privado', desc: 'Todo se genera en tu navegador. Nada se guarda en servidores.' },
+              { icon: '📱', titulo: 'Responsive', desc: 'Funciona perfecto en móvil, tablet y escritorio.' },
+              { icon: '♾️', titulo: 'Sin límites', desc: 'Genera todo lo que quieras, sin cuotas ni restricciones.' },
+            ].map((item) => (
+              <div key={item.titulo} className="text-center p-5 rounded-xl bg-slate-900 border border-slate-800">
+                <div className="text-3xl mb-3" aria-hidden="true">{item.icon}</div>
+                <h3 className="text-white font-semibold mb-2">{item.titulo}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Ad inferior */}
+      <div className="max-w-4xl mx-auto px-4 py-10">
         <AdBlock slot="0987654321" format="horizontal" />
       </div>
-
-      {/* SEO Text */}
-      <section className="py-12 px-4 bg-gray-900/50" aria-labelledby="seo-titulo">
-        <div className="max-w-4xl mx-auto">
-          <h2 id="seo-titulo" className="text-2xl font-bold text-white mb-6 text-center">
-            ¿Por qué usar GeneradorRandom?
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 text-gray-400 text-sm leading-relaxed">
-            <div>
-              <h3 className="text-white font-semibold mb-2">🎯 Herramientas en un solo lugar</h3>
-              <p>
-                Ya sea que necesites un nombre creativo para tu personaje, una contraseña robusta para tu cuenta,
-                la paleta perfecta para tu diseño o simplemente un chiste para animar el día, lo tienes todo aquí.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-2">⚡ Rápido y sin complicaciones</h3>
-              <p>
-                Sin formularios de registro, sin email de confirmación, sin suscripciones de pago.
-                Llegas, haces clic y obtienes tu resultado en menos de un segundo.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-2">📱 Funciona en cualquier dispositivo</h3>
-              <p>
-                Diseño mobile-first que se adapta perfectamente a teléfonos, tabletas y escritorios.
-                Genera lo que necesites desde donde estés.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-2">🔐 Privacidad garantizada</h3>
-              <p>
-                Todo se genera en tu navegador. No guardamos tus contraseñas ni datos personales en ningún servidor.
-                Tu privacidad es lo primero.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
