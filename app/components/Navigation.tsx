@@ -5,12 +5,12 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
 const LINKS = [
-  { href: '/generadores/nombres',             label: 'Nombres',     emoji: '👤' },
-  { href: '/generadores/contrasenas',         label: 'Contraseñas', emoji: '🔒' },
-  { href: '/generadores/colores',             label: 'Colores',     emoji: '🎨' },
-  { href: '/generadores/historias',           label: 'Historias',   emoji: '📖' },
-  { href: '/generadores/chistes',             label: 'Chistes',     emoji: '😂' },
-  { href: '/generadores/chistes-argentinos',  label: '🇦🇷 Argentinos', emoji: '' },
+  { href: '/generadores/nombres',            label: 'Nombres',          emoji: '👤' },
+  { href: '/generadores/contrasenas',        label: 'Contraseñas',      emoji: '🔒' },
+  { href: '/generadores/colores',            label: 'Colores',          emoji: '🎨' },
+  { href: '/generadores/historias',          label: 'Historias',        emoji: '📖' },
+  { href: '/generadores/chistes',            label: 'Chistes',          emoji: '😂' },
+  { href: '/generadores/chistes-argentinos', label: 'Chistes Arg.',     emoji: '🇦🇷', flag: true },
 ]
 
 export default function Navigation() {
@@ -40,13 +40,14 @@ export default function Navigation() {
             <Link
               key={l.href}
               href={l.href}
-              className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-150 ${
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-150 ${
                 pathname === l.href
                   ? 'bg-blue-600/20 text-blue-400 border border-blue-600/30'
                   : 'text-slate-400 hover:text-white hover:bg-slate-800'
               }`}
               aria-current={pathname === l.href ? 'page' : undefined}
             >
+              {l.flag && <span className="text-base leading-none" aria-hidden="true">🇦🇷</span>}
               {l.label}
             </Link>
           ))}
@@ -79,7 +80,8 @@ export default function Navigation() {
               }`}
               onClick={() => setOpen(false)}
             >
-              <span aria-hidden="true">{l.emoji}</span> {l.label}
+              <span aria-hidden="true">{l.emoji}</span>
+              {l.flag ? 'Chistes Argentinos' : l.label}
             </Link>
           ))}
         </div>

@@ -299,6 +299,55 @@ export const CHISTES_ARGENTINOS: { setup: string; punchline: string }[] = [
     setup: '¿Cuál es la moneda más estable de Argentina?',
     punchline: 'El dólar blue. Sube y baja, pero al menos sube.',
   },
+  // --- DESUBICADOS ---
+  {
+    setup: '¿Cuál es la posición favorita del argentino en la cama?',
+    punchline: 'Arriba de todos, mirando para abajo.',
+  },
+  {
+    setup: '¿Cuál es el orgasmo del argentino?',
+    punchline: 'Que le digan que tiene razón.',
+  },
+  {
+    setup: '¿Cuál es el afrodisíaco del argentino?',
+    punchline: 'Un espejo.',
+  },
+  {
+    setup: '¿Por qué los argentinos son tan buenos en la cama?',
+    punchline: 'Porque practican mucho decirle al otro lo que tiene que hacer.',
+  },
+  {
+    setup: '¿Qué dice un argentino después de tener relaciones?',
+    punchline: '"¿Viste? ¿Sos consciente de lo que acabás de experimentar?"',
+  },
+  {
+    setup: '¿Cómo seduce un porteño?',
+    punchline: 'Te explica por qué sos afortunado de que se fije en vos.',
+  },
+  {
+    setup: '¿Por qué los argentinos son malos jugando al strip póker?',
+    punchline: 'Porque cuando se quedan en ropa interior siguen sintiéndose los mejor vestidos.',
+  },
+  {
+    setup: '¿Cuántas veces puede tener relaciones un argentino en una noche?',
+    punchline: 'Una. Pero te lo cuenta veinte.',
+  },
+  {
+    setup: '¿Qué tiene en común el argentino con el Viagra?',
+    punchline: 'Los dos se la pasan demostrando que funcionan.',
+  },
+  {
+    setup: 'Una mina le pregunta a un pibe argentino: "¿Sos bueno en la cama?" El pibe responde:',
+    punchline: '"Che, yo soy bueno en todo."',
+  },
+  {
+    setup: '¿Por qué el argentino no necesita lubricante?',
+    punchline: 'Porque ya tiene suficiente aceite en el ego.',
+  },
+  {
+    setup: '¿Cuál es el juguete sexual favorito del argentino?',
+    punchline: 'La conversación sobre sí mismo.',
+  },
 ]
 
 // ============================================================
