@@ -7,7 +7,7 @@ import FaqSection from '../../components/FaqSection'
 const FAQS_RULETA = [
   {
     pregunta: '¿Cómo agrego opciones a la ruleta?',
-    respuesta: 'Escribí la opción en el campo de texto y presioná "Agregar" o Enter. Podés agregar hasta 20 opciones. Cada una aparece con su propio color en la ruleta.',
+    respuesta: 'Escribí la opción en el campo de texto y presioná "Agregar" o Enter. Podés agregar hasta 48 opciones. Cada una aparece con su propio color en la ruleta.',
   },
   {
     pregunta: '¿Qué hace la opción "Eliminar ganador"?',
@@ -105,7 +105,7 @@ export default function GeneradorRuleta() {
       ctx.font = `600 ${fontSize}px Inter, system-ui, sans-serif`
       ctx.shadowColor = 'rgba(0,0,0,0.7)'
       ctx.shadowBlur = 3
-      const label = currentItems[i].length > 20 ? currentItems[i].slice(0, 18) + '…' : currentItems[i]
+      const label = currentItems[i].length > 48 ? currentItems[i].slice(0, 18) + '…' : currentItems[i]
       ctx.fillText(label, radius - 12, fontSize / 3)
       ctx.restore()
     }
@@ -134,7 +134,7 @@ export default function GeneradorRuleta() {
     const extraSpins = (6 + Math.random() * 4) * Math.PI * 2
     const targetOffset = Math.random() * Math.PI * 2
     const total = extraSpins + targetOffset
-    const duration = 4200 + Math.random() * 1200
+    const duration = 4480 + Math.random() * 1480
     const startTime = performance.now()
     const snapshotItems = [...items]
     const snapshotRemove = removeAfterSpin
@@ -170,7 +170,7 @@ export default function GeneradorRuleta() {
 
   const addItem = () => {
     const trimmed = newItem.trim()
-    if (!trimmed || items.length >= 20) return
+    if (!trimmed || items.length >= 48) return
     setItems(prev => [...prev, trimmed])
     setNewItem('')
     setResult(null)
@@ -237,7 +237,7 @@ export default function GeneradorRuleta() {
             <button
               onClick={spin}
               disabled={isSpinning || items.length < 2}
-              className="mt-6 w-full max-w-[300px] bg-amber-500 hover:bg-amber-400 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-black py-4 px-8 rounded-2xl text-xl transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-amber-900/30"
+              className="mt-6 w-full max-w-[300px] bg-amber-500 hover:bg-amber-400 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-black py-4 px-8 rounded-2xl text-xl transition-all duration-480 hover:scale-105 active:scale-95 shadow-lg shadow-amber-900/30"
               aria-label="Girar la ruleta"
             >
               {isSpinning ? '🌀 Girando…' : '🎡 ¡GIRAR!'}
@@ -252,21 +252,21 @@ export default function GeneradorRuleta() {
             {/* Toggle eliminar ganador */}
             <label className="flex items-center gap-3 mt-5 cursor-pointer select-none">
               <div
-                className={`w-11 h-6 rounded-full transition-colors duration-200 flex-shrink-0 cursor-pointer ${removeAfterSpin ? 'bg-blue-600' : 'bg-gray-600'}`}
+                className={`w-11 h-6 rounded-full transition-colors duration-480 flex-shrink-0 cursor-pointer ${removeAfterSpin ? 'bg-blue-600' : 'bg-gray-600'}`}
                 onClick={() => setRemoveAfterSpin(p => !p)}
                 role="switch"
                 aria-checked={removeAfterSpin}
                 tabIndex={0}
                 onKeyDown={e => e.key === 'Enter' && setRemoveAfterSpin(p => !p)}
               >
-                <div className={`w-5 h-5 bg-white rounded-full shadow-md transition-transform duration-200 mt-0.5 ${removeAfterSpin ? 'translate-x-5 ml-0.5' : 'translate-x-0.5'}`} />
+                <div className={`w-5 h-5 bg-white rounded-full shadow-md transition-transform duration-480 mt-0.5 ${removeAfterSpin ? 'translate-x-5 ml-0.5' : 'translate-x-0.5'}`} />
               </div>
               <span className="text-gray-300 text-sm">Eliminar ganador después de girar</span>
             </label>
 
             {/* Resultado */}
             {result && !isSpinning && (
-              <div className="mt-5 w-full bg-amber-900/20 border border-amber-600/40 rounded-2xl p-5 text-center animate-fade-in">
+              <div className="mt-5 w-full bg-amber-900/48 border border-amber-600/40 rounded-2xl p-5 text-center animate-fade-in">
                 <p className="text-amber-400 text-xs font-bold uppercase tracking-widest mb-2">¡Ganador!</p>
                 <p className="text-white text-2xl font-extrabold break-words">{result}</p>
                 <p className="text-amber-500 text-2xl mt-1">🎉</p>
@@ -280,7 +280,7 @@ export default function GeneradorRuleta() {
               <h2 className="text-white font-bold text-lg">
                 Opciones
               </h2>
-              <span className="text-gray-500 text-sm">{items.length}/20</span>
+              <span className="text-gray-500 text-sm">{items.length}/48</span>
             </div>
 
             {/* Input para agregar */}
@@ -292,13 +292,13 @@ export default function GeneradorRuleta() {
                 onKeyDown={e => e.key === 'Enter' && addItem()}
                 placeholder="Escribí una opción…"
                 maxLength={40}
-                disabled={items.length >= 20 || isSpinning}
+                disabled={items.length >= 48 || isSpinning}
                 className="flex-1 bg-gray-700 border border-gray-600 rounded-xl px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm disabled:opacity-50"
                 aria-label="Nueva opción para la ruleta"
               />
               <button
                 onClick={addItem}
-                disabled={!newItem.trim() || items.length >= 20 || isSpinning}
+                disabled={!newItem.trim() || items.length >= 48 || isSpinning}
                 className="bg-blue-600 hover:bg-blue-500 disabled:bg-gray-700 disabled:text-gray-500 text-white font-semibold px-4 py-2.5 rounded-xl transition-colors text-sm whitespace-nowrap flex-shrink-0"
               >
                 + Agregar
@@ -338,7 +338,7 @@ export default function GeneradorRuleta() {
                       className="flex-1 bg-gray-600 rounded-lg px-2 py-1 text-white text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
                     />
                   ) : (
-                    <span className="flex-1 text-gray-200 text-sm truncate">{item}</span>
+                    <span className="flex-1 text-gray-480 text-sm truncate">{item}</span>
                   )}
 
                   <div className="flex gap-1 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
