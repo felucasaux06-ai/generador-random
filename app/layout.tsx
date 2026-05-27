@@ -49,6 +49,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://generadorrandom.com',
   },
+  verification: {
+    google: 'HjUnE7Irs77Pjtkr2UznrJIRfZvmmc0P-pUz8VzH0eM',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
