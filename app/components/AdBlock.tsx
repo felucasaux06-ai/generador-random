@@ -4,17 +4,14 @@ import { useEffect } from 'react'
 
 interface AdBlockProps {
   slot: string
-  format?: 'horizontal' | 'vertical' | 'rectangle'
   className?: string
 }
 
 declare global {
-  interface Window {
-    adsbygoogle: unknown[]
-  }
+  interface Window { adsbygoogle: unknown[] }
 }
 
-export default function AdBlock({ slot, format = 'horizontal', className = '' }: AdBlockProps) {
+export default function AdBlock({ slot, className = '' }: AdBlockProps) {
   useEffect(() => {
     try {
       if (typeof window !== 'undefined') {
@@ -24,31 +21,24 @@ export default function AdBlock({ slot, format = 'horizontal', className = '' }:
     } catch {}
   }, [])
 
-  const dimensiones = {
-    horizontal: { width: '100%', height: '90px', label: 'Anuncio (728×90)' },
-    vertical: { width: '300px', height: '600px', label: 'Anuncio (300×600)' },
-    rectangle: { width: '336px', height: '280px', label: 'Anuncio (336×280)' },
-  }[format]
-
   const CLIENT_ID = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID
 
   if (!CLIENT_ID) {
     return (
       <div
-        className={`flex items-center justify-center bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg text-gray-400 text-sm ${className}`}
-        style={{ minHeight: dimensiones.height, width: dimensiones.width }}
+        className={`flex items-center justify-center bg-slate-900/50 border border-dashed border-slate-700 rounded-xl text-slate-600 text-xs h-16 ${className}`}
         aria-label="Espacio publicitario"
       >
-        {dimensiones.label}
+        Publicidad
       </div>
     )
   }
 
   return (
-    <div className={`flex justify-center ${className}`} aria-label="Anuncio">
+    <div className={`w-full overflow-hidden rounded-xl ${className}`} aria-label="Anuncio">
       <ins
         className="adsbygoogle"
-        style={{ display: 'block', width: dimensiones.width, height: dimensiones.height }}
+        style={{ display: 'block' }}
         data-ad-client={CLIENT_ID}
         data-ad-slot={slot}
         data-ad-format="auto"

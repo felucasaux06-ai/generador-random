@@ -14,6 +14,10 @@ body { font-family: 'Inter', system-ui, sans-serif; }
 ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #334155; }
 
+/* Hide scrollbar but keep scroll */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
 /* Animations */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(12px); }
@@ -42,15 +46,22 @@ body { font-family: 'Inter', system-ui, sans-serif; }
   background-clip: text;
 }
 
-/* Button base */
+/* Buttons */
 .btn-primary {
   @apply bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-900/30;
+  min-height: 48px;
 }
 .btn-secondary {
   @apply bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-6 py-3 rounded-xl border border-slate-700 hover:border-slate-600 transition-all duration-200;
+  min-height: 48px;
 }
 
-/* Input range custom */
+/* Touch targets — mínimo 44px en mobile */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Input range */
 input[type='range'] {
   -webkit-appearance: none;
   appearance: none;
@@ -58,13 +69,22 @@ input[type='range'] {
   border-radius: 3px;
   background: #1e293b;
   outline: none;
+  width: 100%;
 }
 input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background: #3b82f6;
   cursor: pointer;
-  box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+  box-shadow: 0 0 0 4px rgba(59,130,246,0.2);
+}
+
+/* Checkbox toggle */
+input[type='checkbox'] { cursor: pointer; }
+
+/* Ad separator — sutil, no intrusivo */
+.ad-wrapper {
+  @apply w-full my-6 opacity-90;
 }
