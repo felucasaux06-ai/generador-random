@@ -175,17 +175,6 @@ export default function GeneradorNombres() {
           </div>
         )}
 
-        {/* Info SEO */}
-        <div className="bg-gray-800/30 border border-gray-700/50 rounded-xl p-6 text-gray-400 text-sm leading-relaxed">
-          <h2 className="text-white font-semibold mb-2">Acerca del Generador de Nombres</h2>
-          <p>
-            Nuestra base de datos incluye más de{' '}
-            <strong className="text-gray-300">100 nombres de personas</strong>, 100 apellidos,
-            50 nombres de empresas y 50 nombres de mascotas. Perfecto para escritores, desarrolladores
-            que necesitan datos de prueba, creadores de personajes o simplemente cuando buscas inspiración.
-          </p>
-        </div>
-
         {/* FAQ */}
         <FaqSection faqs={FAQS_NOMBRES} titulo="Preguntas sobre el Generador de Nombres" />
 

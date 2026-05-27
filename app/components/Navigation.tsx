@@ -5,11 +5,12 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
 const LINKS = [
-  { href: '/generadores/nombres',    label: 'Nombres',     emoji: '👤' },
-  { href: '/generadores/contrasenas', label: 'Contraseñas', emoji: '🔒' },
-  { href: '/generadores/colores',    label: 'Colores',     emoji: '🎨' },
-  { href: '/generadores/historias',  label: 'Historias',   emoji: '📖' },
-  { href: '/generadores/chistes',    label: 'Chistes',     emoji: '😂' },
+  { href: '/generadores/nombres',             label: 'Nombres',     emoji: '👤' },
+  { href: '/generadores/contrasenas',         label: 'Contraseñas', emoji: '🔒' },
+  { href: '/generadores/colores',             label: 'Colores',     emoji: '🎨' },
+  { href: '/generadores/historias',           label: 'Historias',   emoji: '📖' },
+  { href: '/generadores/chistes',             label: 'Chistes',     emoji: '😂' },
+  { href: '/generadores/chistes-argentinos',  label: '🇦🇷 Argentinos', emoji: '' },
 ]
 
 export default function Navigation() {

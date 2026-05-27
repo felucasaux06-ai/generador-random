@@ -1,11 +1,12 @@
 import Link from 'next/link'
 
 const HERRAMIENTAS = [
-  { href: '/generadores/nombres',     label: 'Generador de Nombres' },
-  { href: '/generadores/contrasenas', label: 'Generador de Contraseñas' },
-  { href: '/generadores/colores',     label: 'Generador de Colores' },
-  { href: '/generadores/historias',   label: 'Generador de Historias' },
-  { href: '/generadores/chistes',     label: 'Generador de Chistes' },
+  { href: '/generadores/nombres',            label: 'Generador de Nombres' },
+  { href: '/generadores/contrasenas',        label: 'Generador de Contraseñas' },
+  { href: '/generadores/colores',            label: 'Generador de Colores' },
+  { href: '/generadores/historias',          label: 'Generador de Historias' },
+  { href: '/generadores/chistes',            label: 'Generador de Chistes' },
+  { href: '/generadores/chistes-argentinos', label: '🇦🇷 Chistes Argentinos' },
 ]
 
 export default function Footer() {
