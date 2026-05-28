@@ -21,8 +21,8 @@ export default function Privacidad() {
             El responsable del tratamiento de los datos recopilados a través de este sitio web es el
             titular de <strong className="text-slate-300">GeneradorRandom.com</strong>, con domicilio en
             la República Argentina. Para consultas relacionadas con privacidad, podés escribirnos a{' '}
-            <a href="mailto:privacidad@generadorrandom.com" className="text-blue-400 hover:underline">
-              privacidad@generadorrandom.com
+            <a href="mailto:generador.random@gmail.com" className="text-blue-400 hover:underline">
+              generador.random@gmail.com
             </a>.
           </p>
         </section>
@@ -158,8 +158,8 @@ export default function Privacidad() {
             Como no recopilamos datos personales identificables, podés eliminar toda información local
             borrando las cookies y el almacenamiento local de tu navegador. Para ejercer cualquiera de
             estos derechos, contactanos en{' '}
-            <a href="mailto:privacidad@generadorrandom.com" className="text-blue-400 hover:underline">
-              privacidad@generadorrandom.com
+            <a href="mailto:generador.random@gmail.com" className="text-blue-400 hover:underline">
+              generador.random@gmail.com
             </a>.
           </p>
         </section>
@@ -185,8 +185,8 @@ export default function Privacidad() {
           <h2 className="text-xl font-semibold text-white mb-3">10. Contacto</h2>
           <p>
             Para cualquier consulta sobre privacidad, escribinos a{' '}
-            <a href="mailto:privacidad@generadorrandom.com" className="text-blue-400 hover:underline">
-              privacidad@generadorrandom.com
+            <a href="mailto:generador.random@gmail.com" className="text-blue-400 hover:underline">
+              generador.random@gmail.com
             </a>. Respondemos en menos de 48 horas hábiles.
           </p>
         </section>

@@ -138,8 +138,8 @@ export default function Terminos() {
           <h2 className="text-xl font-semibold text-white mb-3">10. Contacto</h2>
           <p>
             Para consultas sobre estos términos, escribinos a{' '}
-            <a href="mailto:hola@generadorrandom.com" className="text-blue-400 hover:underline">
-              hola@generadorrandom.com
+            <a href="mailto:generador.random@gmail.com" className="text-blue-400 hover:underline">
+              generador.random@gmail.com
             </a>.
           </p>
         </section>

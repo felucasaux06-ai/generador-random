@@ -92,8 +92,8 @@ export default function Acerca() {
               Visitá nuestra página de contacto
             </Link>{' '}
             o escribinos directamente a{' '}
-            <a href="mailto:hola@generadorrandom.com" className="text-blue-400 hover:underline">
-              hola@generadorrandom.com
+            <a href="mailto:generador.random@gmail.com" className="text-blue-400 hover:underline">
+              generador.random@gmail.com
             </a>.
           </p>
         </section>

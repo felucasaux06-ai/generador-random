@@ -78,10 +78,10 @@ export default function ContactoPage() {
               <div>
                 <p className="text-gray-400 text-sm">También podés escribirnos directamente a</p>
                 <a
-                  href="mailto:hola@generadorrandom.com"
+                  href="mailto:generador.random@gmail.com"
                   className="text-blue-400 hover:text-blue-300 font-semibold transition-colors"
                 >
-                  hola@generadorrandom.com
+                  generador.random@gmail.com
                 </a>
               </div>
             </div>
@@ -168,7 +168,7 @@ export default function ContactoPage() {
               {estado === 'error' && (
                 <p className="text-red-400 text-sm">
                   Hubo un error al enviar el mensaje. Por favor escribinos directamente a{' '}
-                  <a href="mailto:hola@generadorrandom.com" className="underline">hola@generadorrandom.com</a>.
+                  <a href="mailto:generador.random@gmail.com" className="underline">generador.random@gmail.com</a>.
                 </p>
               )}
 

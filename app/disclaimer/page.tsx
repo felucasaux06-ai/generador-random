@@ -96,8 +96,8 @@ export default function Disclaimer() {
           <h2 className="text-xl font-semibold text-white mb-3">7. Contacto</h2>
           <p>
             Si tenés preguntas sobre este descargo de responsabilidad, podés contactarnos en{' '}
-            <a href="mailto:hola@generadorrandom.com" className="text-blue-400 hover:underline">
-              hola@generadorrandom.com
+            <a href="mailto:generador.random@gmail.com" className="text-blue-400 hover:underline">
+              generador.random@gmail.com
             </a>{' '}
             o visitar nuestra{' '}
             <Link href="/contacto" className="text-blue-400 hover:underline">
