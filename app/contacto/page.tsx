@@ -20,7 +20,7 @@ export default function ContactoPage() {
 
     const form = e.currentTarget
     const data = {
-      access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? '',
+      access_key: '510370a8-c8ba-482d-960d-2e260da3d034',
       name: (form.elements.namedItem('name') as HTMLInputElement).value,
       email: (form.elements.namedItem('email') as HTMLInputElement).value,
       subject: `[GeneradorRandom] ${motivo || 'Consulta'} — ${(form.elements.namedItem('asunto') as HTMLInputElement).value}`,
