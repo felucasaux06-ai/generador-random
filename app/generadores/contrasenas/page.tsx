@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect } from 'react'
 import AdBlock from '../../components/AdBlock'
 import FaqSection from '../../components/FaqSection'
 import { generarContrasena, evaluarFuerza, copiarAlPortapapeles } from '../../lib/utils'
+import RelatedTools from '../../components/RelatedTools'
 
 const FAQS_CONTRASENAS = [
   {
@@ -215,8 +216,27 @@ export default function GeneradorContrasenas() {
           </ul>
         </div>
 
+        {/* Contenido SEO */}
+        <div className="bg-gray-800/30 border border-gray-700/50 rounded-xl p-6 mb-8">
+          <h2 className="text-white font-semibold mb-3">¿Por qué usar un generador de contraseñas seguras?</h2>
+          <div className="text-gray-400 text-sm leading-relaxed space-y-3">
+            <p>
+              Una <strong className="text-gray-300">contraseña segura</strong> es la primera línea de defensa de tus cuentas online. Los ataques de diccionario y fuerza bruta pueden descifrar contraseñas cortas o predecibles en segundos. Este generador crea contraseñas aleatorias que son prácticamente imposibles de adivinar.
+            </p>
+            <p>
+              La <strong className="text-gray-300">longitud es el factor más importante</strong>: cada carácter adicional multiplica exponencialmente las combinaciones posibles. Una contraseña de 16 caracteres con símbolos tiene más combinaciones que átomos en el universo observable. El rango va de 8 a 32 caracteres.
+            </p>
+            <p>
+              <strong className="text-gray-300">100% privado</strong>: todas las contraseñas se generan localmente en tu navegador con JavaScript. Nunca viajan por internet, nunca se almacenan en ningún servidor. Ni siquiera nosotros podemos verlas. Lo recomendamos junto a un gestor de contraseñas como Bitwarden (gratis) o 1Password para guardarlas de forma segura.
+            </p>
+          </div>
+        </div>
+
         {/* FAQ */}
         <FaqSection faqs={FAQS_CONTRASENAS} titulo="Preguntas sobre Contraseñas Seguras" />
+
+        {/* Internal links */}
+        <RelatedTools current="/generadores/contrasenas" />
 
         {/* Ad Inferior */}
         <AdBlock slot="5678901234" />

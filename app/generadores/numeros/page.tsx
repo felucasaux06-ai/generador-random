@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import AdBlock from '../../components/AdBlock'
 import FaqSection from '../../components/FaqSection'
+import RelatedTools from '../../components/RelatedTools'
 import { copiarAlPortapapeles } from '../../lib/utils'
 
 const FAQS_NUMEROS = [
@@ -288,7 +289,25 @@ export default function GeneradorNumeros() {
           </div>
         )}
 
+        {/* Contenido SEO */}
+        <div className="bg-gray-800/30 border border-gray-700/50 rounded-xl p-6 mb-8">
+          <h2 className="text-white font-semibold mb-3">Generador de números aleatorios: usos y aplicaciones</h2>
+          <div className="text-gray-400 text-sm leading-relaxed space-y-3">
+            <p>
+              El <strong className="text-gray-300">generador de números aleatorios</strong> más flexible en español. Elegís exactamente el rango: desde 1 hasta 100, de 1 a 6 como un <strong className="text-gray-300">dado virtual</strong>, del 1 al 52 para una baraja de cartas, o cualquier rango personalizado incluyendo negativos.
+            </p>
+            <p>
+              Usos frecuentes: <strong className="text-gray-300">sorteos de números</strong> para rifas y loterías caseras, elegir el orden de presentación en una clase, definir quién empieza en un juego de mesa, generar datos aleatorios para programación, estadística y simulaciones, o simplemente tomar una decisión cuando tenés demasiadas opciones.
+            </p>
+            <p>
+              Podés generar <strong className="text-gray-300">hasta 10 números a la vez</strong> con el slider de cantidad. El historial de la sesión guarda los últimos 20 resultados. Los rangos rápidos prearmados (1-10, 1-100, dado, cartas) te ahorran configuración cuando tenés prisa.
+            </p>
+          </div>
+        </div>
+
         <FaqSection faqs={FAQS_NUMEROS} titulo="Preguntas sobre el Generador de Números" />
+
+        <RelatedTools current="/generadores/numeros" />
 
         <AdBlock slot="4455667788" className="mt-8" />
       </div>

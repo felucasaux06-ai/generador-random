@@ -28,6 +28,7 @@ const FAQS_NOMBRES = [
 ]
 import { NOMBRES_PERSONAS, APELLIDOS, NOMBRES_EMPRESAS, NOMBRES_MASCOTAS } from '../../lib/data'
 import { generarAleatorio, copiarAlPortapapeles } from '../../lib/utils'
+import RelatedTools from '../../components/RelatedTools'
 
 type Categoria = 'personas' | 'apellidos' | 'empresas' | 'mascotas'
 
@@ -175,8 +176,30 @@ export default function GeneradorNombres() {
           </div>
         )}
 
+        {/* Contenido SEO */}
+        <div className="bg-gray-800/30 border border-gray-700/50 rounded-xl p-6 mb-8">
+          <h2 className="text-white font-semibold mb-3">Generador de nombres aleatorios para todos los usos</h2>
+          <div className="text-gray-400 text-sm leading-relaxed space-y-3">
+            <p>
+              El generador de nombres aleatorios de GeneradorRandom ofrece cuatro categorías: <strong className="text-gray-300">nombres de personas</strong> (clásicos y raros), <strong className="text-gray-300">apellidos</strong> (comunes, de origen inmigrante y únicos), <strong className="text-gray-300">nombres de empresas</strong> (serios y creativos) y <strong className="text-gray-300">nombres para mascotas</strong>. Todo al instante, sin límites.
+            </p>
+            <p>
+              Es la herramienta favorita de <strong className="text-gray-300">escritores que necesitan nombres para personajes</strong> de novelas y guiones, desarrolladores que generan datos de prueba para bases de datos, diseñadores que crean maquetas con texto realista, jugadores de rol que arman sus campañas, y docentes que necesitan nombres ficticios para ejemplos.
+            </p>
+            <p>
+              Los <strong className="text-gray-300">nombres de empresas</strong> van desde opciones profesionales como "Estudio Contable García & Asociados" hasta startups modernas, ideal para brainstorming de marca. Los nombres de mascotas mezclan los clásicos con los absurdos (Roberto, Messi, Alfajor), porque las mejores mascotas merecen los mejores nombres.
+            </p>
+            <p>
+              Cada generación es completamente aleatoria. Generá todos los que necesites hasta encontrar el perfecto. Sin registro, sin límites, sin costo.
+            </p>
+          </div>
+        </div>
+
         {/* FAQ */}
         <FaqSection faqs={FAQS_NOMBRES} titulo="Preguntas sobre el Generador de Nombres" />
+
+        {/* Internal links */}
+        <RelatedTools current="/generadores/nombres" />
 
         {/* Ad Inferior */}
         <AdBlock slot="3456789012" className="mt-8" />

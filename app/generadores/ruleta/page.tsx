@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 import AdBlock from '../../components/AdBlock'
 import FaqSection from '../../components/FaqSection'
+import RelatedTools from '../../components/RelatedTools'
 
 const FAQS_RULETA = [
   {
@@ -398,9 +399,27 @@ export default function GeneradorRuleta() {
           </p>
         </div>
 
+        {/* Contenido SEO */}
+        <div className="mt-6 bg-gray-800/30 border border-gray-700/50 rounded-xl p-6">
+          <h2 className="text-white font-semibold mb-3">Ruleta aleatoria online para sorteos y decisiones</h2>
+          <div className="text-gray-400 text-sm leading-relaxed space-y-3">
+            <p>
+              La <strong className="text-gray-300">ruleta aleatoria online</strong> de GeneradorRandom es la herramienta más versátil para tomar decisiones al azar. A diferencia de otros generadores, podés personalizar completamente las opciones: agregá nombres, actividades, números o cualquier texto, editá lo que quieras y eliminá lo que no necesites.
+            </p>
+            <p>
+              Usos frecuentes: <strong className="text-gray-300">sorteos online</strong> (quién paga la cuenta, quién hace la tarea), asignar turnos en el trabajo, elegir qué comer o qué película ver, sortear regalos entre amigos, definir equipos para juegos, y cualquier decisión que merezca un proceso justo e imparcial.
+            </p>
+            <p>
+              Con la opción <strong className="text-gray-300">"Eliminar ganador"</strong> podés hacer sorteos sin repetición: cada vez que gira, el ganador se saca de la lista. Ideal para rifas, sorteos de premios, o asignar roles en grupos. Soporta hasta 48 opciones simultáneas.
+            </p>
+          </div>
+        </div>
+
         <div className="mt-8">
           <FaqSection faqs={FAQS_RULETA} titulo="Preguntas sobre la Ruleta Aleatoria" />
         </div>
+
+        <RelatedTools current="/generadores/ruleta" />
 
         <AdBlock slot="2233445566" className="mt-8" />
       </div>

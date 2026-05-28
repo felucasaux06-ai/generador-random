@@ -8,20 +8,26 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 
 export const metadata: Metadata = {
   title: {
-    default: 'GeneradorRandom — Nombres, Contraseñas, Colores, Historias y Chistes',
+    default: 'GeneradorRandom — Nombres, Números, Ruleta, Contraseñas y Más',
     template: '%s | GeneradorRandom.com',
   },
   description:
-    'Herramientas gratuitas online: genera nombres aleatorios, contraseñas seguras, paletas de colores, historias cortas y chistes al instante. Sin registro.',
+    'Genera nombres aleatorios, contraseñas seguras, colores, historias, chistes, ruleta online y más. 9 herramientas gratis, sin registro, en español.',
   keywords: [
-    'generador de nombres',
+    'generador random',
+    'generador aleatorio online',
+    'generador de nombres aleatorios',
     'generador de contraseñas seguras',
     'generador de colores',
     'generador de historias',
-    'generador de chistes',
+    'ruleta aleatoria online',
+    'generador de números aleatorios',
+    'cara o cruz online',
+    'sorteo online gratis',
+    'chistes argentinos',
     'herramientas online gratis',
-    'paleta de colores aleatoria',
-    'nombres aleatorios',
+    'generador gratis en español',
+    'número al azar',
   ],
   authors: [{ name: 'GeneradorRandom' }],
   creator: 'GeneradorRandom',
@@ -40,13 +46,15 @@ export const metadata: Metadata = {
     locale: 'es_ES',
     url: 'https://generadorrandom.com',
     siteName: 'GeneradorRandom',
-    title: 'GeneradorRandom — Herramientas Creativas Gratuitas',
-    description: 'Genera nombres, contraseñas, colores, historias y chistes al instante. Gratis, sin registro.',
+    title: 'GeneradorRandom — 9 Herramientas Aleatorias Gratis',
+    description:
+      'Nombres, contraseñas, colores, ruleta, números, cara o cruz, historias y chistes al instante. Gratis, sin registro.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GeneradorRandom — Herramientas Creativas Gratuitas',
-    description: 'Nombres, contraseñas, colores, historias y chistes generados al instante.',
+    title: 'GeneradorRandom — 9 Herramientas Aleatorias Gratis',
+    description:
+      'Ruleta, números, nombres, contraseñas, colores, historias y chistes. Todo al azar, todo gratis.',
   },
   alternates: {
     canonical: 'https://generadorrandom.com',
@@ -66,21 +74,34 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           crossOrigin="anonymous"
         />
         <Script
-          id="schema-org"
+          id="schema-website"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'WebSite',
-              name: 'GeneradorRandom',
-              url: 'https://generadorrandom.com',
-              description: 'Herramientas online gratuitas: nombres, contraseñas, colores, historias y chistes.',
-              potentialAction: {
-                '@type': 'SearchAction',
-                target: 'https://generadorrandom.com/?q={search_term_string}',
-                'query-input': 'required name=search_term_string',
+            __html: JSON.stringify([
+              {
+                '@context': 'https://schema.org',
+                '@type': 'WebSite',
+                name: 'GeneradorRandom',
+                url: 'https://generadorrandom.com',
+                description:
+                  'Herramientas online gratuitas: nombres, contraseñas, colores, historias, chistes, ruleta, números y más.',
+                inLanguage: 'es',
+                potentialAction: {
+                  '@type': 'SearchAction',
+                  target: 'https://generadorrandom.com/?q={search_term_string}',
+                  'query-input': 'required name=search_term_string',
+                },
               },
-            }),
+              {
+                '@context': 'https://schema.org',
+                '@type': 'Organization',
+                name: 'GeneradorRandom',
+                url: 'https://generadorrandom.com',
+                description:
+                  'Sitio de herramientas aleatorias gratuitas en español: nombres, contraseñas, colores, ruleta, números y más.',
+                sameAs: [],
+              },
+            ]),
           }}
         />
       </head>
