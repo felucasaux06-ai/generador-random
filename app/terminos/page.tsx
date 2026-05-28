@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Términos de Uso | GeneradorRandom',
-  description: 'Términos y condiciones de uso de GeneradorRandom.com. Información sobre uso permitido, propiedad intelectual y limitación de responsabilidad.',
+  description: 'Términos y condiciones de uso de GeneradorRandom.com. Propiedad intelectual, limitación de responsabilidad y ley aplicable (Argentina).',
   alternates: { canonical: 'https://generadorrandom.com/terminos' },
   robots: { index: true, follow: true },
 }
@@ -11,136 +12,141 @@ export default function Terminos() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-16">
       <h1 className="text-3xl font-bold text-white mb-2">Términos de Uso</h1>
-      <p className="text-slate-500 text-sm mb-10">Última actualización: 27 de mayo de 2026</p>
+      <p className="text-slate-500 text-sm mb-10">Última actualización: 28 de mayo de 2026</p>
 
       <div className="space-y-10 text-slate-400 leading-relaxed">
 
         <section>
           <h2 className="text-xl font-semibold text-white mb-3">1. Aceptación de los términos</h2>
           <p>
-            Al acceder y usar GeneradorRandom.com aceptás estos Términos de Uso en su totalidad.
-            Si no estás de acuerdo con alguno de ellos, por favor no uses el sitio. El uso continuado
-            del sitio después de cualquier modificación implica la aceptación de los términos actualizados.
+            Al acceder y usar GeneradorRandom.com aceptás estos términos en su totalidad. Si no
+            estás de acuerdo con alguno de los puntos, por favor no uses el sitio.
           </p>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold text-white mb-3">2. Descripción del servicio</h2>
           <p>
-            GeneradorRandom.com es un sitio web que ofrece herramientas online gratuitas para la
-            generación aleatoria de contenido: números, nombres, contraseñas, colores, historias,
-            chistes, ruleta, cara o cruz y otras herramientas similares. El servicio se provee de
-            forma gratuita y sin garantía de disponibilidad continua.
+            GeneradorRandom.com ofrece herramientas gratuitas online de generación aleatoria
+            (nombres, contraseñas, colores, números, chistes, historias, ruleta, cara o cruz).
+            El servicio se presta tal cual, sin registro previo ni costo alguno.
           </p>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold text-white mb-3">3. Uso permitido</h2>
-          <p className="mb-3">Podés usar GeneradorRandom.com para:</p>
+          <p className="mb-3">Podés usar el sitio para:</p>
           <ul className="space-y-2 list-disc list-inside">
-            <li>Uso personal, educativo y comercial de los contenidos generados.</li>
-            <li>Compartir los resultados generados libremente, sin restricciones.</li>
-            <li>Usar las herramientas sin límite de veces ni registro previo.</li>
-            <li>Usar los artículos del blog como referencia, citando la fuente.</li>
+            <li>Uso personal, educativo y comercial de los contenidos generados</li>
+            <li>Compartir libremente los resultados obtenidos</li>
+            <li>Usar las herramientas sin límite de veces</li>
           </ul>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold text-white mb-3">4. Uso prohibido</h2>
-          <p className="mb-3">Está prohibido:</p>
+          <p className="mb-3">No está permitido:</p>
           <ul className="space-y-2 list-disc list-inside">
-            <li>Intentar acceder a sistemas, datos o áreas no autorizadas del sitio.</li>
-            <li>Reproducir, copiar o redistribuir el sitio completo o sus herramientas sin autorización expresa.</li>
-            <li>Usar el sitio para actividades ilegales o que violen derechos de terceros.</li>
-            <li>Realizar ataques de denegación de servicio (DoS/DDoS) o cualquier acción que afecte la disponibilidad del sitio.</li>
-            <li>Usar scrapers automatizados de forma masiva que perjudiquen el rendimiento del servicio.</li>
+            <li>Intentar acceder a sistemas, datos o áreas no autorizadas del sitio</li>
+            <li>Reproducir, copiar o redistribuir el sitio completo sin autorización</li>
+            <li>Usar el sitio para actividades ilegales, fraudulentas o que dañen a terceros</li>
+            <li>Realizar scraping masivo o automatizado que afecte la disponibilidad del sitio</li>
+            <li>Usar las herramientas para generar contenido que viole derechos de terceros</li>
           </ul>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold text-white mb-3">5. Propiedad intelectual</h2>
           <p className="mb-3">
-            El diseño, código fuente, marca, logotipo y contenido editorial de GeneradorRandom.com
-            son propiedad de sus titulares y están protegidos por las leyes de propiedad intelectual
-            de la República Argentina y tratados internacionales.
+            El código, diseño, marca, logotipos y estructura de GeneradorRandom.com son propiedad
+            del titular del sitio. El contenido generado por las herramientas (nombres, contraseñas,
+            colores, etc.) es de libre uso para los usuarios.
           </p>
           <p>
-            El <strong className="text-slate-300">contenido generado</strong> por las herramientas
-            (números, nombres, contraseñas, colores, historias, chistes) es de uso libre para el usuario
-            que lo generó. No reclamamos ningún derecho sobre los resultados producidos por las herramientas.
+            Los artículos del blog son propiedad de GeneradorRandom.com y pueden citarse con
+            atribución y enlace al original.
           </p>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold text-white mb-3">6. Limitación de responsabilidad</h2>
           <p className="mb-3">
-            El sitio se provee <strong className="text-slate-300">"tal cual"</strong>, sin garantías de
-            ningún tipo. En la máxima medida permitida por la ley aplicable:
+            El sitio se provee <strong className="text-slate-300">"tal cual"</strong>, sin garantías
+            de ningún tipo. No garantizamos:
           </p>
           <ul className="space-y-2 list-disc list-inside">
-            <li>
-              <strong className="text-slate-300">Contraseñas:</strong> no garantizamos que las contraseñas
-              generadas sean adecuadas para todos los contextos de seguridad. El usuario es el único
-              responsable de evaluar la fortaleza necesaria según su caso de uso.
-            </li>
-            <li>
-              <strong className="text-slate-300">Sorteos y resultados aleatorios:</strong> los resultados
-              son pseudoaleatorios e imparciales para uso práctico, pero no están certificados para
-              sorteos regulados por ley, loterías con dinero real ni procesos que requieran aleatoriedad
-              criptográfica certificada.
-            </li>
-            <li>
-              <strong className="text-slate-300">Contenido generado:</strong> historias, chistes y nombres
-              se generan algorítmicamente. No nos hacemos responsables si el contenido resulta inapropiado,
-              ofensivo o inexacto en algún contexto específico.
-            </li>
-            <li>
-              <strong className="text-slate-300">Disponibilidad:</strong> no garantizamos que el servicio
-              esté disponible de forma ininterrumpida. Podemos suspender, modificar o discontinuar
-              cualquier herramienta sin previo aviso.
-            </li>
+            <li>Disponibilidad ininterrumpida del servicio</li>
+            <li>Ausencia total de errores</li>
+            <li>Resultados específicos del uso de las herramientas</li>
           </ul>
           <p className="mt-4">
-            GeneradorRandom.com no será responsable por daños directos, indirectos, incidentales o
-            consecuentes derivados del uso o la imposibilidad de uso del sitio.
+            Para conocer los límites específicos de cada herramienta, consultá nuestro{' '}
+            <Link href="/disclaimer" className="text-blue-400 hover:underline">
+              Descargo de Responsabilidad
+            </Link>.
+          </p>
+          <p className="mt-4">
+            GeneradorRandom.com no será responsable por daños directos, indirectos, incidentales
+            o consecuentes derivados del uso o imposibilidad de uso del sitio.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-white mb-3">7. Modificación del servicio</h2>
+          <h2 className="text-xl font-semibold text-white mb-3">7. Modificación de servicios</h2>
           <p>
-            Nos reservamos el derecho de modificar, suspender o discontinuar cualquier parte del
-            servicio en cualquier momento y sin previo aviso. No seremos responsables ante vos ni
-            ante terceros por cualquier modificación, suspensión o discontinuación del servicio.
+            Nos reservamos el derecho de modificar, suspender o eliminar cualquier herramienta o
+            función del sitio en cualquier momento, sin previo aviso y sin responsabilidad alguna.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-white mb-3">8. Cambios en los términos</h2>
+          <h2 className="text-xl font-semibold text-white mb-3">8. Privacidad</h2>
           <p>
-            Podemos modificar estos Términos de Uso en cualquier momento. Los cambios se publicarán
-            en esta página con la fecha de actualización. El uso continuado del sitio después de
-            publicados los cambios implica la aceptación de los nuevos términos.
+            El tratamiento de tus datos se rige por nuestra{' '}
+            <Link href="/privacidad" className="text-blue-400 hover:underline">
+              Política de Privacidad
+            </Link>
+            , que forma parte integral de estos términos.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-white mb-3">9. Ley aplicable y jurisdicción</h2>
+          <h2 className="text-xl font-semibold text-white mb-3">9. Enlaces a terceros</h2>
           <p>
-            Estos Términos de Uso se rigen por las leyes de la <strong className="text-slate-300">República Argentina</strong>.
-            Cualquier disputa que surja en relación con estos términos o el uso del sitio será sometida
-            a la jurisdicción de los tribunales ordinarios de la República Argentina, renunciando
-            expresamente a cualquier otro fuero que pudiera corresponder.
+            El sitio puede contener enlaces a sitios externos. No somos responsables del contenido
+            ni de las prácticas de privacidad de esos sitios.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-white mb-3">10. Contacto</h2>
+          <h2 className="text-xl font-semibold text-white mb-3">10. Ley aplicable y jurisdicción</h2>
+          <p>
+            Estos términos se rigen por las leyes de la <strong className="text-slate-300">República Argentina</strong>.
+            Cualquier disputa relacionada con el uso del sitio será resuelta en los tribunales
+            competentes de Argentina.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-white mb-3">11. Cambios en los términos</h2>
+          <p>
+            Podemos modificar estos términos en cualquier momento. Los cambios se publicarán en
+            esta página con la fecha de última actualización. El uso continuado del sitio implica
+            la aceptación de los términos modificados.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-white mb-3">12. Contacto</h2>
           <p>
             Para consultas sobre estos términos, escribinos a{' '}
             <a href="mailto:generador.random@gmail.com" className="text-blue-400 hover:underline">
               generador.random@gmail.com
-            </a>.
+            </a>{' '}
+            o desde la{' '}
+            <Link href="/contacto" className="text-blue-400 hover:underline">
+              página de contacto
+            </Link>.
           </p>
         </section>
 
