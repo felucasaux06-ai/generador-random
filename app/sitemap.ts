@@ -14,7 +14,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/generadores/ruleta`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/generadores/numeros`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/generadores/moneda`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${base}/blog/para-que-sirve-un-generador-de-numeros-aleatorios`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/blog/10-usos-creativos-generadores-aleatorios`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/blog/como-funciona-la-generacion-aleatoria`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/blog/guia-generadores-aleatorios-online-2026`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/acerca`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 },
+    { url: `${base}/contacto`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 },
     { url: `${base}/privacidad`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${base}/terminos`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
   ]

@@ -15,6 +15,7 @@ const LINKS = [
   { href: '/generadores/ruleta',             label: 'Ruleta',             emoji: '🎡', flag: false },
   { href: '/generadores/numeros',            label: 'Números',            emoji: '🎲', flag: false },
   { href: '/generadores/moneda',             label: 'Moneda',             emoji: '🪙', flag: false },
+  { href: '/blog',                           label: 'Blog',               emoji: '📝', flag: false },
 ]
 
 export default function Navigation() {

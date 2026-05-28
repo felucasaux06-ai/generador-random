@@ -89,6 +89,58 @@ input[type='checkbox'] { cursor: pointer; }
   @apply w-full my-6 opacity-90;
 }
 
+/* Article body styles */
+.article-body h2 {
+  @apply text-2xl font-bold text-white mt-10 mb-4;
+}
+.article-body h3 {
+  @apply text-xl font-semibold text-white mt-7 mb-3;
+}
+.article-body p {
+  @apply text-gray-300 leading-relaxed mb-5;
+}
+.article-body ul {
+  @apply list-disc mb-5 text-gray-300 space-y-2;
+  padding-left: 1.5rem;
+}
+.article-body ol {
+  @apply list-decimal mb-5 text-gray-300 space-y-2;
+  padding-left: 1.5rem;
+}
+.article-body li {
+  @apply leading-relaxed pl-1;
+}
+.article-body strong {
+  @apply text-white font-semibold;
+}
+.article-body em {
+  @apply italic text-gray-200;
+}
+.article-body code {
+  @apply bg-gray-800 text-blue-400 px-1.5 py-0.5 rounded text-sm font-mono;
+}
+.article-body pre {
+  @apply bg-gray-900 border border-gray-700 rounded-xl p-5 mb-5 overflow-x-auto;
+}
+.article-body pre code {
+  @apply bg-transparent p-0 text-gray-300 text-sm;
+}
+.article-body a {
+  @apply text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors;
+}
+.article-body table {
+  @apply w-full border-collapse mb-6 text-sm;
+}
+.article-body th {
+  @apply text-left px-4 py-3 bg-gray-800 text-white font-semibold border border-gray-700;
+}
+.article-body td {
+  @apply px-4 py-3 text-gray-300 border border-gray-700;
+}
+.article-body tr:nth-child(even) td {
+  background-color: rgba(31, 41, 55, 0.4);
+}
+
 /* Coin flip animation */
 @keyframes coinFlip {
   0%   { transform: rotateY(0deg); }

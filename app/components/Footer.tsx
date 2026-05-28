@@ -44,10 +44,25 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Legal */}
+        {/* Legal y sitio */}
         <div>
-          <h3 className="text-slate-300 font-semibold text-sm mb-4 uppercase tracking-wider">Legal</h3>
+          <h3 className="text-slate-300 font-semibold text-sm mb-4 uppercase tracking-wider">Sitio</h3>
           <ul className="space-y-2.5">
+            <li>
+              <Link href="/blog" className="text-slate-500 hover:text-blue-400 text-sm transition-colors">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link href="/acerca" className="text-slate-500 hover:text-blue-400 text-sm transition-colors">
+                Acerca de
+              </Link>
+            </li>
+            <li>
+              <Link href="/contacto" className="text-slate-500 hover:text-blue-400 text-sm transition-colors">
+                Contacto
+              </Link>
+            </li>
             <li>
               <Link href="/privacidad" className="text-slate-500 hover:text-blue-400 text-sm transition-colors">
                 Política de Privacidad
@@ -56,11 +71,6 @@ export default function Footer() {
             <li>
               <Link href="/terminos" className="text-slate-500 hover:text-blue-400 text-sm transition-colors">
                 Términos de Uso
-              </Link>
-            </li>
-            <li>
-              <Link href="/acerca" className="text-slate-500 hover:text-blue-400 text-sm transition-colors">
-                Acerca de
               </Link>
             </li>
           </ul>
