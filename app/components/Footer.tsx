@@ -73,6 +73,11 @@ export default function Footer() {
                 Términos de Uso
               </Link>
             </li>
+            <li>
+              <Link href="/disclaimer" className="text-slate-500 hover:text-blue-400 text-sm transition-colors">
+                Descargo de Responsabilidad
+              </Link>
+            </li>
           </ul>
           <div className="mt-6 p-3 bg-slate-900 rounded-lg border border-slate-800">
             <p className="text-slate-500 text-xs">

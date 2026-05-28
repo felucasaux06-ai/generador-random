@@ -470,6 +470,119 @@ export const ARTICLES: Article[] = [
 <p>En <a href="/">GeneradorRandom</a> tenés 9 generadores diferentes, todos gratuitos, sin registro y sin publicidad intrusiva. Explorá las herramientas y encontrá las que mejor se adaptan a lo que necesitás.</p>
 `,
   },
+  {
+    slug: 'como-hacer-un-sorteo-aleatorio-justo-online',
+    title: 'Cómo hacer un sorteo aleatorio justo online: guía paso a paso',
+    metaTitle: 'Cómo hacer un sorteo aleatorio justo online — Guía completa 2026',
+    description: 'Aprendé a organizar sorteos y rifas justas usando generadores aleatorios online. Paso a paso, gratis y sin descargar nada. Ideal para WhatsApp, Instagram y eventos.',
+    date: '2026-05-28',
+    dateFormatted: '28 de mayo de 2026',
+    readTime: 7,
+    keywords: ['sorteo aleatorio online', 'cómo hacer un sorteo justo', 'sorteo online gratis', 'rifa online gratis', 'sortear participantes online'],
+    category: 'Guías',
+    image: 'https://images.unsplash.com/photo-1518688248740-7c31f1a945c4?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Bolas numeradas de lotería',
+    content: `
+<p>Organizar un sorteo es más fácil de lo que parece, pero hacerlo de forma <strong>justa y transparente</strong> requiere más que tirar papelitos en una bolsa. Con un generador aleatorio online podés hacer sorteos imparciales en segundos, sin descargar nada y sin costos.</p>
+
+<p>En esta guía te explicamos paso a paso cómo organizar distintos tipos de sorteos, qué herramienta usar en cada caso, y cómo evitar los errores más comunes que generan dudas sobre la legitimidad del resultado.</p>
+
+<h2>¿Por qué usar un generador online y no sortear "a mano"?</h2>
+
+<p>Los métodos manuales —papelitos en una bolsa, nombres en un sombrero, tirar monedas— tienen problemas reales:</p>
+
+<ul>
+<li>Alguien puede acusar de trampa sin que puedas demostrarlo fácilmente.</li>
+<li>En grupos grandes, son lentos e impráctivos.</li>
+<li>Cuando el sorteo es remoto (por WhatsApp, Instagram, etc.), simplemente no funcionan.</li>
+</ul>
+
+<p>Un generador aleatorio online resuelve todos estos problemas: el resultado es visible en pantalla, podés compartirlo, y el proceso es transparente para todos los participantes.</p>
+
+<h2>Método 1: Sorteo por número (el más clásico)</h2>
+
+<p><strong>Ideal para:</strong> rifas con tickets numerados, sorteos en grupos donde cada persona tiene un número asignado.</p>
+
+<ol>
+<li>Asignale un número a cada participante antes del sorteo (1 al N).</li>
+<li>Comunicá públicamente quién tiene qué número <em>antes</em> de sortear (esto es clave para la transparencia).</li>
+<li>Abrí el <a href="/generadores/numeros">generador de números aleatorios</a>, configurá el rango (mínimo: 1, máximo: cantidad de participantes).</li>
+<li>Hacé clic en "Generar" con todos los participantes mirando (presencial o compartiendo pantalla por videollamada).</li>
+<li>El número que aparece corresponde al ganador según la lista publicada previamente.</li>
+</ol>
+
+<p><strong>Pro tip:</strong> Generá el número con un video en vivo o grabá la pantalla. Así tenés prueba irrefutable del resultado.</p>
+
+<h2>Método 2: Ruleta con nombres (el más visual)</h2>
+
+<p><strong>Ideal para:</strong> sorteos donde querés ver el proceso de forma visual y entretenida, eventos en vivo, sorteos de Instagram.</p>
+
+<ol>
+<li>Abrí la <a href="/generadores/ruleta">ruleta aleatoria</a>.</li>
+<li>Cargá los nombres de todos los participantes (hasta 48 opciones).</li>
+<li>Activá la opción "Eliminar al ganar" si querés hacer múltiples sorteos consecutivos sin repetir ganadores.</li>
+<li>Girá la ruleta con todos mirando.</li>
+<li>El nombre donde se detenga el puntero es el ganador.</li>
+</ol>
+
+<p>La ruleta es perfecta para sorteos en Instagram Live o TikTok Live: es visual, emocionante y nadie puede dudar del resultado porque todos lo ven en tiempo real.</p>
+
+<h2>Método 3: Cara o cruz para desempatar</h2>
+
+<p><strong>Ideal para:</strong> cuando quedan dos finalistas y necesitás un desempate rápido.</p>
+
+<p>Usá el <a href="/generadores/moneda">generador de cara o cruz</a>. Antes de tirarlo, definí públicamente quién es "cara" y quién es "cruz". Compartí la pantalla y tirá. Simple, rápido, irrefutable.</p>
+
+<h2>Cómo hacer un sorteo transparente en Instagram o WhatsApp</h2>
+
+<p>Los sorteos en redes sociales tienen un reto adicional: los seguidores que no ganaron tienen que confiar en el resultado. Acá está el protocolo recomendado:</p>
+
+<ol>
+<li><strong>Antes del sorteo:</strong> publicá la lista completa de participantes con sus números asignados en un story o post.</li>
+<li><strong>Durante el sorteo:</strong> hacé un Live o grabá la pantalla haciendo el sorteo con el generador online.</li>
+<li><strong>Después:</strong> compartí el video del sorteo en tus stories por 24 horas para que todos puedan verlo.</li>
+</ol>
+
+<p>Esta secuencia elimina el 99% de las dudas sobre legitimidad. La transparencia del proceso es más importante que la herramienta que uses.</p>
+
+<h2>Cuándo usar cada herramienta</h2>
+
+<table>
+<thead>
+<tr><th>Situación</th><th>Herramienta recomendada</th></tr>
+</thead>
+<tbody>
+<tr><td>Rifa con tickets numerados</td><td>Generador de números</td></tr>
+<tr><td>Sorteo con lista de nombres</td><td>Ruleta aleatoria</td></tr>
+<tr><td>Múltiples ganadores en orden</td><td>Ruleta con "eliminar al ganar"</td></tr>
+<tr><td>Desempate entre dos personas</td><td>Cara o cruz</td></tr>
+<tr><td>Sorteo en vivo en Instagram/TikTok</td><td>Ruleta (más visual)</td></tr>
+<tr><td>Sorteo privado en grupo de WhatsApp</td><td>Generador de números (compartí pantalla)</td></tr>
+</tbody>
+</table>
+
+<h2>Errores comunes que generan desconfianza</h2>
+
+<ul>
+<li><strong>Publicar el ganador sin mostrar el proceso:</strong> siempre grabá o transmití el momento del sorteo.</li>
+<li><strong>Asignar números después del sorteo:</strong> la lista de participantes con sus números debe estar publicada antes de sortear.</li>
+<li><strong>Sortear sin testigos:</strong> hacé el sorteo con al menos una persona que no sea vos mirando.</li>
+<li><strong>No especificar las reglas de participación de antemano:</strong> dejá claras las condiciones antes de empezar.</li>
+</ul>
+
+<h2>¿Son legales los sorteos online en Argentina?</h2>
+
+<p>En Argentina, los sorteos gratuitos (sin costo de participación) están permitidos sin necesidad de autorización especial, siempre que no involucren azar remunerado regulado por ley. Los sorteos de redes sociales, rifas de amigos y sorteos sin costo de entrada caen en esta categoría.</p>
+
+<p>Si organizás una rifa <em>con</em> costo de entrada (venta de boletos), las regulaciones varían por provincia y podría requerirse autorización del ENARD u organismo provincial equivalente. Para estos casos, consultá con un profesional legal.</p>
+
+<h2>Conclusión</h2>
+
+<p>Un sorteo justo no requiere software caro ni procesos complicados. Con el <a href="/generadores/numeros">generador de números</a> o la <a href="/generadores/ruleta">ruleta aleatoria</a> de GeneradorRandom tenés todo lo que necesitás: gratis, sin registro y con resultados transparentes que cualquiera puede verificar.</p>
+
+<p>La clave está en el proceso, no solo en la herramienta: publicar los participantes antes, mostrar el sorteo en vivo y guardar evidencia del resultado. Eso es todo lo que necesitás para que tu sorteo sea incuestionable.</p>
+`,
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
