@@ -8,6 +8,8 @@ export interface Article {
   readTime: number
   keywords: string[]
   category: string
+  image: string
+  imageAlt: string
   content: string
 }
 
@@ -22,6 +24,8 @@ export const ARTICLES: Article[] = [
     readTime: 7,
     keywords: ['generador de números aleatorios', 'para qué sirve generador de números', 'número al azar', 'sorteos online', 'random number generator español'],
     category: 'Guías',
+    image: 'https://images.unsplash.com/photo-1605870445919-838d190e8e1b?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Dos dados blancos sobre superficie azul',
     content: `
 <p>Cuando necesitás elegir un número al azar —ya sea para un sorteo, un juego o simplemente para tomar una decisión—, un <strong>generador de números aleatorios</strong> es la herramienta más práctica que existe. Rápido, justo e imparcial: sin papelitos, sin dados perdidos, sin discusiones.</p>
 
@@ -134,6 +138,8 @@ export const ARTICLES: Article[] = [
     readTime: 6,
     keywords: ['usos generadores aleatorios', 'generador random usos creativos', 'herramientas aleatorias online', 'para qué sirve generador random', 'generador aleatorio creativo'],
     category: 'Ideas',
+    image: 'https://images.unsplash.com/photo-1758691736934-e5d6d0c7f875?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Equipo haciendo brainstorming con notas adhesivas de colores',
     content: `
 <p>Cuando escuchás "generador aleatorio", probablemente pensás en sorteos o en tirar un dado virtual. Pero estas herramientas tienen aplicaciones mucho más interesantes y creativas que la mayoría desconoce.</p>
 
@@ -213,6 +219,8 @@ export const ARTICLES: Article[] = [
     readTime: 8,
     keywords: ['cómo funciona generador aleatorio', 'pseudoaleatorio explicado', 'Math.random JavaScript', 'PRNG vs TRNG', 'generación aleatoria computadora'],
     category: 'Tecnología',
+    image: 'https://images.unsplash.com/photo-1754039984985-ef607d80113a?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Código de programación en pantallas de computadora',
     content: `
 <p>¿Alguna vez te preguntaste cómo puede una computadora, que es una máquina completamente determinista y predecible, generar algo que parece verdaderamente aleatorio? La respuesta es fascinante y tiene implicaciones importantes para entender cuándo podés confiar en estas herramientas y cuándo no.</p>
 
@@ -317,6 +325,8 @@ export const ARTICLES: Article[] = [
     readTime: 9,
     keywords: ['generadores aleatorios online', 'mejor generador random 2026', 'generador aleatorio gratis', 'herramientas aleatorias web', 'generador random en español'],
     category: 'Guías',
+    image: 'https://images.unsplash.com/photo-1751257983922-a627088d4c21?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Espacio de trabajo moderno y organizado con laptop',
     content: `
 <p>Los <strong>generadores aleatorios online</strong> pasaron de ser herramientas para programadores y estadísticos a formar parte del kit básico de cualquier persona. Docentes, diseñadores, escritores, organizadores de eventos y jugadores de rol los usan a diario sin necesitar conocimientos técnicos.</p>
 

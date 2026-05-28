@@ -27,6 +27,7 @@ export function generateMetadata({ params }: Props): Metadata {
       type: 'article',
       publishedTime: article.date,
       siteName: 'GeneradorRandom',
+      images: [{ url: article.image, alt: article.imageAlt }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -55,6 +56,7 @@ export default function ArticlePage({ params }: Props) {
     description: article.description,
     datePublished: article.date,
     dateModified: article.date,
+    image: article.image,
     author: { '@type': 'Organization', name: 'GeneradorRandom', url: 'https://generadorrandom.com' },
     publisher: { '@type': 'Organization', name: 'GeneradorRandom', url: 'https://generadorrandom.com' },
     url: `https://generadorrandom.com/blog/${article.slug}`,
@@ -100,6 +102,16 @@ export default function ArticlePage({ params }: Props) {
               <time dateTime={article.date}>{article.dateFormatted}</time>
             </div>
           </header>
+
+          {/* Hero image */}
+          <div className="relative w-full h-56 md:h-72 overflow-hidden rounded-2xl mb-8">
+            <img
+              src={article.image}
+              alt={article.imageAlt}
+              loading="eager"
+              className="w-full h-full object-cover"
+            />
+          </div>
 
           <AdBlock slot="3344556677" className="mb-8" />
 

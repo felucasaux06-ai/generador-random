@@ -45,30 +45,42 @@ export default function BlogPage() {
             <Link
               key={article.slug}
               href={`/blog/${article.slug}`}
-              className="group bg-gray-800 border border-gray-700 rounded-2xl p-6 hover:border-blue-600/50 hover:bg-gray-800/80 transition-all duration-200"
+              className="group bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden hover:border-blue-600/50 transition-all duration-200"
             >
-              <div className="flex items-center gap-2 mb-3">
-                <span className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${CATEGORY_COLORS[article.category] || 'bg-gray-700/50 text-gray-400 border-gray-600'}`}>
+              {/* Thumbnail */}
+              <div className="relative w-full h-48 overflow-hidden">
+                <img
+                  src={`${article.image}&w=600&h=300`}
+                  alt={article.imageAlt}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
+                <span className={`absolute top-3 left-3 text-xs font-semibold px-2.5 py-1 rounded-full border backdrop-blur-sm ${CATEGORY_COLORS[article.category] || 'bg-gray-700/50 text-gray-400 border-gray-600'}`}>
                   {article.category}
                 </span>
-                <span className="text-gray-600 text-xs">{article.readTime} min de lectura</span>
               </div>
 
-              <h2 className="text-white font-bold text-lg leading-snug mb-2 group-hover:text-blue-400 transition-colors">
-                {article.title}
-              </h2>
+              {/* Content */}
+              <div className="p-6">
+                <h2 className="text-white font-bold text-lg leading-snug mb-2 group-hover:text-blue-400 transition-colors">
+                  {article.title}
+                </h2>
 
-              <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3">
-                {article.description}
-              </p>
+                <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-2">
+                  {article.description}
+                </p>
 
-              <div className="flex items-center justify-between">
-                <time className="text-gray-600 text-xs" dateTime={article.date}>
-                  {article.dateFormatted}
-                </time>
-                <span className="text-blue-400 text-sm font-medium group-hover:underline">
-                  Leer artículo →
-                </span>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3 text-xs text-gray-600">
+                    <time dateTime={article.date}>{article.dateFormatted}</time>
+                    <span>·</span>
+                    <span>{article.readTime} min</span>
+                  </div>
+                  <span className="text-blue-400 text-sm font-medium group-hover:underline">
+                    Leer →
+                  </span>
+                </div>
               </div>
             </Link>
           ))}
