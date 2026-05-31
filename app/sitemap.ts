@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/como-funciona-la-generacion-aleatoria`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/blog/guia-generadores-aleatorios-online-2026`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/blog/como-hacer-un-sorteo-aleatorio-justo-online`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/blog/como-crear-contrasenas-seguras`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/acerca`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 },
     { url: `${base}/contacto`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 },
     { url: `${base}/disclaimer`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },

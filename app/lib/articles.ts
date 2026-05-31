@@ -471,6 +471,135 @@ export const ARTICLES: Article[] = [
 `,
   },
   {
+    slug: 'como-crear-contrasenas-seguras',
+    title: 'Contraseñas seguras: cómo crearlas (y por qué las tuyas probablemente no lo son)',
+    metaTitle: 'Cómo crear contraseñas seguras — Guía completa 2026',
+    description: 'Aprendé a crear contraseñas que nadie puede hackear. Qué hace insegura a una contraseña, cómo funciona un ataque de fuerza bruta y cómo usar un generador correctamente.',
+    date: '2026-05-31',
+    dateFormatted: '31 de mayo de 2026',
+    readTime: 8,
+    keywords: ['contraseña segura', 'cómo crear contraseñas seguras', 'generador de contraseñas', 'contraseña difícil de hackear', 'seguridad de contraseñas 2026'],
+    category: 'Tecnología',
+    image: 'https://images.unsplash.com/photo-1518932945647-7a1c969f8be2?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Persona usando smartphone con aplicaciones de seguridad',
+    content: `
+<p>El 80% de las filtraciones de datos implica contraseñas débiles o reutilizadas. Tu contraseña de banco probablemente es insegura. La de tu email, también. Y si usás la misma en varios sitios, una sola filtración compromete todo.</p>
+
+<p>Esta guía te explica qué hace insegura a una contraseña, cómo piensan los hackers cuando intentan descifrarlas, y cómo usar un <a href="/generadores/contrasenas">generador de contraseñas</a> para protegerte de verdad.</p>
+
+<h2>Por qué tu contraseña probablemente es débil</h2>
+
+<p>Las personas creamos contraseñas siguiendo patrones predecibles. Los sistemas de hackeo los conocen todos:</p>
+
+<ul>
+<li><strong>Palabras del diccionario:</strong> "perro", "casa", "argentina" — los ataques de diccionario prueban millones de palabras por segundo.</li>
+<li><strong>Sustituciones obvias:</strong> "p3rr0", "c4s4" — los algoritmos modernos incluyen estas variantes automáticamente.</li>
+<li><strong>Datos personales:</strong> fechas de nacimiento, nombres de mascotas, equipos de fútbol — fáciles de encontrar en redes sociales.</li>
+<li><strong>Patrones de teclado:</strong> "qwerty", "123456", "asdfgh" — están en las primeras posiciones de todas las listas de contraseñas más comunes.</li>
+<li><strong>Mayúscula al principio + número al final:</strong> "Perro123" — este patrón es tan común que todos los sistemas de cracking lo prueban primero.</li>
+</ul>
+
+<h2>Cómo funciona un ataque de fuerza bruta</h2>
+
+<p>Un ataque de fuerza bruta prueba todas las combinaciones posibles hasta encontrar la correcta. La velocidad depende del hardware, pero con GPUs modernas se pueden probar <strong>miles de millones de contraseñas por segundo</strong>.</p>
+
+<p>Cuánto tarda en crackearse una contraseña según su longitud (combinando letras minúsculas, mayúsculas y números):</p>
+
+<table>
+<thead>
+<tr><th>Longitud</th><th>Tiempo estimado</th></tr>
+</thead>
+<tbody>
+<tr><td>6 caracteres</td><td>Menos de 1 segundo</td></tr>
+<tr><td>8 caracteres</td><td>Menos de 1 hora</td></tr>
+<tr><td>10 caracteres</td><td>Aproximadamente 1 semana</td></tr>
+<tr><td>12 caracteres</td><td>Varios siglos</td></tr>
+<tr><td>16 caracteres</td><td>Prácticamente imposible</td></tr>
+</tbody>
+</table>
+
+<p>Agregar símbolos (!@#$%) multiplica exponencialmente el tiempo necesario. Una contraseña de 12 caracteres con símbolos puede tardar más tiempo en crackearse que la edad del universo.</p>
+
+<h2>Las 4 reglas de una contraseña realmente segura</h2>
+
+<h3>1. Longitud ante todo</h3>
+
+<p>La longitud es el factor más importante. Cada carácter adicional multiplica exponencialmente las combinaciones posibles. El mínimo recomendado hoy es <strong>12 caracteres para cuentas normales</strong> y <strong>16+ para cuentas críticas</strong> (banco, email principal, redes sociales).</p>
+
+<h3>2. Mezcla de tipos de caracteres</h3>
+
+<p>Combiná obligatoriamente:</p>
+<ul>
+<li>Letras minúsculas (a-z)</li>
+<li>Letras mayúsculas (A-Z)</li>
+<li>Números (0-9)</li>
+<li>Símbolos (!@#$%^&amp;*)</li>
+</ul>
+
+<p>Cada tipo de carácter que agregás amplía enormemente el espacio de búsqueda para un atacante.</p>
+
+<h3>3. Nunca reutilices contraseñas</h3>
+
+<p>Una contraseña perfecta reutilizada en 10 sitios es equivalente a tener 10 contraseñas débiles. Cuando una base de datos se filtra (y pasa constantemente), los atacantes prueban las contraseñas encontradas en todos los demás servicios populares. Esto se llama <em>credential stuffing</em>.</p>
+
+<h3>4. Sin información personal</h3>
+
+<p>Nada de nombres, fechas, equipos, mascotas ni nada que pueda encontrarse en tus redes sociales. Un atacante que te tenga en la mira va a probar toda esa información antes de pasar a la fuerza bruta.</p>
+
+<h2>Cómo usar el generador de contraseñas correctamente</h2>
+
+<p>El <a href="/generadores/contrasenas">generador de contraseñas de GeneradorRandom</a> crea contraseñas verdaderamente aleatorias que cumplen todas las reglas automáticamente. Así se usa bien:</p>
+
+<ol>
+<li><strong>Longitud mínima 16:</strong> el slider va de 8 a 32 caracteres. Para cuentas importantes, ponelo en 16 o más.</li>
+<li><strong>Activá todos los tipos:</strong> mayúsculas, números y símbolos activados simultáneamente.</li>
+<li><strong>No modifiques la contraseña generada:</strong> la tentación de cambiar algunos caracteres para "recordarla mejor" la hace menos aleatoria y más vulnerable.</li>
+<li><strong>Copiá directo:</strong> usá el botón "Copiar" para evitar errores de tipeo.</li>
+<li><strong>Generá una diferente para cada cuenta:</strong> nunca reutilices.</li>
+</ol>
+
+<p>La barra de fortaleza te muestra en tiempo real qué tan segura es la contraseña generada. Apuntá siempre a "Muy fuerte" (verde).</p>
+
+<h2>El problema real: cómo recordar contraseñas imposibles de recordar</h2>
+
+<p>Si cada cuenta tiene una contraseña diferente de 16+ caracteres completamente aleatoria, es humanamente imposible recordarlas todas. La solución no es simplificarlas: es usar un <strong>gestor de contraseñas</strong>.</p>
+
+<p>Un gestor de contraseñas guarda todas tus contraseñas encriptadas y las completa automáticamente cuando entrás a un sitio. Solo necesitás recordar una: la contraseña maestra del gestor.</p>
+
+<p>Los más recomendados:</p>
+
+<ul>
+<li><strong>Bitwarden</strong> — gratuito, open source, multiplataforma. El más recomendado para la mayoría de los usuarios.</li>
+<li><strong>1Password</strong> — pago, pero con excelente UX y funciones avanzadas.</li>
+<li><strong>KeePass</strong> — gratuito, local (sin nube), para los más paranoicos.</li>
+</ul>
+
+<h2>Autenticación en dos factores: el complemento esencial</h2>
+
+<p>Incluso con una contraseña perfecta, si alguien la obtiene (por phishing, por ejemplo), puede acceder a tu cuenta. La autenticación en dos factores (2FA) agrega una segunda capa: aunque tengan tu contraseña, necesitan también tu teléfono.</p>
+
+<p>Activá 2FA en todas las cuentas que lo permitan, especialmente email, banco y redes sociales. Las apps de autenticación (Google Authenticator, Authy) son más seguras que el SMS.</p>
+
+<h2>Señales de que tu contraseña fue comprometida</h2>
+
+<ul>
+<li>Recibís emails de inicio de sesión desde lugares o dispositivos desconocidos</li>
+<li>Aparecen actividades en tus cuentas que vos no hiciste</li>
+<li>Te llegan reseteos de contraseña que no solicitaste</li>
+<li>Tus contactos reciben mensajes raros desde tu cuenta</li>
+</ul>
+
+<p>Si sospechás que una contraseña fue comprometida, cambiala inmediatamente y revisá si la usaste en otros sitios para cambiarla también allí.</p>
+
+<h2>Conclusión</h2>
+
+<p>La seguridad de tus contraseñas es la primera línea de defensa de toda tu vida digital. La buena noticia es que mejorarla no requiere conocimientos técnicos: un <a href="/generadores/contrasenas">generador de contraseñas</a> + un gestor de contraseñas + 2FA activo en las cuentas principales es todo lo que necesitás para estar protegido como el 99% de los profesionales de seguridad.</p>
+
+<p>Empezá hoy: generá una contraseña nueva para tu cuenta de email principal. Esa sola acción mejora tu seguridad más que cualquier otra cosa.</p>
+`,
+  },
+
+  {
     slug: 'como-hacer-un-sorteo-aleatorio-justo-online',
     title: 'Cómo hacer un sorteo aleatorio justo online: guía paso a paso',
     metaTitle: 'Cómo hacer un sorteo aleatorio justo online — Guía completa 2026',
