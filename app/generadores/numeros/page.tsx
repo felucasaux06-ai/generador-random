@@ -110,7 +110,7 @@ export default function GeneradorNumeros() {
                 type="number"
                 value={minVal}
                 onChange={e => { setMinVal(Number(e.target.value)); setError('') }}
-                className="w-full bg-zinc-700 border border-zinc-600 rounded-xl px-4 py-3 text-white text-2xl font-bold text-center focus:outline-none focus:border-fuchsia-500 transition-colors"
+                className="w-full bg-zinc-700 border border-zinc-600 rounded-xl px-4 py-3 text-white text-2xl font-bold text-center focus:outline-none focus:border-lime-400 transition-colors"
                 aria-label="Número mínimo"
               />
             </div>
@@ -123,7 +123,7 @@ export default function GeneradorNumeros() {
                 type="number"
                 value={maxVal}
                 onChange={e => { setMaxVal(Number(e.target.value)); setError('') }}
-                className="w-full bg-zinc-700 border border-zinc-600 rounded-xl px-4 py-3 text-white text-2xl font-bold text-center focus:outline-none focus:border-fuchsia-500 transition-colors"
+                className="w-full bg-zinc-700 border border-zinc-600 rounded-xl px-4 py-3 text-white text-2xl font-bold text-center focus:outline-none focus:border-lime-400 transition-colors"
                 aria-label="Número máximo"
               />
             </div>
@@ -141,7 +141,7 @@ export default function GeneradorNumeros() {
               <label htmlFor="cantidad" className="text-zinc-400 text-sm font-medium">
                 {t.numeros.qty}
               </label>
-              <span className="text-fuchsia-400 font-bold text-lg">{cantidad}</span>
+              <span className="text-lime-400 font-bold text-lg">{cantidad}</span>
             </div>
             <input
               id="cantidad"
@@ -150,7 +150,7 @@ export default function GeneradorNumeros() {
               max={10}
               value={cantidad}
               onChange={e => setCantidad(Number(e.target.value))}
-              className="w-full accent-fuchsia-600"
+              className="w-full accent-lime-400"
               aria-label={`Generar ${cantidad} número${cantidad > 1 ? 's' : ''}`}
             />
             <div className="flex justify-between text-xs text-zinc-500 mt-1">
@@ -169,7 +169,7 @@ export default function GeneradorNumeros() {
                   onClick={() => aplicarRango(r.min, r.max)}
                   className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors border ${
                     minVal === r.min && maxVal === r.max
-                      ? 'bg-fuchsia-600/20 border-fuchsia-600/50 text-fuchsia-400'
+                      ? 'bg-lime-400/10 border-lime-400/40 text-lime-400'
                       : 'bg-zinc-700 border-zinc-600 text-zinc-400 hover:text-white hover:border-zinc-500'
                   }`}
                 >
@@ -184,7 +184,7 @@ export default function GeneradorNumeros() {
         <button
           onClick={generar}
           disabled={animando}
-          className="w-full bg-fuchsia-600 hover:bg-fuchsia-500 disabled:opacity-60 text-white font-black py-4 rounded-2xl text-xl transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-fuchsia-900/30 mb-6"
+          className="w-full bg-lime-400 hover:bg-lime-300 disabled:opacity-60 text-black font-black py-4 rounded-2xl text-xl transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-black/30 mb-6"
           aria-label="Generar número aleatorio"
         >
           {animando ? t.numeros.generating : t.numeros.generate}

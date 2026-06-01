@@ -22,10 +22,7 @@ export default function FaqSection({ faqs, titulo = 'Preguntas Frecuentes' }: Fa
     mainEntity: faqs.map((faq) => ({
       '@type': 'Question',
       name: faq.pregunta,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.respuesta,
-      },
+      acceptedAnswer: { '@type': 'Answer', text: faq.respuesta },
     })),
   }
 
@@ -37,28 +34,28 @@ export default function FaqSection({ faqs, titulo = 'Preguntas Frecuentes' }: Fa
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      <h2 id="faq-titulo" className="text-2xl font-bold text-white mb-6 text-center">
+      <p className="text-[11px] font-mono text-[#333] uppercase tracking-[0.2em] mb-3">// faq</p>
+      <h2 id="faq-titulo" className="text-2xl font-black text-white mb-8">
         {titulo}
       </h2>
 
-      <div className="space-y-3">
+      <div className="space-y-px bg-[#111]">
         {faqs.map((faq, i) => (
-          <div
-            key={i}
-            className="bg-zinc-800/60 border border-zinc-700 rounded-xl overflow-hidden"
-          >
+          <div key={i} className="bg-[#080808] overflow-hidden">
             <button
               onClick={() => setAbierto(abierto === i ? null : i)}
-              className="w-full flex items-center justify-between p-5 text-left hover:bg-zinc-800 transition-colors"
+              className="w-full flex items-center justify-between p-5 text-left hover:bg-[#0c0c0c] transition-colors group"
               aria-expanded={abierto === i}
             >
-              <span className="text-white font-medium pr-4">{faq.pregunta}</span>
-              <span className={`text-zinc-400 text-xl flex-shrink-0 transition-transform duration-200 ${abierto === i ? 'rotate-45' : ''}`}>
+              <span className="text-[#ccc] font-medium pr-4 text-sm group-hover:text-white transition-colors">
+                {faq.pregunta}
+              </span>
+              <span className={`text-[#bbff00] text-lg flex-shrink-0 transition-transform duration-200 font-mono ${abierto === i ? 'rotate-45' : ''}`}>
                 +
               </span>
             </button>
             {abierto === i && (
-              <div className="px-5 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-zinc-700 pt-4 animate-fade-in">
+              <div className="px-5 pb-5 text-[#444] text-sm leading-relaxed border-t border-[#111] pt-4 animate-fade-in">
                 {faq.respuesta}
               </div>
             )}

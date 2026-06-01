@@ -84,7 +84,7 @@ export default function GeneradorNombres() {
               onClick={() => cambiarCategoria(cat.id)}
               className={`flex flex-col items-center p-4 rounded-xl border-2 transition-all duration-200 ${
                 categoria === cat.id
-                  ? 'border-fuchsia-500 bg-fuchsia-600/20 text-white'
+                  ? 'border-lime-400 bg-lime-400/10 text-lime-400'
                   : 'border-zinc-700 bg-zinc-800 text-zinc-400 hover:border-zinc-500 hover:text-white'
               }`}
               aria-pressed={categoria === cat.id}
@@ -113,7 +113,7 @@ export default function GeneradorNombres() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <button
               onClick={generar}
-              className="bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-bold px-8 py-3 rounded-xl text-lg transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-fuchsia-900/30"
+              className="bg-lime-400 hover:bg-lime-300 text-black font-bold px-8 py-3 rounded-xl text-lg transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-black/30"
               aria-label={`Generar ${CATEGORIAS.find((c) => c.id === categoria)?.label}`}
             >
               {t.nombres.generate}

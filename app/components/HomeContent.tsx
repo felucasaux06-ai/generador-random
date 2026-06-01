@@ -5,62 +5,54 @@ import AdBlock from './AdBlock'
 import FlagArg from './FlagArg'
 import { useLanguage } from '../contexts/LanguageContext'
 
-const BORDER: Record<string, string> = {
-  blue:    'hover:border-blue-600/40',
-  emerald: 'hover:border-emerald-600/40',
-  purple:  'hover:border-purple-600/40',
-  amber:   'hover:border-amber-600/40',
-  rose:    'hover:border-rose-600/40',
-  sky:     'hover:border-sky-600/40',
-  green:   'hover:border-green-600/40',
-  violet:  'hover:border-violet-600/40',
-  yellow:  'hover:border-yellow-600/40',
-}
-
-const ICON_BG: Record<string, string> = {
-  blue:    'bg-blue-600/15 text-blue-400',
-  emerald: 'bg-emerald-600/15 text-emerald-400',
-  purple:  'bg-purple-600/15 text-purple-400',
-  amber:   'bg-amber-600/15 text-amber-400',
-  rose:    'bg-rose-600/15 text-rose-400',
-  sky:     'bg-sky-600/15 text-sky-400',
-  green:   'bg-green-600/15 text-green-400',
-  violet:  'bg-violet-600/15 text-violet-400',
-  yellow:  'bg-yellow-600/15 text-yellow-400',
-}
-
 export default function HomeContent() {
   const { t } = useLanguage()
 
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden py-14 md:py-24 px-4">
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] md:w-[600px] h-[200px] md:h-[300px] bg-fuchsia-600/10 rounded-full blur-3xl" />
-        </div>
+      <section className="relative overflow-hidden pt-14 pb-10 md:pt-24 md:pb-16 px-4">
+        {/* Grid decoration top-right */}
+        <div className="absolute top-0 right-0 w-72 h-72 md:w-96 md:h-96 pointer-events-none opacity-[0.04]" aria-hidden="true"
+          style={{
+            backgroundImage: 'linear-gradient(#bbff00 1px, transparent 1px), linear-gradient(90deg, #bbff00 1px, transparent 1px)',
+            backgroundSize: '32px 32px',
+          }}
+        />
+        {/* Lime glow corner */}
+        <div className="absolute top-0 right-0 w-64 h-64 pointer-events-none" aria-hidden="true"
+          style={{ background: 'radial-gradient(circle at top right, rgba(187,255,0,0.06) 0%, transparent 70%)' }}
+        />
 
-        <div className="relative max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-800 rounded-full px-4 py-1.5 text-xs text-zinc-400 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true" />
+        <div className="relative max-w-5xl mx-auto">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 border border-[#1f1f1f] px-3 py-1.5 text-[11px] font-mono text-[#444] mb-8 uppercase tracking-widest">
+            <span className="w-1.5 h-1.5 bg-[#bbff00] animate-pulse inline-block" aria-hidden="true" />
             {t.home.badge}
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 leading-tight tracking-tight">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tight mb-6">
             {t.home.heroTitle1}<br />
-            <span className="gradient-text">{t.home.heroTitle2}</span>
+            <span className="text-[#bbff00]">{t.home.heroTitle2}</span>
           </h1>
 
-          <p className="text-zinc-400 text-base md:text-xl mb-8 max-w-xl mx-auto leading-relaxed px-2">
-            {t.home.heroSubtitle}
+          <p className="text-[#444] text-sm md:text-base mb-10 max-w-lg font-mono leading-relaxed">
+            <span className="text-[#bbff00]">$</span> {t.home.heroSubtitle}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center px-4 sm:px-0">
-            <Link href="/generadores/nombres" className="btn-primary text-base text-center">
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link
+              href="/generadores/nombres"
+              className="btn-primary text-xs text-center uppercase tracking-widest"
+            >
               {t.home.cta}
             </Link>
-            <Link href="/generadores/chistes-argentinos" className="btn-secondary text-base text-center flex items-center justify-center gap-2">
-              <FlagArg className="w-5 h-3.5" /> {t.home.tools.find(t => t.href === '/generadores/chistes-argentinos')?.title ?? 'Chistes Argentinos'}
+            <Link
+              href="/generadores/chistes-argentinos"
+              className="btn-secondary text-xs text-center flex items-center justify-center gap-2 uppercase tracking-widest"
+            >
+              <FlagArg className="w-5 h-3.5" />
+              {t.home.tools.find(h => h.href === '/generadores/chistes-argentinos')?.title ?? 'Chistes Argentinos'}
             </Link>
           </div>
         </div>
@@ -72,39 +64,44 @@ export default function HomeContent() {
       </div>
 
       {/* Grid herramientas */}
-      <section className="py-10 md:py-16 px-4" aria-labelledby="herramientas-h2">
+      <section className="py-12 md:py-20 px-4" aria-labelledby="herramientas-h2">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 id="herramientas-h2" className="text-2xl md:text-3xl font-bold text-white mb-2">
+          <div className="mb-10 md:mb-14">
+            <p className="text-[11px] font-mono text-[#333] uppercase tracking-[0.2em] mb-3">// herramientas</p>
+            <h2 id="herramientas-h2" className="text-2xl md:text-4xl font-black text-white leading-tight">
               {t.home.toolsTitle}
             </h2>
-            <p className="text-zinc-500 text-sm md:text-base">
-              {t.home.toolsSubtitle}
-            </p>
+            <p className="text-[#333] text-sm mt-2 font-mono">{t.home.toolsSubtitle}</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+          {/* Mosaic grid — gap creates the border effect */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#141414]">
             {t.home.tools.map((h) => (
               <Link
                 key={h.href}
                 href={h.href}
-                className={`group bg-zinc-900 border border-zinc-800 ${BORDER[h.color]} rounded-2xl p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 active:scale-[0.98]`}
+                className="group relative bg-[#080808] p-6 md:p-7 transition-all duration-200 hover:bg-[#0c0c0c]"
               >
-                <div className="flex items-start justify-between mb-3">
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${ICON_BG[h.color]}`}>
-                    {h.flag
-                      ? <FlagArg className="w-6 h-4" />
-                      : <span className="text-lg" aria-hidden="true">{h.emoji}</span>
-                    }
+                {/* Left border accent — reveals on hover */}
+                <span className="absolute left-0 top-0 bottom-0 w-0.5 bg-transparent group-hover:bg-[#bbff00] transition-all duration-200" aria-hidden="true" />
+
+                <div className="flex items-start justify-between mb-5">
+                  <div className="text-3xl" aria-hidden="true">
+                    {h.flag ? <FlagArg className="w-8 h-5 mt-1" /> : h.emoji}
                   </div>
-                  <span className="text-xs text-zinc-500 bg-zinc-800 px-2 py-1 rounded-full border border-zinc-700 flex-shrink-0">
+                  <span className="text-[10px] font-mono text-[#2a2a2a] uppercase tracking-widest border border-[#1a1a1a] px-2 py-1">
                     {h.badge}
                   </span>
                 </div>
-                <h3 className="text-white font-semibold text-base mb-1">{h.title}</h3>
-                <p className="text-zinc-500 text-sm leading-relaxed">{h.desc}</p>
-                <div className="mt-3 text-xs font-medium text-zinc-600 group-hover:text-fuchsia-400 transition-colors">
+
+                <h3 className="text-white font-bold text-base mb-2 group-hover:text-[#bbff00] transition-colors duration-200">
+                  {h.title}
+                </h3>
+                <p className="text-[#3a3a3a] text-sm leading-relaxed">{h.desc}</p>
+
+                <div className="mt-5 flex items-center gap-1.5 text-[11px] font-mono text-[#2a2a2a] group-hover:text-[#bbff00] transition-colors duration-200 uppercase tracking-widest">
                   {t.home.open}
+                  <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
                 </div>
               </Link>
             ))}
@@ -113,28 +110,31 @@ export default function HomeContent() {
       </section>
 
       {/* Por qué */}
-      <section className="py-10 md:py-16 px-4 bg-zinc-900/40 border-y border-zinc-800/60">
+      <section className="py-12 md:py-16 px-4 border-y border-[#111]">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-xl md:text-2xl font-bold text-white text-center mb-8">
-            {t.home.whyTitle}
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
+          <div className="mb-10">
+            <p className="text-[11px] font-mono text-[#333] uppercase tracking-[0.2em] mb-3">// por qué elegirnos</p>
+            <h2 className="text-2xl md:text-3xl font-black text-white">{t.home.whyTitle}</h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#111]">
             {t.home.features.map((item) => (
-              <div key={item.title} className="text-center p-4 md:p-5 rounded-xl bg-zinc-900 border border-zinc-800">
-                <div className="text-2xl md:text-3xl mb-2" aria-hidden="true">{item.icon}</div>
-                <h3 className="text-white font-semibold text-sm md:text-base mb-1">{item.title}</h3>
-                <p className="text-zinc-500 text-xs md:text-sm leading-relaxed">{item.desc}</p>
+              <div key={item.title} className="bg-[#080808] p-6 md:p-8">
+                <div className="text-2xl mb-4" aria-hidden="true">{item.icon}</div>
+                <h3 className="text-white font-bold text-sm mb-2">{item.title}</h3>
+                <p className="text-[#3a3a3a] text-xs leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contenido SEO */}
-      <section className="py-10 md:py-16 px-4">
+      {/* SEO */}
+      <section className="py-12 md:py-16 px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-xl md:text-2xl font-bold text-white mb-5">{t.home.seoTitle}</h2>
-          <div className="text-zinc-400 text-sm md:text-base leading-relaxed space-y-4">
+          <p className="text-[11px] font-mono text-[#333] uppercase tracking-[0.2em] mb-3">// info</p>
+          <h2 className="text-xl md:text-2xl font-black text-white mb-6">{t.home.seoTitle}</h2>
+          <div className="text-[#444] text-sm md:text-base leading-relaxed space-y-4">
             <p>{t.home.seoP1}</p>
             <p>{t.home.seoP2}</p>
             <p>{t.home.seoP3}</p>

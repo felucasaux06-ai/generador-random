@@ -151,7 +151,7 @@ export default function GeneradorColores() {
           <div className="px-4 pb-4 flex flex-col sm:flex-row gap-3">
             <button
               onClick={regenerar}
-              className="flex-1 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-200 hover:scale-105 active:scale-95"
+              className="flex-1 bg-lime-400 hover:bg-lime-300 text-black font-bold py-3 px-6 rounded-xl transition-all duration-200 hover:scale-105 active:scale-95"
               aria-label="Generar nueva paleta de colores"
             >
               {t.colores.generate}

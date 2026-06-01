@@ -79,7 +79,7 @@ export default function ChistesArgentinos() {
         {/* Botón principal */}
         <button
           onClick={generar}
-          className="w-full bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-bold py-4 px-6 rounded-2xl text-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-fuchsia-900/30 mb-5 flex items-center justify-center gap-2"
+          className="w-full bg-lime-400 hover:bg-lime-300 text-black font-bold py-4 px-6 rounded-2xl text-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-black/30 mb-5 flex items-center justify-center gap-2"
           aria-label="Generar chiste argentino"
         >
           <FlagArg className="w-6 h-4" />
@@ -98,14 +98,14 @@ export default function ChistesArgentinos() {
             {!revelado ? (
               <button
                 onClick={() => setRevelado(true)}
-                className="w-full border-2 border-dashed border-fuchsia-500/40 text-fuchsia-400 hover:border-fuchsia-500 hover:bg-fuchsia-600/10 font-bold py-4 px-6 rounded-xl transition-all text-base active:scale-[0.98]"
+                className="w-full border-2 border-dashed border-lime-400/40 text-lime-400 hover:border-lime-400 hover:bg-lime-400/10 font-bold py-4 px-6 rounded-xl transition-all text-base active:scale-[0.98]"
               >
                 {t.chistesArg.reveal}
               </button>
             ) : (
-              <div className="bg-fuchsia-950/40 border border-fuchsia-800/50 rounded-xl p-4 animate-fade-in">
-                <p className="text-xs font-bold text-fuchsia-500 uppercase tracking-wider mb-2">{t.chistesArg.punchlineLabel}</p>
-                <p className="text-fuchsia-200 text-lg font-bold leading-relaxed" aria-live="polite">
+              <div className="bg-lime-950/20 border border-lime-800/30 rounded-xl p-4 animate-fade-in">
+                <p className="text-xs font-bold text-lime-500 uppercase tracking-wider mb-2">{t.chistesArg.punchlineLabel}</p>
+                <p className="text-lime-200 text-lg font-bold leading-relaxed" aria-live="polite">
                   {chiste.punchline} 😂
                 </p>
               </div>
