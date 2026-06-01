@@ -11,8 +11,8 @@
   --border:  #2C2015;
   --border2: #3A2C1C;
   --text:    #F2E9D4;
-  --muted:   #A09080;
-  --muted2:  #7A6A58;
+  --muted:   #C0AE9C;
+  --muted2:  #9A8B7A;
   --accent:  #E8531E;
   --accent2: #D4481A;
   --accent-dim: rgba(232, 83, 30, 0.12);
@@ -23,6 +23,8 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Josefin Sans', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
   background-color: var(--bg);
   color: var(--text);
 }

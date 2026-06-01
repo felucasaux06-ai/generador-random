@@ -37,14 +37,14 @@ export default function Footer() {
           <p className="font-display text-2xl mb-4" style={{ color: '#F2E9D4' }}>
             GR<span style={{ color: '#E8531E' }}>.</span>
           </p>
-          <p className="text-sm leading-relaxed font-mono" style={{ color: '#8A7862' }}>
+          <p className="text-sm leading-relaxed font-mono" style={{ color: '#B8A898' }}>
             {t.footer.tagline}
           </p>
         </div>
 
         {/* Herramientas */}
         <div>
-          <h3 className="font-mono text-xs mb-5 uppercase tracking-[0.2em]" style={{ color: '#5A4A35' }}>
+          <h3 className="font-mono text-xs mb-5 uppercase tracking-[0.2em]" style={{ color: '#7A6A55' }}>
             {t.footer.tools}
           </h3>
           <ul className="space-y-2.5">
@@ -53,9 +53,9 @@ export default function Footer() {
                 <Link
                   href={h.href}
                   className="text-sm transition-colors duration-150"
-                  style={{ color: '#8A7862' }}
+                  style={{ color: '#B8A898' }}
                   onMouseEnter={e => (e.currentTarget.style.color = '#E8531E')}
-                  onMouseLeave={e => (e.currentTarget.style.color = '#8A7862')}
+                  onMouseLeave={e => (e.currentTarget.style.color = '#B8A898')}
                 >
                   {h.label}
                 </Link>
@@ -66,7 +66,7 @@ export default function Footer() {
 
         {/* Legal */}
         <div>
-          <h3 className="font-mono text-xs mb-5 uppercase tracking-[0.2em]" style={{ color: '#5A4A35' }}>
+          <h3 className="font-mono text-xs mb-5 uppercase tracking-[0.2em]" style={{ color: '#7A6A55' }}>
             {t.footer.site}
           </h3>
           <ul className="space-y-2.5">
@@ -82,9 +82,9 @@ export default function Footer() {
                 <Link
                   href={item.href}
                   className="text-sm transition-colors duration-150"
-                  style={{ color: '#8A7862' }}
+                  style={{ color: '#B8A898' }}
                   onMouseEnter={e => (e.currentTarget.style.color = '#E8531E')}
-                  onMouseLeave={e => (e.currentTarget.style.color = '#8A7862')}
+                  onMouseLeave={e => (e.currentTarget.style.color = '#B8A898')}
                 >
                   {item.label}
                 </Link>
@@ -92,13 +92,13 @@ export default function Footer() {
             ))}
           </ul>
           <div className="mt-6 p-3" style={{ border: '1px solid #1E160D', background: '#0D0A06' }}>
-            <p className="text-xs font-mono" style={{ color: '#5A4A35' }}>{t.footer.badges}</p>
+            <p className="text-xs font-mono" style={{ color: '#7A6A55' }}>{t.footer.badges}</p>
           </div>
         </div>
       </div>
 
       <div className="py-5 px-5" style={{ borderTop: '1px solid #1E160D' }}>
-        <p className="text-center text-xs font-mono" style={{ color: '#5A4A35' }}>
+        <p className="text-center text-xs font-mono" style={{ color: '#7A6A55' }}>
           {t.footer.copyright(year)}
         </p>
       </div>

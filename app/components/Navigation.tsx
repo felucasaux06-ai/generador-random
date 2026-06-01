@@ -62,7 +62,7 @@ export default function Navigation() {
                 key={l.href}
                 href={l.href}
                 className="relative flex items-center gap-1 px-2.5 py-5 text-xs font-semibold tracking-widest uppercase transition-all duration-150 whitespace-nowrap"
-                style={{ color: active ? '#E8531E' : '#8A7862' }}
+                style={{ color: active ? '#E8531E' : '#B8A898' }}
                 aria-current={active ? 'page' : undefined}
               >
                 {active && (
@@ -90,7 +90,7 @@ export default function Navigation() {
             className="h-7 px-3 text-xs font-bold font-mono tracking-widest transition-all duration-150"
             style={{
               border: '1px solid #2C2015',
-              color: '#8A7862',
+              color: '#B8A898',
               background: 'transparent',
             }}
             onMouseEnter={e => {
@@ -98,8 +98,8 @@ export default function Navigation() {
               ;(e.currentTarget as HTMLElement).style.borderColor = '#E8531E'
             }}
             onMouseLeave={e => {
-              (e.currentTarget as HTMLElement).style.color = '#8A7862'
-              ;(e.currentTarget as HTMLElement).style.borderColor = '#5A4A35'
+              (e.currentTarget as HTMLElement).style.color = '#B8A898'
+              ;(e.currentTarget as HTMLElement).style.borderColor = '#7A6A55'
             }}
           >
             {t.nav.langToggle}
@@ -107,17 +107,17 @@ export default function Navigation() {
 
           <button
             className="md:hidden w-9 h-9 flex flex-col justify-center items-center gap-1.5 transition-colors"
-            style={{ color: '#8A7862' }}
+            style={{ color: '#B8A898' }}
             onClick={() => setOpen(!open)}
             aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
             aria-expanded={open}
           >
             <span className={`block w-5 h-px transition-all duration-200 origin-center`}
-              style={{ background: '#A09080', transform: open ? 'rotate(45deg) translateY(7px)' : 'none' }} />
+              style={{ background: '#C0AE9C', transform: open ? 'rotate(45deg) translateY(7px)' : 'none' }} />
             <span className={`block w-5 h-px transition-all duration-200`}
-              style={{ background: '#A09080', opacity: open ? 0 : 1 }} />
+              style={{ background: '#C0AE9C', opacity: open ? 0 : 1 }} />
             <span className={`block w-5 h-px transition-all duration-200 origin-center`}
-              style={{ background: '#A09080', transform: open ? 'rotate(-45deg) translateY(-7px)' : 'none' }} />
+              style={{ background: '#C0AE9C', transform: open ? 'rotate(-45deg) translateY(-7px)' : 'none' }} />
           </button>
         </div>
       </div>
@@ -133,7 +133,7 @@ export default function Navigation() {
                 href={l.href}
                 className="flex items-center gap-3 px-4 py-3 text-sm font-semibold uppercase tracking-wider transition-all"
                 style={{
-                  color: active ? '#E8531E' : '#8A7862',
+                  color: active ? '#E8531E' : '#B8A898',
                   borderLeft: active ? '2px solid #E8531E' : '2px solid transparent',
                   background: active ? 'rgba(232, 83, 30, 0.06)' : 'transparent',
                 }}
