@@ -714,161 +714,179 @@ export const ARTICLES: Article[] = [
   },
 
   {
-    slug: 'cara-o-cruz-online-como-funciona',
-    title: 'Cara o Cruz online: cómo funciona y para qué usarlo',
-    metaTitle: 'Cara o Cruz Online — Cómo funciona y para qué sirve (2026)',
-    description: 'Descubrí cómo funciona el generador de cara o cruz online: probabilidades reales, usos cotidianos y por qué es más justo que lanzar una moneda física.',
+    slug: 'paralisis-por-analisis-como-tomar-decisiones',
+    title: 'Parálisis por análisis: por qué no podés decidir (y cómo salir)',
+    metaTitle: 'Parálisis por análisis: por qué no podés decidir y cómo salir — Guía 2026',
+    description: 'La parálisis por análisis te frena cuando más necesitás actuar. Descubrí por qué pasa, cómo reconocerla y técnicas concretas para tomar decisiones sin arrepentirte.',
     date: '2026-05-31',
     dateFormatted: '31 de mayo de 2026',
-    readTime: 6,
-    keywords: ['cara o cruz online', 'tirar moneda online', 'moneda virtual', 'cara o cruz gratis', 'moneda al azar'],
-    category: 'Guías',
-    image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Moneda girando en el aire representando cara o cruz',
+    readTime: 7,
+    keywords: ['parálisis por análisis', 'cómo tomar decisiones', 'no puedo decidir', 'toma de decisiones', 'análisis parálisis'],
+    category: 'Psicología',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Persona mirando papeles con las manos en la cabeza, representando la parálisis por análisis',
     content: `
-<p>Tirar una moneda es uno de los métodos más antiguos del mundo para tomar una decisión. Es simple, rápido y —en teoría— completamente justo. El problema es que no siempre tenés una moneda en el bolsillo, y cuando la tenés, siempre aparece alguien que dice "yo la tiro". Con un generador de <strong>cara o cruz online</strong>, esos problemas desaparecen.</p>
+<p>Llevás cuarenta minutos eligiendo qué ver en Netflix. Abriste seis pestañas comparando auriculares que cuestan lo mismo. Sabés lo que querés pedir en el restaurant pero igual esperás hasta que venga el mozo para decidir. Si algo de esto te suena familiar, probablemente conozcas de primera mano lo que los psicólogos llaman <strong>parálisis por análisis</strong>.</p>
 
-<p>En este artículo te explicamos cómo funciona el lanzador de moneda virtual, qué tan aleatorio es realmente, y en qué situaciones concretas puede salvarte la vida (o al menos una discusión).</p>
+<p>No es pereza ni indecisión de carácter. Es un mecanismo mental bien documentado que nos frena justo cuando más necesitamos actuar. Y lo que es peor: cuanta más información tenemos, más probable es que ocurra.</p>
 
-<h2>¿Cómo funciona un generador de cara o cruz online?</h2>
+<h2>Qué es la parálisis por análisis</h2>
 
-<p>El generador usa <code>Math.random()</code>, una función de JavaScript que produce un número decimal entre 0 y 1 con distribución uniforme. La lógica es tan simple como directa: si el número es menor a 0.5, sale <strong>cara</strong>; si es 0.5 o mayor, sale <strong>cruz</strong>.</p>
+<p>La parálisis por análisis es el estado en el que pensar demasiado en una decisión termina impidiendo tomarla. Ocurre cuando el cerebro interpreta la elección como una amenaza —miedo a equivocarse, a arrepentirse, a perder algo— y entra en un loop de análisis infinito buscando la opción "perfecta" que elimine cualquier riesgo.</p>
 
-<p>Esto garantiza exactamente un 50% de probabilidad para cada resultado en cada lanzamiento. No importa lo que salió antes: cada tirada es completamente independiente. Si salieron diez caras seguidas, la próxima tirada sigue teniendo exactamente 50/50 de chances para cada lado. Eso se llama <em>independencia estadística</em>, y es una propiedad fundamental de los eventos aleatorios.</p>
+<p>El problema es que esa opción perfecta casi nunca existe. Y mientras la buscamos, el costo de no decidir (tiempo perdido, ansiedad, oportunidades que se cierran) suele ser mayor que el costo de haber elegido "mal".</p>
 
-<p>Todo el proceso ocurre en tu propio navegador, sin enviar datos a ningún servidor. La moneda virtual es tan privada como girar una moneda real en tu mesa.</p>
+<p>El término se popularizó en los años 90 pero el fenómeno es tan viejo como el pensamiento humano. El filósofo Bertrand Russell ya lo describía: "El problema de este mundo es que los estúpidos están seguros de todo y los inteligentes están llenos de dudas."</p>
 
-<h2>¿Es más justo que lanzar una moneda física?</h2>
+<h2>Por qué le pasa a todo el mundo (y más a los que piensan más)</h2>
 
-<p>Sorprendentemente, sí. Las monedas físicas no son perfectamente equilibradas: el relieve del diseño, el grosor del borde y la forma en que cada persona lanza influyen en el resultado. Estudios de probabilidad demostraron que una moneda lanzada por una persona tiende a caer del mismo lado que estaba boca arriba al principio, con una leve ventaja de hasta el 51%.</p>
+<p>Paradójicamente, la parálisis por análisis es más común en personas reflexivas, perfeccionistas o muy responsables. Quienes menos se la piensan suelen decidir más rápido, no porque sean mejores en eso, sino porque le asignan menos peso al resultado.</p>
 
-<p>Un generador digital no tiene ninguno de esos sesgos. El resultado es verdaderamente impredecible y sin influencia humana. Nadie puede "tirar bien" una moneda virtual.</p>
+<p>La paradoja de la elección —concepto del psicólogo Barry Schwartz— también juega un rol clave: a más opciones disponibles, más difícil es elegir y más probable es que cualquier elección te deje insatisfecho, porque siempre podés imaginar que "la otra" era mejor. En los años 70 un supermercado promedio tenía 9.000 productos. Hoy tiene más de 40.000. Nuestro cerebro no está diseñado para ese volumen de decisiones.</p>
 
-<h2>Para qué sirve tirar moneda online</h2>
+<h2>Cómo reconocer que estás en parálisis</h2>
 
-<h3>Decidir quién paga</h3>
+<ul>
+<li>Seguís investigando aunque ya tenés suficiente información para decidir.</li>
+<li>Pedís opinión a más y más personas sin llegar a ninguna conclusión.</li>
+<li>Posponés la decisión esperando "el momento correcto" que nunca llega.</li>
+<li>Después de elegir, revisás constantemente si elegiste bien.</li>
+<li>Te sentís más ansioso cuanto más lo pensás, no menos.</li>
+</ul>
 
-<p>El clásico. Dos personas, una cuenta, ninguna quiere pagar. En vez de discutir o hacer el "yo invito, vos la próxima" que nunca se cumple, abrís el generador, definen en voz alta quién es cara y quién es cruz, y tirás. Resultado inmediato, sin drama.</p>
+<p>El dato clave: si reunir más información ya no cambia tu evaluación de las opciones, estás en parálisis. En ese punto, seguir analizando no te acerca a la mejor decisión: solo te aleja del momento de tomarla.</p>
 
-<h3>Elegir la película o el restaurante</h3>
+<h2>Técnicas concretas para salir del loop</h2>
 
-<p>Todos conocemos la situación: "¿Qué querés ver?" — "Lo que vos quieras" — "No, decí algo vos". Una tirada de <strong>moneda al azar</strong> corta el loop en segundos. Si el resultado es cara, gana la propuesta A; si es cruz, gana la propuesta B. Nada más justo.</p>
+<h3>1. Poné un tiempo límite antes de empezar</h3>
 
-<h3>Decidir quién empieza en un juego de mesa</h3>
+<p>Antes de empezar a evaluar opciones, definí cuánto tiempo le vas a dedicar: "voy a pensar esto 10 minutos y decido". Cuando suena el tiempo, elegís con lo que tenés. Este límite artificial obliga al cerebro a priorizar la información más relevante en lugar de buscar la perfecta.</p>
 
-<p>La mayoría de los juegos de mesa necesitan un punto de partida. En vez de buscar el dado más chico o que alguien "elija" mentalmente, usá el <a href="/generadores/moneda">generador de cara o cruz</a>. Si son más de dos jugadores podés hacer rondas eliminatorias: cara avanza, cruz queda afuera, hasta que queda uno.</p>
+<h3>2. Reducí las opciones a dos o tres</h3>
 
-<h3>Sorteos entre dos personas</h3>
+<p>Si tenés doce candidatos para algo, no los evalúes todos juntos. Hacé una primera ronda de eliminación rápida —sin pensar demasiado— hasta quedarte con dos o tres finalistas. Con menos opciones, la decisión final es mucho más manejable.</p>
 
-<p>Cuando solo hay dos candidatos para una sola cosa —quién se queda con el último pedazo de pizza, quién limpia el baño esta semana, quién hace el viaje al súper— la moneda virtual es la herramienta perfecta. Simple, rápido y sin excusas.</p>
+<h3>3. Preguntate: ¿importa esto dentro de cinco años?</h3>
 
-<h3>Desempates en deportes y juegos</h3>
+<p>La mayoría de las decisiones que nos paralizan son de impacto bajo o medio: qué marca de auriculares comprar, a qué lugar ir el finde, qué serie empezar. Preguntarte si esto va a importar en cinco años (la respuesta casi siempre es no) ayuda a calibrar cuánta energía merece realmente la elección.</p>
 
-<p>Muchos deportes usan lanzamiento de moneda para decidir quién elige lado o turno al inicio. En un picado, una partida de cartas o cualquier juego donde necesitás un primer jugador, el generador cumple la misma función con cero posibilidad de discusión posterior.</p>
+<h3>4. Tirá una moneda</h3>
 
-<h2>Las estadísticas que muestra el generador</h2>
+<p>Suena demasiado simple para funcionar, pero tiene una base psicológica real. Asignale cara a una opción y cruz a la otra. Antes de ver el resultado, notá qué esperás que salga. Si al ver "cara" sentís alivio, eso es lo que querías. Si sentís decepción, también te está diciendo algo.</p>
 
-<p>El generador de GeneradorRandom lleva un contador de sesión que muestra cuántas veces salió cara y cuántas cruz, con el porcentaje de cada uno. Este dato tiene un valor educativo interesante: si tirás 10 veces, podés ver una distribución bastante despareja. Si tirás 100 veces, el porcentaje se va acercando al 50/50.</p>
+<p>La moneda no decide por vos: revela lo que ya sabías pero no te animabas a admitir. Podés usar el <a href="/generadores/moneda">generador de cara o cruz</a> para este ejercicio: tirás, observás tu reacción instintiva y ya tenés tu respuesta real.</p>
 
-<p>Eso ilustra perfectamente la <strong>ley de los grandes números</strong>: a largo plazo, los resultados aleatorios tienden al valor esperado. Pero en el corto plazo, las rachas son normales e inevitables. Si salieron cinco caras seguidas, no es trampa: es estadística.</p>
+<h3>5. Aceptá que la decisión perfecta no existe</h3>
 
-<h2>¿Puedo usarlo para apuestas con dinero real?</h2>
+<p>No importa qué elegís: siempre va a haber algo que la otra opción tenía y esta no. Eso no es un error de elección, es una consecuencia inevitable de vivir en un mundo con recursos y tiempo limitados. La pregunta no es "¿elegí lo mejor posible?" sino "¿elegí algo razonable con la información que tenía?"</p>
 
-<p>Para decisiones informales entre amigos, sí. Para apuestas con dinero real o sorteos con implicancias legales, no: el generador usa pseudoaleatoriedad del navegador, que es suficiente para cualquier uso cotidiano pero no está certificado para aplicaciones de juego regulado.</p>
+<h3>6. Decidí y no revises</h3>
 
-<p>Para esos casos existen sistemas certificados por organismos independientes. Nuestro generador está pensado para la vida diaria: decisiones rápidas, justas y sin complicaciones.</p>
+<p>Una vez que tomás la decisión, no la revises. Los estudios sobre arrepentimiento muestran que las personas que se comprometen con su elección sin mirar atrás terminan más satisfechas que quienes siguen evaluando si hicieron lo correcto. Comprometerse con la decisión —no con el resultado— es la parte más difícil y la más importante.</p>
+
+<h2>El costo real de no decidir</h2>
+
+<p>Lo que muchas veces no se ve es que no decidir también es una decisión, y generalmente la peor. Mientras analizás, el tiempo pasa, las oportunidades se cierran, la ansiedad crece y la energía mental que podrías usar en otra cosa queda atrapada en ese loop. El costo de la parálisis siempre existe aunque sea invisible.</p>
+
+<p>Un estudio de la Universidad de Cornell descubrió que las personas se arrepienten más de las cosas que no hicieron que de las que hicieron. A largo plazo, la inacción duele más que el error.</p>
 
 <h2>Conclusión</h2>
 
-<p>Tirar una moneda es el método de desempate más universal que existe. Hacerlo online tiene todas las ventajas de la moneda física y ninguno de sus problemas: no necesitás tenerla encima, el resultado es completamente imparcial y nadie puede acusar de trampa. La próxima vez que necesites <strong>tirar moneda online</strong>, ya sabés dónde venir.</p>
+<p>La parálisis por análisis no se cura buscando más información ni esperando más certeza: se cura decidiendo. Con tiempo límite, con menos opciones, con el truco de la moneda, o simplemente aceptando que lo perfecto es enemigo de lo bueno.</p>
 
-<p>Probá el <a href="/generadores/moneda">generador de cara o cruz</a> de GeneradorRandom: gratis, sin registro y con resultado en menos de dos segundos.</p>
+<p>La próxima vez que estés dando vueltas sin llegar a ningún lado, probá el método más directo: elegí algo, comprometete con eso, y seguí adelante. Tu futuro yo te lo va a agradecer.</p>
 `,
   },
 
   {
-    slug: 'ruleta-aleatoria-online-usos-y-como-funciona',
-    title: 'Ruleta aleatoria online: usos, ventajas y cómo sacarle el máximo provecho',
-    metaTitle: 'Ruleta Aleatoria Online — Usos, ventajas y cómo funciona (2026)',
-    description: 'Todo sobre la ruleta aleatoria online: cómo funciona, para qué sirve y los mejores usos en sorteos, trabajo, aula y vida cotidiana. Gratis y sin registro.',
+    slug: 'noche-de-juegos-en-casa-con-amigos',
+    title: 'Noche de juegos en casa con amigos: 10 ideas para pasarla bien sin gastar nada',
+    metaTitle: 'Noche de juegos en casa con amigos — 10 ideas gratis para este finde',
+    description: 'Las mejores ideas para una noche de juegos en casa con amigos: desde clásicos reinventados hasta juegos con el celular. Gratis, sin preparación y para todos los grupos.',
     date: '2026-05-31',
     dateFormatted: '31 de mayo de 2026',
-    readTime: 7,
-    keywords: ['ruleta aleatoria online', 'ruleta para sorteos', 'girar ruleta online gratis', 'ruleta de nombres', 'ruleta online para decisiones'],
-    category: 'Guías',
-    image: 'https://images.unsplash.com/photo-1773335638484-297f95ef33a9?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Manos colocando fichas sobre una ruleta de casino',
+    readTime: 8,
+    keywords: ['noche de juegos en casa', 'juegos para hacer con amigos', 'actividades para hacer en casa', 'juegos grupales sin materiales', 'qué hacer con amigos en casa'],
+    category: 'Entretenimiento',
+    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Grupo de amigos riendo y jugando juntos en casa',
     content: `
-<p>Una <strong>ruleta aleatoria online</strong> es mucho más que un juego: es una herramienta de decisión versátil que puede resolver situaciones cotidianas, organizar sorteos justos, dinamizar clases o reuniones, y hacer más divertido cualquier proceso de elección. Y lo mejor es que podés personalizarla completamente con tus propias opciones.</p>
+<p>Salir sale caro. El cine, el bar, la cena afuera: todo suma. Pero quedarse en casa no tiene por qué ser aburrido. Con un poco de creatividad —y sin gastar un peso— podés armar una noche que todo el mundo recuerde. Y no, no hablamos de poner una peli y quedarse dormido en el sillón.</p>
 
-<p>En este artículo te contamos cómo funciona, qué la diferencia de otras herramientas similares, y los mejores usos que podés darle hoy mismo.</p>
+<p>Acá van diez ideas concretas para una <strong>noche de juegos en casa con amigos</strong> que funcionen de verdad, sin preparación previa ni materiales especiales.</p>
 
-<h2>¿Cómo funciona la ruleta aleatoria?</h2>
+<h2>1. Verdad o reto con ruleta de forfaits</h2>
 
-<p>A diferencia de una ruleta de casino —donde el resultado depende de la física del giro real—, una <strong>ruleta online</strong> determina el ganador mediante un algoritmo matemático. La velocidad inicial y la posición final se calculan con <code>Math.random()</code> de JavaScript, que genera valores completamente impredecibles.</p>
+<p>El clásico de siempre, pero con una vuelta de tuerca. En vez de que alguien elija el reto "a dedo" —lo que siempre genera la sensación de que te están apuntando a vos—, carguen los retos en una <a href="/generadores/ruleta">ruleta aleatoria online</a>. Cada uno propone dos o tres retos, se cargan todos en la ruleta, y quien tiene que cumplir uno simplemente la gira. El azar elige, nadie puede acusar de trampa.</p>
 
-<p>El proceso visual de la ruleta girando es una animación: el resultado ya está calculado antes de que la rueda empiece a desacelerar. Esto no significa que haya trampa; al contrario, garantiza que el resultado sea verdaderamente aleatorio, sin que ningún factor físico pueda influir (como la fuerza del tiro o la fricción).</p>
+<p>El mismo sistema sirve para elegir quién tiene que responder la pregunta siguiente. La ruleta con los nombres del grupo decide quién va, y eso solo ya agrega una cuota de tensión que hace todo más divertido.</p>
 
-<p>La ruleta de GeneradorRandom acepta hasta 48 opciones personalizadas, asigna un color distinto a cada segmento y muestra el ganador con un puntero fijo en la parte superior. Si activás la opción "Eliminar ganador", el resultado seleccionado se saca de la lista automáticamente para el próximo giro.</p>
+<h2>2. Trivia relámpago</h2>
 
-<h2>La diferencia clave: las opciones las ponés vos</h2>
+<p>Un integrante del grupo googlea preguntas de trivia (hay miles de listas gratuitas en internet: historia, cultura general, música, series, deportes). Los demás responden en voz alta. El primero en responder bien suma un punto. Primero en llegar a diez gana.</p>
 
-<p>Un dado o un generador de números te da un valor dentro de un rango. Una ruleta aleatoria personalizada te permite asignar significado a cada resultado. En vez de "salió el 3", puede salir "María ganó el sorteo" o "hoy cocinás vos". Esa diferencia hace que la ruleta sea la herramienta más versátil para decisiones grupales.</p>
+<p>Para elegir la categoría de cada ronda sin discusiones, carguen las opciones en la ruleta y gírenla. Geografía, música de los 90, gastronomía, fútbol, películas: lo que el grupo decida que entra. Nadie puede decir "siempre ponen categorías que favorecen a fulano" porque las elige el azar.</p>
 
-<h2>Los mejores usos de una ruleta online</h2>
+<h2>3. ¿Quién soy? (Post-its en la frente)</h2>
 
-<h3>Sorteos y rifas</h3>
+<p>Cada uno escribe un nombre famoso en un post-it y se lo pega en la frente al de al lado sin que lo vea. Después cada uno hace preguntas de sí/no para adivinar quién es. ¿Soy hombre? ¿Soy músico? ¿Soy argentino? Quien adivina primero gana.</p>
 
-<p>El uso más popular. Cargás los nombres de todos los participantes, girás la ruleta y el nombre donde se detenga el puntero es el ganador. Si querés hacer múltiples sorteos sin repetir ganadores, activás "Eliminar ganador" y cada giro saca de la lista al elegido.</p>
+<p>Si no tienen post-its, pueden escribir el nombre en un papel y sostenerlo contra la frente, o simplemente decirlo al oído a todos menos al que tiene que adivinar.</p>
 
-<p>La ventaja frente al generador de números es visual: es más emocionante ver girar la ruleta que ver aparecer un número. Ideal para transmisiones en vivo por Instagram, TikTok o YouTube, donde el proceso tiene que ser entretenido además de transparente.</p>
+<h2>4. Mímica sin palabras</h2>
 
-<h3>Decisiones en grupo</h3>
+<p>Se forman equipos de dos o más personas. Un integrante recibe una palabra o frase (se la dicen en secreto o se la muestran en el celular) y tiene que hacer que su equipo la adivine usando solo gestos, sin hablar ni señalar objetos reales. Tiempo límite: 60 segundos.</p>
 
-<p>¿A qué restaurante van? ¿Qué actividad hacen este finde? ¿Quién hace qué tarea? Cuando hay varias opciones y nadie quiere decidir, la ruleta corta el debate en segundos. Cargás las opciones, girás, y el resultado es irrefutable porque fue el azar, no una persona, quien decidió.</p>
+<p>Para las categorías y el orden de los turnos, de nuevo la ruleta. Para decidir en caso de empate entre equipos, un cara o cruz con el <a href="/generadores/moneda">generador de moneda</a> es suficiente.</p>
 
-<h3>En el aula</h3>
+<h2>5. El juego de las asociaciones</h2>
 
-<p>Los docentes la usan para elegir al azar qué alumno expone, qué tema se trabaja primero, qué grupo presenta hoy, o para cualquier dinámica que requiera selección aleatoria. Es más divertido que nombrar a alguien directamente y genera menos tensión porque el proceso es transparente para todos.</p>
+<p>Uno dice una palabra, el siguiente dice la primera que le venga a la mente relacionada con esa, y así sucesivamente sin pausas. Quien se queda más de tres segundos sin responder, repite una palabra o dice algo sin relación obvia queda eliminado. Suena simple hasta que lo jugás.</p>
 
-<h3>En el trabajo</h3>
+<p>Variante picante: el que queda eliminado tiene que cumplir un forfait de la ruleta.</p>
 
-<p>Asignar tareas rotativas, elegir quién lidera la próxima reunión, decidir el orden de las presentaciones, o simplemente elegir dónde pedir el almuerzo. La ruleta hace que estas decisiones menores sean rápidas y sin fricción entre colegas.</p>
+<h2>6. Adivinar la canción en tres notas</h2>
 
-<h3>Juegos y entretenimiento</h3>
+<p>Alguien tararea o silba el inicio de una canción. El primero que la adivina suma un punto y elige la próxima. Para que nadie acapare siempre el mismo género, carguen categorías en la ruleta: "canción de los 90", "cumbia", "reggaeton", "tema de película", "canción de tu infancia". El azar elige el tipo de canción, vos elegís cuál dentro de ese género.</p>
 
-<p>En juegos de mesa, podés usar la ruleta para asignar roles, definir el orden de juego o agregar elementos aleatorios a cualquier mecánica. En juegos de preguntas, podés cargar las categorías y girar para que el azar elija el tema. Las posibilidades son infinitas cuando las opciones las definís vos.</p>
+<h2>7. Yo nunca (con puntos)</h2>
 
-<h3>Retos y forfaits</h3>
+<p>Uno dice "yo nunca..." y completa con algo que genuinamente nunca hizo. Quien sí lo hizo suma un punto (o pierde una vida, según cómo lo jueguen). El primero en llegar a cierta cantidad de puntos pierde —o gana, dependiendo de cómo lo planteen.</p>
 
-<p>En reuniones de amigos, la ruleta de forfaits es un clásico: cargás los penitencias (cantar, bailar, contar un secreto) y quien la gira tiene que cumplir lo que marque. Como todos pusieron las opciones, nadie puede quejarse del resultado.</p>
+<p>La gracia está en la creatividad de las frases. Cuanto más específicas y reveladoras, mejor. Este juego siempre termina con historias que nadie esperaba escuchar.</p>
 
-<h2>Opción "Eliminar ganador": para sorteos sin repetición</h2>
+<h2>8. El juego del espejo</h2>
 
-<p>Esta función merece mención especial porque es la más usada en sorteos formales. Cuando la activás, cada vez que la ruleta elige una opción esa opción desaparece de la rueda. Podés hacer sorteos de múltiples premios consecutivos con la certeza de que ningún participante gana dos veces.</p>
+<p>Dos personas se paran una frente a la otra. Una lidera los movimientos, la otra tiene que imitarla exactamente como si fuera su reflejo. Sin hablar. El grupo tiene que adivinar quién lidera. Si no pueden, el dúo gana. Si lo descubren, les toca forfait.</p>
 
-<p>El flujo típico: cargás 20 nombres, activás "Eliminar ganador", y girás tres veces para tres premios distintos. Los primeros tres en ser seleccionados ganan, sin ninguna posibilidad de repetición.</p>
+<p>Parece fácil y es imposible. La clave está en moverse muy lento y en sincronía perfecta.</p>
 
-<h2>¿Es verdaderamente aleatorio?</h2>
+<h2>9. Historia colectiva en una oración</h2>
 
-<p>Sí. La posición donde se detiene la ruleta depende de valores generados por <code>Math.random()</code>, que produce resultados impredecibles. No hay forma de manipular ni predecir el resultado de antemano, ni siquiera para quien desarrolló la herramienta.</p>
+<p>Alguien empieza una historia con una oración. El siguiente agrega otra oración continuando el relato. Y así sucesivamente. La única regla: no podés contradecir lo que dijo el anterior ni terminar la historia. El objetivo es ver hasta dónde llega el delirio antes de que alguien no pueda seguir.</p>
 
-<p>Para uso cotidiano —sorteos entre amigos, decisiones de grupo, dinámicas de clase— este nivel de aleatoriedad es más que suficiente. Para sorteos con implicancias legales o económicas significativas, existe normativa específica que requiere sistemas certificados por organismos independientes.</p>
+<p>Para elegir el género de la historia (terror, romance, ciencia ficción, policial), la ruleta decide. Si quieren algo más estructurado, el <a href="/generadores/historias">generador de historias</a> de GeneradorRandom les da un punto de partida aleatorio y desde ahí improvisan.</p>
 
-<h2>Cómo sacarle el máximo provecho</h2>
+<h2>10. Olimpíadas absurdas</h2>
+
+<p>Creen sus propios "deportes" caseros: quién come más rápido una galletita moviéndola desde la frente hasta la boca sin manos, quién mantiene más tiempo un globo en el aire, quién adivina el peso de un objeto sin tocarlo. Carguen todas las disciplinas en la ruleta y gírenla para saber cuál se juega a continuación.</p>
+
+<p>Para el podio final, si hay empate, cara o cruz decide quién queda en primer lugar. Rápido, justo y con la dosis justa de drama.</p>
+
+<h2>Cómo organizar la noche para que no pierda ritmo</h2>
+
+<p>El secreto de una buena noche de juegos no está en los juegos sino en el ritmo. Algunos consejos que funcionan:</p>
 
 <ul>
-<li><strong>Preparala antes de usarla en público:</strong> cargá todas las opciones con tiempo y verificá que estén correctas antes de girar frente a todos.</li>
-<li><strong>Compartí la pantalla:</strong> si el sorteo es remoto, compartí la pantalla por videollamada. Todos ven el proceso en tiempo real.</li>
-<li><strong>Guardá el resultado:</strong> tomá captura de pantalla o grabá cuando aparece el ganador. Esa evidencia evita discusiones posteriores.</li>
-<li><strong>Usá opciones claras y únicas:</strong> evitá repetir nombres o poner opciones ambiguas. Cada opción tiene que ser inconfundible.</li>
+<li><strong>Limitá cada juego a 15-20 minutos.</strong> Cuando empieza a bajar la energía, cambien de actividad.</li>
+<li><strong>Mezclá los equipos entre juego y juego.</strong> Evita que siempre gane el mismo grupo y mantiene la interacción entre todos.</li>
+<li><strong>Usá la ruleta para decidir qué juego sigue.</strong> Carguen todos los juegos de la lista al principio de la noche y que el azar decida el orden. Así nadie puede acusar de favoritismo.</li>
+<li><strong>Definí los forfaits al principio.</strong> Si van a tener penalizaciones, que todos los sepan antes de empezar. La sorpresa de no saber qué te puede tocar también es parte del juego.</li>
 </ul>
 
 <h2>Conclusión</h2>
 
-<p>La <strong>ruleta aleatoria online</strong> es la herramienta de decisión más completa para situaciones donde hay más de dos opciones. Es más visual que un generador de números, más versátil que una moneda y más justa que elegir "a dedo". Cargás las opciones, girás y el azar hace el resto.</p>
-
-<p>Probá la <a href="/generadores/ruleta">ruleta aleatoria de GeneradorRandom</a>: hasta 48 opciones, eliminación automática de ganadores, y todo gratis sin registro.</p>
+<p>Una noche de juegos en casa no necesita presupuesto ni preparación elaborada. Necesita buena compañía y un par de ideas para romper el hielo. Con esta lista, la ruleta para los forfaits y el cara o cruz para los desempates, tenés todo lo que precisás para una noche que dure hasta las tres de la mañana sin que nadie quiera irse.</p>
 `,
   },
 ]
