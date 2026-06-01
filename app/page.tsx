@@ -213,6 +213,26 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Contenido SEO */}
+      <section className="py-10 md:py-16 px-4">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl md:text-2xl font-bold text-white mb-5">¿Qué es GeneradorRandom?</h2>
+          <div className="text-slate-400 text-sm md:text-base leading-relaxed space-y-4">
+            <p>
+              GeneradorRandom es un <strong className="text-slate-300">generador aleatorio online</strong> con nueve{' '}
+              <strong className="text-slate-300">herramientas gratuitas</strong> en un solo lugar. Podés generar nombres de personas, empresas o mascotas; crear contraseñas seguras; explorar paletas de colores; inventar historias cortas; conseguir un chiste para romper el hielo; girar una ruleta personalizada; obtener números al azar; y tirar una moneda virtual. Todo desde el navegador, sin descargar nada y sin gastar un peso.
+            </p>
+            <p>
+              El sitio está pensado para cualquier persona que necesite una decisión rápida, un nombre creativo, un dato aleatorio o simplemente pasar el rato. Es el único{' '}
+              <strong className="text-slate-300">generador random en español</strong> que reúne todas estas funciones en un diseño limpio y fácil de usar desde el celular. No importa si sos diseñador, docente, programador, jugador o alguien que simplemente no puede decidir qué comer hoy: acá encontrás lo que necesitás.
+            </p>
+            <p>
+              Todas las herramientas funcionan <strong className="text-slate-300">sin registro</strong> y sin límites de uso. Los resultados se generan en tu propio dispositivo — nada se guarda en nuestros servidores. Usá GeneradorRandom las veces que quieras, compartí los resultados y volvé cuando lo necesites.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Ad inferior */}
       <div className="max-w-4xl mx-auto px-4 ad-wrapper">
         <AdBlock slot="0987654321" />
