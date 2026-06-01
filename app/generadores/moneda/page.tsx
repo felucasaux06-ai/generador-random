@@ -190,6 +190,24 @@ export default function GeneradorMoneda() {
 
         <FaqSection faqs={FAQS_MONEDA} titulo="Preguntas sobre Cara o Cruz" />
 
+        {/* Contenido SEO */}
+        <div className="mt-6 bg-gray-800/30 border border-gray-700/50 rounded-xl p-6">
+          <h2 className="text-white font-semibold mb-3">Cara o Cruz online para decisiones rápidas</h2>
+          <div className="text-gray-400 text-sm leading-relaxed space-y-3">
+            <p>
+              Tirar una <strong className="text-gray-300">moneda virtual</strong> nunca fue tan fácil. Con este generador de{' '}
+              <strong className="text-gray-300">cara o cruz online</strong> resolvés cualquier dilema en un segundo, sin necesidad de buscar una moneda física ni ponerte de acuerdo con nadie sobre quién la lanza. El resultado es 100% aleatorio e imparcial: exactamente 50% de probabilidad para cada lado, siempre.
+            </p>
+            <p>
+              Los usos más frecuentes son los más cotidianos: decidir <strong className="text-gray-300">quién paga el café</strong>, quién elige la película del viernes, quién arranca en un juego de mesa, o quién le toca lavar los platos. También sirve para sorteos entre dos personas cuando querés una forma justa y rápida de elegir sin discusiones. Tirá la moneda al azar y listo.
+            </p>
+            <p>
+              A diferencia de lanzar una moneda real, acá no hay forma de hacer trampa: no existe el "tiro mal" ni el "volvemos a tirar". Usá esta herramienta de <strong className="text-gray-300">cara o cruz gratis</strong> desde el celular o la computadora, sin instalar nada, sin registrarte. La próxima vez que necesités{' '}
+              <strong className="text-gray-300">tirar moneda online</strong>, ya sabés dónde venir.
+            </p>
+          </div>
+        </div>
+
         <AdBlock slot="6677889900" className="mt-8" />
       </div>
     </div>
