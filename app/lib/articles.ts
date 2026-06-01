@@ -712,6 +712,165 @@ export const ARTICLES: Article[] = [
 <p>La clave está en el proceso, no solo en la herramienta: publicar los participantes antes, mostrar el sorteo en vivo y guardar evidencia del resultado. Eso es todo lo que necesitás para que tu sorteo sea incuestionable.</p>
 `,
   },
+
+  {
+    slug: 'cara-o-cruz-online-como-funciona',
+    title: 'Cara o Cruz online: cómo funciona y para qué usarlo',
+    metaTitle: 'Cara o Cruz Online — Cómo funciona y para qué sirve (2026)',
+    description: 'Descubrí cómo funciona el generador de cara o cruz online: probabilidades reales, usos cotidianos y por qué es más justo que lanzar una moneda física.',
+    date: '2026-05-31',
+    dateFormatted: '31 de mayo de 2026',
+    readTime: 6,
+    keywords: ['cara o cruz online', 'tirar moneda online', 'moneda virtual', 'cara o cruz gratis', 'moneda al azar'],
+    category: 'Guías',
+    image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Moneda girando en el aire representando cara o cruz',
+    content: `
+<p>Tirar una moneda es uno de los métodos más antiguos del mundo para tomar una decisión. Es simple, rápido y —en teoría— completamente justo. El problema es que no siempre tenés una moneda en el bolsillo, y cuando la tenés, siempre aparece alguien que dice "yo la tiro". Con un generador de <strong>cara o cruz online</strong>, esos problemas desaparecen.</p>
+
+<p>En este artículo te explicamos cómo funciona el lanzador de moneda virtual, qué tan aleatorio es realmente, y en qué situaciones concretas puede salvarte la vida (o al menos una discusión).</p>
+
+<h2>¿Cómo funciona un generador de cara o cruz online?</h2>
+
+<p>El generador usa <code>Math.random()</code>, una función de JavaScript que produce un número decimal entre 0 y 1 con distribución uniforme. La lógica es tan simple como directa: si el número es menor a 0.5, sale <strong>cara</strong>; si es 0.5 o mayor, sale <strong>cruz</strong>.</p>
+
+<p>Esto garantiza exactamente un 50% de probabilidad para cada resultado en cada lanzamiento. No importa lo que salió antes: cada tirada es completamente independiente. Si salieron diez caras seguidas, la próxima tirada sigue teniendo exactamente 50/50 de chances para cada lado. Eso se llama <em>independencia estadística</em>, y es una propiedad fundamental de los eventos aleatorios.</p>
+
+<p>Todo el proceso ocurre en tu propio navegador, sin enviar datos a ningún servidor. La moneda virtual es tan privada como girar una moneda real en tu mesa.</p>
+
+<h2>¿Es más justo que lanzar una moneda física?</h2>
+
+<p>Sorprendentemente, sí. Las monedas físicas no son perfectamente equilibradas: el relieve del diseño, el grosor del borde y la forma en que cada persona lanza influyen en el resultado. Estudios de probabilidad demostraron que una moneda lanzada por una persona tiende a caer del mismo lado que estaba boca arriba al principio, con una leve ventaja de hasta el 51%.</p>
+
+<p>Un generador digital no tiene ninguno de esos sesgos. El resultado es verdaderamente impredecible y sin influencia humana. Nadie puede "tirar bien" una moneda virtual.</p>
+
+<h2>Para qué sirve tirar moneda online</h2>
+
+<h3>Decidir quién paga</h3>
+
+<p>El clásico. Dos personas, una cuenta, ninguna quiere pagar. En vez de discutir o hacer el "yo invito, vos la próxima" que nunca se cumple, abrís el generador, definen en voz alta quién es cara y quién es cruz, y tirás. Resultado inmediato, sin drama.</p>
+
+<h3>Elegir la película o el restaurante</h3>
+
+<p>Todos conocemos la situación: "¿Qué querés ver?" — "Lo que vos quieras" — "No, decí algo vos". Una tirada de <strong>moneda al azar</strong> corta el loop en segundos. Si el resultado es cara, gana la propuesta A; si es cruz, gana la propuesta B. Nada más justo.</p>
+
+<h3>Decidir quién empieza en un juego de mesa</h3>
+
+<p>La mayoría de los juegos de mesa necesitan un punto de partida. En vez de buscar el dado más chico o que alguien "elija" mentalmente, usá el <a href="/generadores/moneda">generador de cara o cruz</a>. Si son más de dos jugadores podés hacer rondas eliminatorias: cara avanza, cruz queda afuera, hasta que queda uno.</p>
+
+<h3>Sorteos entre dos personas</h3>
+
+<p>Cuando solo hay dos candidatos para una sola cosa —quién se queda con el último pedazo de pizza, quién limpia el baño esta semana, quién hace el viaje al súper— la moneda virtual es la herramienta perfecta. Simple, rápido y sin excusas.</p>
+
+<h3>Desempates en deportes y juegos</h3>
+
+<p>Muchos deportes usan lanzamiento de moneda para decidir quién elige lado o turno al inicio. En un picado, una partida de cartas o cualquier juego donde necesitás un primer jugador, el generador cumple la misma función con cero posibilidad de discusión posterior.</p>
+
+<h2>Las estadísticas que muestra el generador</h2>
+
+<p>El generador de GeneradorRandom lleva un contador de sesión que muestra cuántas veces salió cara y cuántas cruz, con el porcentaje de cada uno. Este dato tiene un valor educativo interesante: si tirás 10 veces, podés ver una distribución bastante despareja. Si tirás 100 veces, el porcentaje se va acercando al 50/50.</p>
+
+<p>Eso ilustra perfectamente la <strong>ley de los grandes números</strong>: a largo plazo, los resultados aleatorios tienden al valor esperado. Pero en el corto plazo, las rachas son normales e inevitables. Si salieron cinco caras seguidas, no es trampa: es estadística.</p>
+
+<h2>¿Puedo usarlo para apuestas con dinero real?</h2>
+
+<p>Para decisiones informales entre amigos, sí. Para apuestas con dinero real o sorteos con implicancias legales, no: el generador usa pseudoaleatoriedad del navegador, que es suficiente para cualquier uso cotidiano pero no está certificado para aplicaciones de juego regulado.</p>
+
+<p>Para esos casos existen sistemas certificados por organismos independientes. Nuestro generador está pensado para la vida diaria: decisiones rápidas, justas y sin complicaciones.</p>
+
+<h2>Conclusión</h2>
+
+<p>Tirar una moneda es el método de desempate más universal que existe. Hacerlo online tiene todas las ventajas de la moneda física y ninguno de sus problemas: no necesitás tenerla encima, el resultado es completamente imparcial y nadie puede acusar de trampa. La próxima vez que necesites <strong>tirar moneda online</strong>, ya sabés dónde venir.</p>
+
+<p>Probá el <a href="/generadores/moneda">generador de cara o cruz</a> de GeneradorRandom: gratis, sin registro y con resultado en menos de dos segundos.</p>
+`,
+  },
+
+  {
+    slug: 'ruleta-aleatoria-online-usos-y-como-funciona',
+    title: 'Ruleta aleatoria online: usos, ventajas y cómo sacarle el máximo provecho',
+    metaTitle: 'Ruleta Aleatoria Online — Usos, ventajas y cómo funciona (2026)',
+    description: 'Todo sobre la ruleta aleatoria online: cómo funciona, para qué sirve y los mejores usos en sorteos, trabajo, aula y vida cotidiana. Gratis y sin registro.',
+    date: '2026-05-31',
+    dateFormatted: '31 de mayo de 2026',
+    readTime: 7,
+    keywords: ['ruleta aleatoria online', 'ruleta para sorteos', 'girar ruleta online gratis', 'ruleta de nombres', 'ruleta online para decisiones'],
+    category: 'Guías',
+    image: 'https://images.unsplash.com/photo-1773335638484-297f95ef33a9?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Manos colocando fichas sobre una ruleta de casino',
+    content: `
+<p>Una <strong>ruleta aleatoria online</strong> es mucho más que un juego: es una herramienta de decisión versátil que puede resolver situaciones cotidianas, organizar sorteos justos, dinamizar clases o reuniones, y hacer más divertido cualquier proceso de elección. Y lo mejor es que podés personalizarla completamente con tus propias opciones.</p>
+
+<p>En este artículo te contamos cómo funciona, qué la diferencia de otras herramientas similares, y los mejores usos que podés darle hoy mismo.</p>
+
+<h2>¿Cómo funciona la ruleta aleatoria?</h2>
+
+<p>A diferencia de una ruleta de casino —donde el resultado depende de la física del giro real—, una <strong>ruleta online</strong> determina el ganador mediante un algoritmo matemático. La velocidad inicial y la posición final se calculan con <code>Math.random()</code> de JavaScript, que genera valores completamente impredecibles.</p>
+
+<p>El proceso visual de la ruleta girando es una animación: el resultado ya está calculado antes de que la rueda empiece a desacelerar. Esto no significa que haya trampa; al contrario, garantiza que el resultado sea verdaderamente aleatorio, sin que ningún factor físico pueda influir (como la fuerza del tiro o la fricción).</p>
+
+<p>La ruleta de GeneradorRandom acepta hasta 48 opciones personalizadas, asigna un color distinto a cada segmento y muestra el ganador con un puntero fijo en la parte superior. Si activás la opción "Eliminar ganador", el resultado seleccionado se saca de la lista automáticamente para el próximo giro.</p>
+
+<h2>La diferencia clave: las opciones las ponés vos</h2>
+
+<p>Un dado o un generador de números te da un valor dentro de un rango. Una ruleta aleatoria personalizada te permite asignar significado a cada resultado. En vez de "salió el 3", puede salir "María ganó el sorteo" o "hoy cocinás vos". Esa diferencia hace que la ruleta sea la herramienta más versátil para decisiones grupales.</p>
+
+<h2>Los mejores usos de una ruleta online</h2>
+
+<h3>Sorteos y rifas</h3>
+
+<p>El uso más popular. Cargás los nombres de todos los participantes, girás la ruleta y el nombre donde se detenga el puntero es el ganador. Si querés hacer múltiples sorteos sin repetir ganadores, activás "Eliminar ganador" y cada giro saca de la lista al elegido.</p>
+
+<p>La ventaja frente al generador de números es visual: es más emocionante ver girar la ruleta que ver aparecer un número. Ideal para transmisiones en vivo por Instagram, TikTok o YouTube, donde el proceso tiene que ser entretenido además de transparente.</p>
+
+<h3>Decisiones en grupo</h3>
+
+<p>¿A qué restaurante van? ¿Qué actividad hacen este finde? ¿Quién hace qué tarea? Cuando hay varias opciones y nadie quiere decidir, la ruleta corta el debate en segundos. Cargás las opciones, girás, y el resultado es irrefutable porque fue el azar, no una persona, quien decidió.</p>
+
+<h3>En el aula</h3>
+
+<p>Los docentes la usan para elegir al azar qué alumno expone, qué tema se trabaja primero, qué grupo presenta hoy, o para cualquier dinámica que requiera selección aleatoria. Es más divertido que nombrar a alguien directamente y genera menos tensión porque el proceso es transparente para todos.</p>
+
+<h3>En el trabajo</h3>
+
+<p>Asignar tareas rotativas, elegir quién lidera la próxima reunión, decidir el orden de las presentaciones, o simplemente elegir dónde pedir el almuerzo. La ruleta hace que estas decisiones menores sean rápidas y sin fricción entre colegas.</p>
+
+<h3>Juegos y entretenimiento</h3>
+
+<p>En juegos de mesa, podés usar la ruleta para asignar roles, definir el orden de juego o agregar elementos aleatorios a cualquier mecánica. En juegos de preguntas, podés cargar las categorías y girar para que el azar elija el tema. Las posibilidades son infinitas cuando las opciones las definís vos.</p>
+
+<h3>Retos y forfaits</h3>
+
+<p>En reuniones de amigos, la ruleta de forfaits es un clásico: cargás los penitencias (cantar, bailar, contar un secreto) y quien la gira tiene que cumplir lo que marque. Como todos pusieron las opciones, nadie puede quejarse del resultado.</p>
+
+<h2>Opción "Eliminar ganador": para sorteos sin repetición</h2>
+
+<p>Esta función merece mención especial porque es la más usada en sorteos formales. Cuando la activás, cada vez que la ruleta elige una opción esa opción desaparece de la rueda. Podés hacer sorteos de múltiples premios consecutivos con la certeza de que ningún participante gana dos veces.</p>
+
+<p>El flujo típico: cargás 20 nombres, activás "Eliminar ganador", y girás tres veces para tres premios distintos. Los primeros tres en ser seleccionados ganan, sin ninguna posibilidad de repetición.</p>
+
+<h2>¿Es verdaderamente aleatorio?</h2>
+
+<p>Sí. La posición donde se detiene la ruleta depende de valores generados por <code>Math.random()</code>, que produce resultados impredecibles. No hay forma de manipular ni predecir el resultado de antemano, ni siquiera para quien desarrolló la herramienta.</p>
+
+<p>Para uso cotidiano —sorteos entre amigos, decisiones de grupo, dinámicas de clase— este nivel de aleatoriedad es más que suficiente. Para sorteos con implicancias legales o económicas significativas, existe normativa específica que requiere sistemas certificados por organismos independientes.</p>
+
+<h2>Cómo sacarle el máximo provecho</h2>
+
+<ul>
+<li><strong>Preparala antes de usarla en público:</strong> cargá todas las opciones con tiempo y verificá que estén correctas antes de girar frente a todos.</li>
+<li><strong>Compartí la pantalla:</strong> si el sorteo es remoto, compartí la pantalla por videollamada. Todos ven el proceso en tiempo real.</li>
+<li><strong>Guardá el resultado:</strong> tomá captura de pantalla o grabá cuando aparece el ganador. Esa evidencia evita discusiones posteriores.</li>
+<li><strong>Usá opciones claras y únicas:</strong> evitá repetir nombres o poner opciones ambiguas. Cada opción tiene que ser inconfundible.</li>
+</ul>
+
+<h2>Conclusión</h2>
+
+<p>La <strong>ruleta aleatoria online</strong> es la herramienta de decisión más completa para situaciones donde hay más de dos opciones. Es más visual que un generador de números, más versátil que una moneda y más justa que elegir "a dedo". Cargás las opciones, girás y el azar hace el resto.</p>
+
+<p>Probá la <a href="/generadores/ruleta">ruleta aleatoria de GeneradorRandom</a>: hasta 48 opciones, eliminación automática de ganadores, y todo gratis sin registro.</p>
+`,
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
