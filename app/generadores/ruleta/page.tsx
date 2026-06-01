@@ -4,29 +4,7 @@ import { useState, useRef, useEffect, useCallback } from 'react'
 import AdBlock from '../../components/AdBlock'
 import FaqSection from '../../components/FaqSection'
 import RelatedTools from '../../components/RelatedTools'
-
-const FAQS_RULETA = [
-  {
-    pregunta: '¿Cómo agrego opciones a la ruleta?',
-    respuesta: 'Escribí la opción en el campo de texto y presioná "Agregar" o Enter. Podés agregar hasta 48 opciones. Cada una aparece con su propio color en la ruleta.',
-  },
-  {
-    pregunta: '¿Qué hace la opción "Eliminar ganador"?',
-    respuesta: 'Si activás esta opción, cuando la ruleta elija una opción esa opción se elimina automáticamente de la lista. Ideal para sorteos donde no querés que el mismo participante gane dos veces.',
-  },
-  {
-    pregunta: '¿Puedo editar o borrar opciones?',
-    respuesta: 'Sí. En la lista de opciones, pasá el cursor sobre un ítem para ver los botones de editar y eliminar. Hacé clic en el lápiz para modificar el texto, o en la X para borrarlo.',
-  },
-  {
-    pregunta: '¿Para qué sirve una ruleta aleatoria?',
-    respuesta: 'Es perfecta para sorteos, elegir qué comer, decidir quién paga la cuenta, asignar tareas en el trabajo, juegos de mesa, o cualquier decisión que quieras dejar al azar. El resultado es completamente aleatorio.',
-  },
-  {
-    pregunta: '¿El resultado es verdaderamente aleatorio?',
-    respuesta: 'Sí. La velocidad y posición final de la ruleta se determinan con Math.random() de JavaScript, que produce resultados impredecibles. No hay forma de manipular ni predecir el resultado de antemano.',
-  },
-]
+import { useLanguage } from '../../contexts/LanguageContext'
 
 const COLORS = [
   '#3b82f6', '#8b5cf6', '#ec4899', '#f97316',
@@ -37,6 +15,7 @@ const COLORS = [
 const DEFAULT_ITEMS = ['Opción 1', 'Opción 2', 'Opción 3', 'Opción 4', 'Opción 5']
 
 export default function GeneradorRuleta() {
+  const { t } = useLanguage()
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const rotationRef = useRef(0)
   const animRef = useRef<number | null>(null)
@@ -68,11 +47,11 @@ export default function GeneradorRuleta() {
     ctx.clearRect(0, 0, size, size)
 
     if (currentItems.length === 0) {
-      ctx.fillStyle = '#1e293b'
+      ctx.fillStyle = '#18181b'
       ctx.beginPath()
       ctx.arc(cx, cy, radius, 0, Math.PI * 2)
       ctx.fill()
-      ctx.fillStyle = '#475569'
+      ctx.fillStyle = '#52525b'
       ctx.font = 'bold 16px Inter, system-ui, sans-serif'
       ctx.textAlign = 'center'
       ctx.fillText('Agregá opciones', cx, cy - 8)
@@ -92,7 +71,7 @@ export default function GeneradorRuleta() {
       ctx.closePath()
       ctx.fillStyle = COLORS[i % COLORS.length]
       ctx.fill()
-      ctx.strokeStyle = 'rgba(2, 6, 23, 0.85)'
+      ctx.strokeStyle = 'rgba(8, 8, 8, 0.85)'
       ctx.lineWidth = 2
       ctx.stroke()
 
@@ -111,12 +90,11 @@ export default function GeneradorRuleta() {
       ctx.restore()
     }
 
-    // Center dot
     ctx.beginPath()
     ctx.arc(cx, cy, 15, 0, Math.PI * 2)
-    ctx.fillStyle = '#0f172a'
+    ctx.fillStyle = '#080808'
     ctx.fill()
-    ctx.strokeStyle = '#64748b'
+    ctx.strokeStyle = '#52525b'
     ctx.lineWidth = 3
     ctx.stroke()
   }, [])
@@ -204,26 +182,22 @@ export default function GeneradorRuleta() {
         {/* Header */}
         <div className="text-center mb-10">
           <div className="text-5xl mb-4" aria-hidden="true">🎡</div>
-          <h1 className="text-4xl font-extrabold text-white mb-3">Ruleta Aleatoria</h1>
-          <p className="text-gray-400 text-lg">
-            Agregá cualquier opción, girá y dejá que la suerte decida.
-          </p>
+          <h1 className="text-4xl font-extrabold text-white mb-3">{t.ruleta.title}</h1>
+          <p className="text-zinc-400 text-lg">{t.ruleta.subtitle}</p>
         </div>
 
         <AdBlock slot="1122334455" className="mb-8" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Columna ruleta */}
-          <div className="bg-gray-800 border border-gray-700 rounded-2xl p-6 flex flex-col items-center">
+          <div className="bg-zinc-800 border border-zinc-700 rounded-2xl p-6 flex flex-col items-center">
 
-            {/* Pointer (flecha apuntando hacia abajo al borde superior de la rueda) */}
             <div className="mb-0 z-10" aria-hidden="true">
               <svg width="28" height="22" viewBox="0 0 28 22" fill="none">
                 <polygon points="0,0 28,0 14,22" fill="#f59e0b" />
               </svg>
             </div>
 
-            {/* Canvas */}
             <div className="w-full max-w-[340px]">
               <canvas
                 ref={canvasRef}
@@ -234,26 +208,24 @@ export default function GeneradorRuleta() {
               />
             </div>
 
-            {/* Botón girar */}
             <button
               onClick={spin}
               disabled={isSpinning || items.length < 2}
-              className="mt-6 w-full max-w-[300px] bg-amber-500 hover:bg-amber-400 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-black py-4 px-8 rounded-2xl text-xl transition-all duration-480 hover:scale-105 active:scale-95 shadow-lg shadow-amber-900/30"
+              className="mt-6 w-full max-w-[300px] bg-amber-500 hover:bg-amber-400 disabled:bg-zinc-600 disabled:cursor-not-allowed text-white font-black py-4 px-8 rounded-2xl text-xl transition-all duration-480 hover:scale-105 active:scale-95 shadow-lg shadow-amber-900/30"
               aria-label="Girar la ruleta"
             >
-              {isSpinning ? '🌀 Girando…' : '🎡 ¡GIRAR!'}
+              {isSpinning ? t.ruleta.spinning : t.ruleta.spin}
             </button>
 
             {items.length < 2 && !isSpinning && (
-              <p className="mt-3 text-gray-500 text-sm text-center">
-                Necesitás al menos 2 opciones para girar.
+              <p className="mt-3 text-zinc-500 text-sm text-center">
+                {t.ruleta.needTwo}
               </p>
             )}
 
-            {/* Toggle eliminar ganador */}
             <label className="flex items-center gap-3 mt-5 cursor-pointer select-none">
               <div
-                className={`w-11 h-6 rounded-full transition-colors duration-480 flex-shrink-0 cursor-pointer ${removeAfterSpin ? 'bg-blue-600' : 'bg-gray-600'}`}
+                className={`w-11 h-6 rounded-full transition-colors duration-480 flex-shrink-0 cursor-pointer ${removeAfterSpin ? 'bg-fuchsia-600' : 'bg-zinc-600'}`}
                 onClick={() => setRemoveAfterSpin(p => !p)}
                 role="switch"
                 aria-checked={removeAfterSpin}
@@ -262,13 +234,12 @@ export default function GeneradorRuleta() {
               >
                 <div className={`w-5 h-5 bg-white rounded-full shadow-md transition-transform duration-480 mt-0.5 ${removeAfterSpin ? 'translate-x-5 ml-0.5' : 'translate-x-0.5'}`} />
               </div>
-              <span className="text-gray-300 text-sm">Eliminar ganador después de girar</span>
+              <span className="text-zinc-300 text-sm">{t.ruleta.removeWinner}</span>
             </label>
 
-            {/* Resultado */}
             {result && !isSpinning && (
               <div className="mt-5 w-full bg-amber-900/48 border border-amber-600/40 rounded-2xl p-5 text-center animate-fade-in">
-                <p className="text-amber-400 text-xs font-bold uppercase tracking-widest mb-2">¡Ganador!</p>
+                <p className="text-amber-400 text-xs font-bold uppercase tracking-widest mb-2">{t.ruleta.winner}</p>
                 <p className="text-white text-2xl font-extrabold break-words">{result}</p>
                 <p className="text-amber-500 text-2xl mt-1">🎉</p>
               </div>
@@ -276,47 +247,43 @@ export default function GeneradorRuleta() {
           </div>
 
           {/* Columna opciones */}
-          <div className="bg-gray-800 border border-gray-700 rounded-2xl p-6 flex flex-col">
+          <div className="bg-zinc-800 border border-zinc-700 rounded-2xl p-6 flex flex-col">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-white font-bold text-lg">
-                Opciones
-              </h2>
-              <span className="text-gray-500 text-sm">{items.length}/48</span>
+              <h2 className="text-white font-bold text-lg">{t.ruleta.options}</h2>
+              <span className="text-zinc-500 text-sm">{items.length}/48</span>
             </div>
 
-            {/* Input para agregar */}
             <div className="flex gap-2 mb-5">
               <input
                 type="text"
                 value={newItem}
                 onChange={e => setNewItem(e.target.value)}
                 onKeyDown={e => e.key === 'Enter' && addItem()}
-                placeholder="Escribí una opción…"
+                placeholder={t.ruleta.placeholder}
                 maxLength={40}
                 disabled={items.length >= 48 || isSpinning}
-                className="flex-1 bg-gray-700 border border-gray-600 rounded-xl px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm disabled:opacity-50"
+                className="flex-1 bg-zinc-700 border border-zinc-600 rounded-xl px-4 py-2.5 text-white placeholder-zinc-500 focus:outline-none focus:border-fuchsia-500 text-sm disabled:opacity-50"
                 aria-label="Nueva opción para la ruleta"
               />
               <button
                 onClick={addItem}
                 disabled={!newItem.trim() || items.length >= 48 || isSpinning}
-                className="bg-blue-600 hover:bg-blue-500 disabled:bg-gray-700 disabled:text-gray-500 text-white font-semibold px-4 py-2.5 rounded-xl transition-colors text-sm whitespace-nowrap flex-shrink-0"
+                className="bg-fuchsia-600 hover:bg-fuchsia-500 disabled:bg-zinc-700 disabled:text-zinc-500 text-white font-semibold px-4 py-2.5 rounded-xl transition-colors text-sm whitespace-nowrap flex-shrink-0"
               >
-                + Agregar
+                {t.ruleta.add}
               </button>
             </div>
 
-            {/* Lista de opciones */}
             <div className="flex-1 space-y-2 overflow-y-auto max-h-[380px] pr-1 no-scrollbar">
               {items.length === 0 && (
-                <p className="text-gray-600 text-sm text-center py-8">
+                <p className="text-zinc-600 text-sm text-center py-8">
                   No hay opciones todavía.<br />Agregá al menos 2 para poder girar.
                 </p>
               )}
               {items.map((item, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-3 p-3 bg-gray-700/50 rounded-xl group hover:bg-gray-700/80 transition-colors"
+                  className="flex items-center gap-3 p-3 bg-zinc-700/50 rounded-xl group hover:bg-zinc-700/80 transition-colors"
                 >
                   <div
                     className="w-3.5 h-3.5 rounded-full flex-shrink-0"
@@ -336,10 +303,10 @@ export default function GeneradorRuleta() {
                       onBlur={saveEdit}
                       autoFocus
                       maxLength={40}
-                      className="flex-1 bg-gray-600 rounded-lg px-2 py-1 text-white text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+                      className="flex-1 bg-zinc-600 rounded-lg px-2 py-1 text-white text-sm focus:outline-none focus:ring-1 focus:ring-fuchsia-500"
                     />
                   ) : (
-                    <span className="flex-1 text-gray-480 text-sm truncate">{item}</span>
+                    <span className="flex-1 text-zinc-300 text-sm truncate">{item}</span>
                   )}
 
                   <div className="flex gap-1 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -347,7 +314,7 @@ export default function GeneradorRuleta() {
                       <button
                         onClick={() => startEdit(i)}
                         disabled={isSpinning}
-                        className="w-7 h-7 flex items-center justify-center rounded-lg bg-gray-600 hover:bg-gray-500 text-gray-400 hover:text-white transition-colors disabled:opacity-30"
+                        className="w-7 h-7 flex items-center justify-center rounded-lg bg-zinc-600 hover:bg-zinc-500 text-zinc-400 hover:text-white transition-colors disabled:opacity-30"
                         aria-label={`Editar "${item}"`}
                         title="Editar"
                       >
@@ -368,55 +335,51 @@ export default function GeneradorRuleta() {
               ))}
             </div>
 
-            {/* Limpiar todo */}
             {items.length > 0 && (
-              <div className="flex gap-3 mt-4 pt-4 border-t border-gray-700">
+              <div className="flex gap-3 mt-4 pt-4 border-t border-zinc-700">
                 <button
                   onClick={() => { setItems(DEFAULT_ITEMS); setResult(null) }}
                   disabled={isSpinning}
-                  className="flex-1 text-gray-500 hover:text-gray-300 text-xs transition-colors disabled:opacity-30 text-center py-1"
+                  className="flex-1 text-zinc-500 hover:text-zinc-300 text-xs transition-colors disabled:opacity-30 text-center py-1"
                 >
-                  Restaurar ejemplo
+                  {t.ruleta.restore}
                 </button>
                 <button
                   onClick={() => { setItems([]); setResult(null) }}
                   disabled={isSpinning}
                   className="flex-1 text-red-500 hover:text-red-400 text-xs transition-colors disabled:opacity-30 text-center py-1"
                 >
-                  Limpiar todo
+                  {t.ruleta.clearAll}
                 </button>
               </div>
             )}
           </div>
         </div>
 
-        {/* Instrucciones rápidas */}
-        <div className="mt-6 bg-gray-800/30 border border-gray-700/50 rounded-xl p-5 text-sm text-gray-400">
-          <h2 className="text-white font-semibold mb-2">¿Cómo usar la ruleta?</h2>
-          <p>
-            1. Agregá tus opciones (nombres, actividades, lo que quieras). 2. Presioná <strong className="text-gray-300">¡GIRAR!</strong>.
-            3. La ruleta elige al azar. Si activás <strong className="text-gray-300">Eliminar ganador</strong>, el ganador se saca de la lista automáticamente — perfecto para sorteos sin repetición.
-          </p>
+        {/* Instrucciones */}
+        <div className="mt-6 bg-zinc-800/30 border border-zinc-700/50 rounded-xl p-5 text-sm text-zinc-400">
+          <h2 className="text-white font-semibold mb-2">{t.ruleta.howTitle}</h2>
+          <p>{t.ruleta.howText}</p>
         </div>
 
         {/* Contenido SEO */}
-        <div className="mt-6 bg-gray-800/30 border border-gray-700/50 rounded-xl p-6">
+        <div className="mt-6 bg-zinc-800/30 border border-zinc-700/50 rounded-xl p-6">
           <h2 className="text-white font-semibold mb-3">Ruleta aleatoria online para sorteos y decisiones</h2>
-          <div className="text-gray-400 text-sm leading-relaxed space-y-3">
+          <div className="text-zinc-400 text-sm leading-relaxed space-y-3">
             <p>
-              La <strong className="text-gray-300">ruleta aleatoria online</strong> de GeneradorRandom es la herramienta más versátil para tomar decisiones al azar. A diferencia de otros generadores, podés personalizar completamente las opciones: agregá nombres, actividades, números o cualquier texto, editá lo que quieras y eliminá lo que no necesites.
+              La <strong className="text-zinc-300">ruleta aleatoria online</strong> de GeneradorRandom es la herramienta más versátil para tomar decisiones al azar. A diferencia de otros generadores, podés personalizar completamente las opciones: agregá nombres, actividades, números o cualquier texto, editá lo que quieras y eliminá lo que no necesites.
             </p>
             <p>
-              Usos frecuentes: <strong className="text-gray-300">sorteos online</strong> (quién paga la cuenta, quién hace la tarea), asignar turnos en el trabajo, elegir qué comer o qué película ver, sortear regalos entre amigos, definir equipos para juegos, y cualquier decisión que merezca un proceso justo e imparcial.
+              Usos frecuentes: <strong className="text-zinc-300">sorteos online</strong> (quién paga la cuenta, quién hace la tarea), asignar turnos en el trabajo, elegir qué comer o qué película ver, sortear regalos entre amigos, definir equipos para juegos, y cualquier decisión que merezca un proceso justo e imparcial.
             </p>
             <p>
-              Con la opción <strong className="text-gray-300">"Eliminar ganador"</strong> podés hacer sorteos sin repetición: cada vez que gira, el ganador se saca de la lista. Ideal para rifas, sorteos de premios, o asignar roles en grupos. Soporta hasta 48 opciones simultáneas.
+              Con la opción <strong className="text-zinc-300">"Eliminar ganador"</strong> podés hacer sorteos sin repetición: cada vez que gira, el ganador se saca de la lista. Ideal para rifas, sorteos de premios, o asignar roles en grupos. Soporta hasta 48 opciones simultáneas.
             </p>
           </div>
         </div>
 
         <div className="mt-8">
-          <FaqSection faqs={FAQS_RULETA} titulo="Preguntas sobre la Ruleta Aleatoria" />
+          <FaqSection faqs={t.ruleta.faqs} titulo={t.ruleta.faqTitle} />
         </div>
 
         <RelatedTools current="/generadores/ruleta" />

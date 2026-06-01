@@ -4,29 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import AdBlock from '../../components/AdBlock'
 import FaqSection from '../../components/FaqSection'
 import { generarPaleta, hexARgb, esColorClaro, copiarAlPortapapeles } from '../../lib/utils'
-
-const FAQS_COLORES = [
-  {
-    pregunta: '¿Qué es un código HEX de color?',
-    respuesta: 'Un código HEX es una forma de representar colores usando 6 caracteres (letras y números), por ejemplo #3b82f6. Es el formato más usado en diseño web y CSS. El código tiene tres partes: dos caracteres para rojo, dos para verde y dos para azul.',
-  },
-  {
-    pregunta: '¿Cuál es la diferencia entre HEX y RGB?',
-    respuesta: 'Son dos formas de representar el mismo color. HEX usa caracteres hexadecimales (#FF5733) y es más común en diseño web. RGB usa números del 0 al 255 para cada componente de color (rgb(255, 87, 51)) y es más intuitivo para algunos diseñadores.',
-  },
-  {
-    pregunta: '¿Puedo usar estas paletas en mis proyectos comerciales?',
-    respuesta: 'Sí, los colores generados son completamente libres de usar en cualquier proyecto, comercial o personal. Los colores en sí no tienen derechos de autor.',
-  },
-  {
-    pregunta: '¿Cómo guardo mis colores favoritos?',
-    respuesta: 'Haz clic en el botón de estrella ⭐ junto a cualquier color para guardarlo. Los colores se almacenan en tu navegador (localStorage) y estarán disponibles la próxima vez que visites la página desde el mismo dispositivo.',
-  },
-  {
-    pregunta: '¿Para qué sirve un generador de paletas de colores?',
-    respuesta: 'Es útil para diseñadores gráficos, desarrolladores web, artistas digitales e ilustradores que necesitan inspiración de color. También es perfecto para proyectos de branding, decoración, moda o cualquier proyecto creativo.',
-  },
-]
+import { useLanguage } from '../../contexts/LanguageContext'
 
 interface ColorGuardado {
   hex: string
@@ -34,6 +12,7 @@ interface ColorGuardado {
 }
 
 export default function GeneradorColores() {
+  const { t } = useLanguage()
   const [paleta, setPaleta] = useState<string[]>([])
   const [favoritos, setFavoritos] = useState<ColorGuardado[]>([])
   const [copiadoId, setCopiadoId] = useState<string | null>(null)
@@ -92,17 +71,14 @@ export default function GeneradorColores() {
         {/* Header */}
         <div className="text-center mb-10">
           <div className="text-5xl mb-4" aria-hidden="true">🎨</div>
-          <h1 className="text-4xl font-extrabold text-white mb-3">Generador de Colores</h1>
-          <p className="text-gray-400 text-lg">
-            Paletas de 5 colores únicas con HEX y RGB. Guarda tus favoritos para más tarde.
-          </p>
+          <h1 className="text-4xl font-extrabold text-white mb-3">{t.colores.title}</h1>
+          <p className="text-zinc-400 text-lg">{t.colores.subtitle}</p>
         </div>
 
-        {/* Ad Superior */}
         <AdBlock slot="6789012345" className="mb-8" />
 
         {/* Paleta principal */}
-        <div className="bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden mb-6">
+        <div className="bg-zinc-800 border border-zinc-700 rounded-2xl overflow-hidden mb-6">
           {/* Vista paleta */}
           <div className="flex h-40 md:h-56" role="list" aria-label="Paleta de colores generada">
             {paleta.map((hex) => {
@@ -129,15 +105,15 @@ export default function GeneradorColores() {
             {paleta.map((hex) => {
               const { r, g, b } = hexARgb(hex)
               return (
-                <div key={hex} className="flex items-center gap-4 p-3 bg-gray-700/50 rounded-xl group">
+                <div key={hex} className="flex items-center gap-4 p-3 bg-zinc-700/50 rounded-xl group">
                   <div
-                    className="w-12 h-12 rounded-lg border border-gray-600 flex-shrink-0 shadow-md"
+                    className="w-12 h-12 rounded-lg border border-zinc-600 flex-shrink-0 shadow-md"
                     style={{ backgroundColor: hex }}
                     aria-label={`Muestra de color ${hex}`}
                   />
                   <div className="flex-1 min-w-0">
                     <p className="text-white font-mono font-bold text-lg">{hex.toUpperCase()}</p>
-                    <p className="text-gray-400 text-sm font-mono">rgb({r}, {g}, {b})</p>
+                    <p className="text-zinc-400 text-sm font-mono">rgb({r}, {g}, {b})</p>
                   </div>
                   <div className="flex gap-2 flex-shrink-0">
                     <button
@@ -145,7 +121,7 @@ export default function GeneradorColores() {
                       className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                         copiadoId === hex
                           ? 'bg-green-600 text-white'
-                          : 'bg-gray-600 hover:bg-gray-500 text-gray-300 hover:text-white'
+                          : 'bg-zinc-600 hover:bg-zinc-500 text-zinc-300 hover:text-white'
                       }`}
                       aria-label={`Copiar color ${hex}`}
                     >
@@ -153,7 +129,7 @@ export default function GeneradorColores() {
                     </button>
                     <button
                       onClick={() => copiarAlPortapapeles(`rgb(${r}, ${g}, ${b})`)}
-                      className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-gray-600 hover:bg-gray-500 text-gray-300 hover:text-white transition-all"
+                      className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-zinc-600 hover:bg-zinc-500 text-zinc-300 hover:text-white transition-all"
                       aria-label={`Copiar RGB de color ${hex}`}
                     >
                       📋 RGB
@@ -175,36 +151,36 @@ export default function GeneradorColores() {
           <div className="px-4 pb-4 flex flex-col sm:flex-row gap-3">
             <button
               onClick={regenerar}
-              className="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-200 hover:scale-105 active:scale-95"
+              className="flex-1 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-200 hover:scale-105 active:scale-95"
               aria-label="Generar nueva paleta de colores"
             >
-              🎨 Nueva paleta
+              {t.colores.generate}
             </button>
             <button
               onClick={copiarPaleta}
               className={`flex-1 font-bold py-3 px-6 rounded-xl border-2 transition-all duration-200 ${
                 palCopiada
                   ? 'border-green-500 bg-green-600/20 text-green-400'
-                  : 'border-gray-600 bg-gray-700 text-gray-300 hover:border-gray-500 hover:text-white'
+                  : 'border-zinc-600 bg-zinc-700 text-zinc-300 hover:border-zinc-500 hover:text-white'
               }`}
               aria-label="Copiar todos los colores de la paleta"
             >
-              {palCopiada ? '✅ ¡Copiada!' : '📋 Copiar paleta'}
+              {palCopiada ? t.colores.paletteCopied : t.colores.copyPalette}
             </button>
           </div>
         </div>
 
         {/* Favoritos */}
         {favoritos.length > 0 && (
-          <div className="bg-gray-800/50 border border-gray-700 rounded-2xl p-6 mb-8">
+          <div className="bg-zinc-800/50 border border-zinc-700 rounded-2xl p-6 mb-8">
             <h2 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
-              <span aria-hidden="true">⭐</span> Colores guardados ({favoritos.length})
+              <span aria-hidden="true">⭐</span> {t.colores.saved} ({favoritos.length})
             </h2>
             <div className="flex flex-wrap gap-3">
               {favoritos.map((fav) => (
                 <div key={fav.hex} className="group relative">
                   <div
-                    className="w-12 h-12 rounded-xl border border-gray-600 cursor-pointer shadow-md hover:scale-110 transition-transform"
+                    className="w-12 h-12 rounded-xl border border-zinc-600 cursor-pointer shadow-md hover:scale-110 transition-transform"
                     style={{ backgroundColor: fav.hex }}
                     onClick={() => copiarColor(fav.hex)}
                     role="button"
@@ -219,7 +195,7 @@ export default function GeneradorColores() {
                   >
                     ×
                   </button>
-                  <p className="text-center text-xs text-gray-500 mt-1 font-mono">
+                  <p className="text-center text-xs text-zinc-500 mt-1 font-mono">
                     {fav.hex.toUpperCase()}
                   </p>
                 </div>
@@ -229,7 +205,7 @@ export default function GeneradorColores() {
         )}
 
         {/* Info SEO */}
-        <div className="bg-gray-800/30 border border-gray-700/50 rounded-xl p-6 text-gray-400 text-sm leading-relaxed mb-8">
+        <div className="bg-zinc-800/30 border border-zinc-700/50 rounded-xl p-6 text-zinc-400 text-sm leading-relaxed mb-8">
           <h2 className="text-white font-semibold mb-2">Para diseñadores y creativos</h2>
           <p>
             Genera combinaciones de colores únicas con los valores HEX y RGB listos para copiar.
@@ -238,10 +214,8 @@ export default function GeneradorColores() {
           </p>
         </div>
 
-        {/* FAQ */}
-        <FaqSection faqs={FAQS_COLORES} titulo="Preguntas sobre el Generador de Colores" />
+        <FaqSection faqs={t.colores.faqs} titulo={t.colores.faqTitle} />
 
-        {/* Ad Inferior */}
         <AdBlock slot="7890123456" />
       </div>
     </div>

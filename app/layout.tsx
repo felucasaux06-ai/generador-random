@@ -3,6 +3,7 @@ import Script from 'next/script'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import CookieBanner from './components/CookieBanner'
+import { LanguageProvider } from './contexts/LanguageContext'
 import './globals.css'
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
@@ -106,7 +107,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans antialiased">
+      <body className="bg-[#080808] text-zinc-100 min-h-screen flex flex-col font-sans antialiased">
         {GA_ID && (
           <>
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
@@ -115,12 +116,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </Script>
           </>
         )}
-        <Navigation />
-        <main className="flex-1" id="main-content">
-          {children}
-        </main>
-        <Footer />
-        <CookieBanner />
+        <LanguageProvider>
+          <Navigation />
+          <main className="flex-1" id="main-content">
+            {children}
+          </main>
+          <Footer />
+          <CookieBanner />
+        </LanguageProvider>
       </body>
     </html>
   )

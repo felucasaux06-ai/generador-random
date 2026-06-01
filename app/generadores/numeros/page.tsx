@@ -5,29 +5,7 @@ import AdBlock from '../../components/AdBlock'
 import FaqSection from '../../components/FaqSection'
 import RelatedTools from '../../components/RelatedTools'
 import { copiarAlPortapapeles } from '../../lib/utils'
-
-const FAQS_NUMEROS = [
-  {
-    pregunta: '¿Cómo funciona el generador de números aleatorios?',
-    respuesta: 'Usamos Math.random() de JavaScript, que genera un número decimal entre 0 y 1 con alta precisión. Lo multiplicamos y ajustamos para obtener un entero en el rango que elegís. El resultado es impredecible.',
-  },
-  {
-    pregunta: '¿Los números son verdaderamente aleatorios?',
-    respuesta: 'Son pseudoaleatorios: impredecibles para fines prácticos. Para sorteos, decisiones y juegos son perfectamente válidos. Si necesitás aleatoriedad criptográfica certificada, precisás hardware especializado.',
-  },
-  {
-    pregunta: '¿Cuántos números puedo generar a la vez?',
-    respuesta: 'De 1 a 10 números por vez con el slider de cantidad. El historial guarda los últimos 20 resultados de la sesión. Si necesitás más, generá varias tandas.',
-  },
-  {
-    pregunta: '¿Puedo generar números negativos?',
-    respuesta: 'Sí, el mínimo puede ser negativo. Por ejemplo, de -100 a 100 genera números en ese rango completo. El único requisito es que el mínimo sea estrictamente menor al máximo.',
-  },
-  {
-    pregunta: '¿Para qué sirve un generador de números aleatorios?',
-    respuesta: 'Sorteos, juegos de mesa, estadística, programación, simulaciones, contraseñas numéricas, elegir una película de la lista, o simplemente cuando necesitás un número al azar sin pensar. La herramienta más versátil.',
-  },
-]
+import { useLanguage } from '../../contexts/LanguageContext'
 
 const RANGOS_RAPIDOS = [
   { label: '1 – 10', min: 1, max: 10 },
@@ -41,6 +19,7 @@ const RANGOS_RAPIDOS = [
 ]
 
 export default function GeneradorNumeros() {
+  const { t } = useLanguage()
   const [minVal, setMinVal] = useState(1)
   const [maxVal, setMaxVal] = useState(100)
   const [cantidad, setCantidad] = useState(1)
@@ -53,7 +32,7 @@ export default function GeneradorNumeros() {
 
   const validar = () => {
     if (minVal >= maxVal) {
-      setError('El mínimo debe ser menor al máximo.')
+      setError(t.numeros.errorMsg)
       return false
     }
     setError('')
@@ -111,43 +90,40 @@ export default function GeneradorNumeros() {
         {/* Header */}
         <div className="text-center mb-10">
           <div className="text-5xl mb-4" aria-hidden="true">🎲</div>
-          <h1 className="text-4xl font-extrabold text-white mb-3">Generador de Números</h1>
-          <p className="text-gray-400 text-lg">
-            Elegí el rango y generá números al azar al instante.
-          </p>
+          <h1 className="text-4xl font-extrabold text-white mb-3">{t.numeros.title}</h1>
+          <p className="text-zinc-400 text-lg">{t.numeros.subtitle}</p>
         </div>
 
         <AdBlock slot="3344556677" className="mb-8" />
 
         {/* Configuración */}
-        <div className="bg-gray-800 border border-gray-700 rounded-2xl p-6 mb-6 space-y-6">
-          <h2 className="text-white font-bold text-lg">⚙️ Configurar rango</h2>
+        <div className="bg-zinc-800 border border-zinc-700 rounded-2xl p-6 mb-6 space-y-6">
+          <h2 className="text-white font-bold text-lg">{t.numeros.configTitle}</h2>
 
-          {/* Mínimo / Máximo */}
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label htmlFor="minVal" className="text-gray-400 text-sm block mb-2 font-medium">
-                Desde
+              <label htmlFor="minVal" className="text-zinc-400 text-sm block mb-2 font-medium">
+                {t.numeros.from}
               </label>
               <input
                 id="minVal"
                 type="number"
                 value={minVal}
                 onChange={e => { setMinVal(Number(e.target.value)); setError('') }}
-                className="w-full bg-gray-700 border border-gray-600 rounded-xl px-4 py-3 text-white text-2xl font-bold text-center focus:outline-none focus:border-blue-500 transition-colors"
+                className="w-full bg-zinc-700 border border-zinc-600 rounded-xl px-4 py-3 text-white text-2xl font-bold text-center focus:outline-none focus:border-fuchsia-500 transition-colors"
                 aria-label="Número mínimo"
               />
             </div>
             <div>
-              <label htmlFor="maxVal" className="text-gray-400 text-sm block mb-2 font-medium">
-                Hasta
+              <label htmlFor="maxVal" className="text-zinc-400 text-sm block mb-2 font-medium">
+                {t.numeros.to}
               </label>
               <input
                 id="maxVal"
                 type="number"
                 value={maxVal}
                 onChange={e => { setMaxVal(Number(e.target.value)); setError('') }}
-                className="w-full bg-gray-700 border border-gray-600 rounded-xl px-4 py-3 text-white text-2xl font-bold text-center focus:outline-none focus:border-blue-500 transition-colors"
+                className="w-full bg-zinc-700 border border-zinc-600 rounded-xl px-4 py-3 text-white text-2xl font-bold text-center focus:outline-none focus:border-fuchsia-500 transition-colors"
                 aria-label="Número máximo"
               />
             </div>
@@ -162,10 +138,10 @@ export default function GeneradorNumeros() {
           {/* Cantidad */}
           <div>
             <div className="flex justify-between mb-2">
-              <label htmlFor="cantidad" className="text-gray-400 text-sm font-medium">
-                Cantidad de números
+              <label htmlFor="cantidad" className="text-zinc-400 text-sm font-medium">
+                {t.numeros.qty}
               </label>
-              <span className="text-blue-400 font-bold text-lg">{cantidad}</span>
+              <span className="text-fuchsia-400 font-bold text-lg">{cantidad}</span>
             </div>
             <input
               id="cantidad"
@@ -174,10 +150,10 @@ export default function GeneradorNumeros() {
               max={10}
               value={cantidad}
               onChange={e => setCantidad(Number(e.target.value))}
-              className="w-full accent-blue-600"
+              className="w-full accent-fuchsia-600"
               aria-label={`Generar ${cantidad} número${cantidad > 1 ? 's' : ''}`}
             />
-            <div className="flex justify-between text-xs text-gray-500 mt-1">
+            <div className="flex justify-between text-xs text-zinc-500 mt-1">
               <span>1</span>
               <span>10</span>
             </div>
@@ -185,7 +161,7 @@ export default function GeneradorNumeros() {
 
           {/* Rangos rápidos */}
           <div>
-            <p className="text-gray-500 text-xs mb-2 font-medium uppercase tracking-wider">Rangos rápidos</p>
+            <p className="text-zinc-500 text-xs mb-2 font-medium uppercase tracking-wider">{t.numeros.quickRanges}</p>
             <div className="flex flex-wrap gap-2">
               {RANGOS_RAPIDOS.map(r => (
                 <button
@@ -193,8 +169,8 @@ export default function GeneradorNumeros() {
                   onClick={() => aplicarRango(r.min, r.max)}
                   className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors border ${
                     minVal === r.min && maxVal === r.max
-                      ? 'bg-blue-600/20 border-blue-600/50 text-blue-400'
-                      : 'bg-gray-700 border-gray-600 text-gray-400 hover:text-white hover:border-gray-500'
+                      ? 'bg-fuchsia-600/20 border-fuchsia-600/50 text-fuchsia-400'
+                      : 'bg-zinc-700 border-zinc-600 text-zinc-400 hover:text-white hover:border-zinc-500'
                   }`}
                 >
                   {r.label}
@@ -208,15 +184,15 @@ export default function GeneradorNumeros() {
         <button
           onClick={generar}
           disabled={animando}
-          className="w-full bg-blue-600 hover:bg-blue-500 disabled:opacity-60 text-white font-black py-4 rounded-2xl text-xl transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-blue-900/30 mb-6"
+          className="w-full bg-fuchsia-600 hover:bg-fuchsia-500 disabled:opacity-60 text-white font-black py-4 rounded-2xl text-xl transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-fuchsia-900/30 mb-6"
           aria-label="Generar número aleatorio"
         >
-          {animando ? '🎲 Generando…' : '🎲 Generar'}
+          {animando ? t.numeros.generating : t.numeros.generate}
         </button>
 
         {/* Resultado */}
         {hayResultado && !animando && (
-          <div className="bg-gray-800 border border-gray-700 rounded-2xl p-6 mb-6 animate-fade-in">
+          <div className="bg-zinc-800 border border-zinc-700 rounded-2xl p-6 mb-6 animate-fade-in">
             <div className="text-center mb-4">
               {cantidad === 1 && resultado !== null ? (
                 <>
@@ -227,8 +203,8 @@ export default function GeneradorNumeros() {
                   >
                     {resultado}
                   </div>
-                  <p className="text-gray-500 text-sm">
-                    Entre {minVal} y {maxVal}
+                  <p className="text-zinc-500 text-sm">
+                    {t.numeros.between} {minVal} {t.numeros.and} {maxVal}
                   </p>
                 </>
               ) : (
@@ -237,14 +213,14 @@ export default function GeneradorNumeros() {
                     {multiplesResultados.map((n, i) => (
                       <span
                         key={i}
-                        className="text-3xl md:text-4xl font-black text-white bg-gray-700 rounded-2xl px-5 py-3 border border-gray-600"
+                        className="text-3xl md:text-4xl font-black text-white bg-zinc-700 rounded-2xl px-5 py-3 border border-zinc-600"
                       >
                         {n}
                       </span>
                     ))}
                   </div>
-                  <p className="text-gray-500 text-sm">
-                    {cantidad} números entre {minVal} y {maxVal}
+                  <p className="text-zinc-500 text-sm">
+                    {cantidad} {t.numeros.numbers} {minVal} {t.numeros.and} {maxVal}
                   </p>
                 </>
               )}
@@ -255,32 +231,32 @@ export default function GeneradorNumeros() {
               className={`w-full py-2.5 rounded-xl font-semibold text-sm border-2 transition-all ${
                 copiado
                   ? 'border-green-500 bg-green-600/20 text-green-400'
-                  : 'border-gray-600 bg-gray-700 text-gray-300 hover:border-gray-500 hover:text-white'
+                  : 'border-zinc-600 bg-zinc-700 text-zinc-300 hover:border-zinc-500 hover:text-white'
               }`}
               aria-label="Copiar resultado"
             >
-              {copiado ? '✅ ¡Copiado!' : '📋 Copiar resultado'}
+              {copiado ? t.numeros.copied : t.numeros.copy}
             </button>
           </div>
         )}
 
         {/* Historial */}
         {historial.length > 0 && (
-          <div className="bg-gray-800/50 border border-gray-700 rounded-2xl p-5 mb-8">
+          <div className="bg-zinc-800/50 border border-zinc-700 rounded-2xl p-5 mb-8">
             <div className="flex items-center justify-between mb-3">
-              <h2 className="text-white font-bold text-sm">🕐 Historial de la sesión</h2>
+              <h2 className="text-white font-bold text-sm">{t.numeros.history}</h2>
               <button
                 onClick={() => setHistorial([])}
-                className="text-gray-600 hover:text-gray-400 text-xs transition-colors"
+                className="text-zinc-600 hover:text-zinc-400 text-xs transition-colors"
               >
-                Limpiar
+                {t.numeros.clear}
               </button>
             </div>
             <div className="flex flex-wrap gap-2">
               {historial.map((n, i) => (
                 <span
                   key={i}
-                  className="bg-gray-700 text-gray-300 px-3 py-1.5 rounded-lg text-sm font-mono border border-gray-600"
+                  className="bg-zinc-700 text-zinc-300 px-3 py-1.5 rounded-lg text-sm font-mono border border-zinc-600"
                 >
                   {n}
                 </span>
@@ -290,22 +266,22 @@ export default function GeneradorNumeros() {
         )}
 
         {/* Contenido SEO */}
-        <div className="bg-gray-800/30 border border-gray-700/50 rounded-xl p-6 mb-8">
+        <div className="bg-zinc-800/30 border border-zinc-700/50 rounded-xl p-6 mb-8">
           <h2 className="text-white font-semibold mb-3">Generador de números aleatorios: usos y aplicaciones</h2>
-          <div className="text-gray-400 text-sm leading-relaxed space-y-3">
+          <div className="text-zinc-400 text-sm leading-relaxed space-y-3">
             <p>
-              El <strong className="text-gray-300">generador de números aleatorios</strong> más flexible en español. Elegís exactamente el rango: desde 1 hasta 100, de 1 a 6 como un <strong className="text-gray-300">dado virtual</strong>, del 1 al 52 para una baraja de cartas, o cualquier rango personalizado incluyendo negativos.
+              El <strong className="text-zinc-300">generador de números aleatorios</strong> más flexible en español. Elegís exactamente el rango: desde 1 hasta 100, de 1 a 6 como un <strong className="text-zinc-300">dado virtual</strong>, del 1 al 52 para una baraja de cartas, o cualquier rango personalizado incluyendo negativos.
             </p>
             <p>
-              Usos frecuentes: <strong className="text-gray-300">sorteos de números</strong> para rifas y loterías caseras, elegir el orden de presentación en una clase, definir quién empieza en un juego de mesa, generar datos aleatorios para programación, estadística y simulaciones, o simplemente tomar una decisión cuando tenés demasiadas opciones.
+              Usos frecuentes: <strong className="text-zinc-300">sorteos de números</strong> para rifas y loterías caseras, elegir el orden de presentación en una clase, definir quién empieza en un juego de mesa, generar datos aleatorios para programación, estadística y simulaciones, o simplemente tomar una decisión cuando tenés demasiadas opciones.
             </p>
             <p>
-              Podés generar <strong className="text-gray-300">hasta 10 números a la vez</strong> con el slider de cantidad. El historial de la sesión guarda los últimos 20 resultados. Los rangos rápidos prearmados (1-10, 1-100, dado, cartas) te ahorran configuración cuando tenés prisa.
+              Podés generar <strong className="text-zinc-300">hasta 10 números a la vez</strong> con el slider de cantidad. El historial de la sesión guarda los últimos 20 resultados. Los rangos rápidos prearmados (1-10, 1-100, dado, cartas) te ahorran configuración cuando tenés prisa.
             </p>
           </div>
         </div>
 
-        <FaqSection faqs={FAQS_NUMEROS} titulo="Preguntas sobre el Generador de Números" />
+        <FaqSection faqs={t.numeros.faqs} titulo={t.numeros.faqTitle} />
 
         <RelatedTools current="/generadores/numeros" />
 

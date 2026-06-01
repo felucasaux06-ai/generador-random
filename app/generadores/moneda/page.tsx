@@ -3,31 +3,10 @@
 import { useState } from 'react'
 import AdBlock from '../../components/AdBlock'
 import FaqSection from '../../components/FaqSection'
-
-const FAQS_MONEDA = [
-  {
-    pregunta: '¿Es realmente 50/50?',
-    respuesta: 'Sí. Usamos Math.random() de JavaScript, que produce un número entre 0 y 1 con distribución uniforme. Si es menor a 0.5, sale cara; si es 0.5 o mayor, sale cruz. Exactamente 50% de probabilidad para cada lado.',
-  },
-  {
-    pregunta: '¿Para qué sirve tirar una moneda online?',
-    respuesta: 'Para resolver decisiones rápidas cuando no tenés una moneda física: quién paga, quién empieza el juego, qué película ver, a qué equipo le toca. Es más rápido que buscar una moneda en el bolsillo.',
-  },
-  {
-    pregunta: '¿Puedo confiar en el resultado para apuestas o sorteos?',
-    respuesta: 'Para decisiones informales y sorteos entre amigos, sí. Para apuestas con dinero real o sorteos legales, recomendamos usar un sistema certificado. Nuestro generador es perfecto para uso casual y recreativo.',
-  },
-  {
-    pregunta: '¿Qué significan las estadísticas que muestra?',
-    respuesta: 'El contador muestra cuántas veces salió cara y cuántas cruz en tu sesión. Si tirás muchas veces, los porcentajes se aproximan al 50/50, confirmando que el generador es imparcial.',
-  },
-  {
-    pregunta: '¿Por qué la ley de los grandes números dice que tiende al 50/50?',
-    respuesta: 'Cada lanzamiento es independiente: no importa cuántas veces seguidas salió cara, la próxima tiene exactamente 50% de probabilidad. La "ley de los grandes números" dice que con muchos lanzamientos el promedio se acerca al 50/50, pero no "corrige" rachas.',
-  },
-]
+import { useLanguage } from '../../contexts/LanguageContext'
 
 export default function GeneradorMoneda() {
+  const { t } = useLanguage()
   const [resultado, setResultado] = useState<'cara' | 'cruz' | null>(null)
   const [girando, setGirando] = useState(false)
   const [stats, setStats] = useState({ cara: 0, cruz: 0 })
@@ -57,17 +36,14 @@ export default function GeneradorMoneda() {
         {/* Header */}
         <div className="text-center mb-10">
           <div className="text-5xl mb-4" aria-hidden="true">🪙</div>
-          <h1 className="text-4xl font-extrabold text-white mb-3">Cara o Cruz</h1>
-          <p className="text-gray-400 text-lg">
-            Tirá la moneda virtual. 50/50 garantizado.
-          </p>
+          <h1 className="text-4xl font-extrabold text-white mb-3">{t.moneda.title}</h1>
+          <p className="text-zinc-400 text-lg">{t.moneda.subtitle}</p>
         </div>
 
         <AdBlock slot="5566778899" className="mb-8" />
 
         {/* Moneda y botón */}
-        <div className="bg-gray-800 border border-gray-700 rounded-2xl p-8 mb-6">
-          {/* Contenedor con perspectiva para la animación 3D */}
+        <div className="bg-zinc-800 border border-zinc-700 rounded-2xl p-8 mb-6">
           <div className="flex justify-center mb-8" style={{ perspective: '600px' }}>
             <div
               key={flipKey}
@@ -75,12 +51,12 @@ export default function GeneradorMoneda() {
                 girando ? 'animate-coin-flip' : ''
               } ${
                 resultado === 'cruz'
-                  ? 'bg-gradient-to-br from-slate-400 to-slate-600 border-slate-400 text-slate-100'
+                  ? 'bg-gradient-to-br from-zinc-400 to-zinc-600 border-zinc-400 text-zinc-100'
                   : 'bg-gradient-to-br from-yellow-400 to-amber-600 border-yellow-400 text-yellow-900'
               }`}
               style={{
                 boxShadow: resultado === 'cruz'
-                  ? '0 8px 32px rgba(100,116,139,0.4), inset 0 2px 8px rgba(255,255,255,0.25)'
+                  ? '0 8px 32px rgba(113,113,122,0.4), inset 0 2px 8px rgba(255,255,255,0.25)'
                   : '0 8px 32px rgba(234,179,8,0.45), inset 0 2px 8px rgba(255,255,255,0.35)',
               }}
               aria-live="polite"
@@ -105,17 +81,17 @@ export default function GeneradorMoneda() {
           <div className="text-center mb-6 min-h-[64px] flex flex-col items-center justify-center">
             {resultado && !girando ? (
               <div className="animate-fade-in">
-                <p className="text-gray-500 text-xs uppercase tracking-widest mb-1">Resultado</p>
+                <p className="text-zinc-500 text-xs uppercase tracking-widest mb-1">{t.moneda.result}</p>
                 <p className={`text-5xl font-black ${
-                  resultado === 'cara' ? 'text-yellow-400' : 'text-slate-300'
+                  resultado === 'cara' ? 'text-yellow-400' : 'text-zinc-300'
                 }`}>
-                  {resultado === 'cara' ? '⚜️ CARA' : '✕ CRUZ'}
+                  {resultado === 'cara' ? t.moneda.heads : t.moneda.tails}
                 </p>
               </div>
             ) : girando ? (
-              <p className="text-gray-500 text-lg animate-pulse">Volando en el aire…</p>
+              <p className="text-zinc-500 text-lg animate-pulse">{t.moneda.flying}</p>
             ) : (
-              <p className="text-gray-600 text-base">Presioná el botón para lanzar</p>
+              <p className="text-zinc-600 text-base">{t.moneda.ready}</p>
             )}
           </div>
 
@@ -123,41 +99,40 @@ export default function GeneradorMoneda() {
           <button
             onClick={lanzar}
             disabled={girando}
-            className="w-full bg-amber-500 hover:bg-amber-400 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-black py-4 rounded-2xl text-xl transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-amber-900/30"
+            className="w-full bg-amber-500 hover:bg-amber-400 disabled:bg-zinc-600 disabled:cursor-not-allowed text-white font-black py-4 rounded-2xl text-xl transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-amber-900/30"
             aria-label="Lanzar la moneda"
           >
-            {girando ? '🪙 Volando…' : '🪙 ¡Lanzar!'}
+            {girando ? t.moneda.launching : t.moneda.launch}
           </button>
         </div>
 
         {/* Estadísticas */}
         {total > 0 && (
-          <div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-6 mb-8 animate-fade-in">
+          <div className="bg-zinc-800/60 border border-zinc-700 rounded-2xl p-6 mb-8 animate-fade-in">
             <h2 className="text-white font-bold text-center mb-5">
-              Estadísticas de la sesión
-              <span className="text-gray-500 text-sm font-normal ml-2">({total} lanzamiento{total !== 1 ? 's' : ''})</span>
+              {t.moneda.stats}
+              <span className="text-zinc-500 text-sm font-normal ml-2">({total} {total !== 1 ? t.moneda.flips : t.moneda.flip})</span>
             </h2>
 
             <div className="grid grid-cols-2 gap-4 mb-5">
               <div className="bg-yellow-900/20 border border-yellow-700/30 rounded-2xl p-5 text-center">
                 <p className="text-yellow-400 text-4xl font-black">{stats.cara}</p>
-                <p className="text-yellow-300/80 text-sm font-semibold mt-1">⚜️ Cara</p>
+                <p className="text-yellow-300/80 text-sm font-semibold mt-1">{t.moneda.headsLabel}</p>
                 <p className="text-yellow-500/60 text-xs mt-0.5 font-bold">{pctCara}%</p>
               </div>
-              <div className="bg-slate-700/30 border border-slate-600/30 rounded-2xl p-5 text-center">
-                <p className="text-slate-300 text-4xl font-black">{stats.cruz}</p>
-                <p className="text-slate-400 text-sm font-semibold mt-1">✕ Cruz</p>
-                <p className="text-slate-500 text-xs mt-0.5 font-bold">{pctCruz}%</p>
+              <div className="bg-zinc-700/30 border border-zinc-600/30 rounded-2xl p-5 text-center">
+                <p className="text-zinc-300 text-4xl font-black">{stats.cruz}</p>
+                <p className="text-zinc-400 text-sm font-semibold mt-1">{t.moneda.tailsLabel}</p>
+                <p className="text-zinc-500 text-xs mt-0.5 font-bold">{pctCruz}%</p>
               </div>
             </div>
 
-            {/* Barra de distribución */}
             <div>
-              <div className="flex justify-between text-xs text-gray-500 mb-1.5">
-                <span>⚜️ Cara {pctCara}%</span>
-                <span>✕ Cruz {pctCruz}%</span>
+              <div className="flex justify-between text-xs text-zinc-500 mb-1.5">
+                <span>{t.moneda.headsLabel} {pctCara}%</span>
+                <span>{t.moneda.tailsLabel} {pctCruz}%</span>
               </div>
-              <div className="w-full bg-slate-600 rounded-full h-3 overflow-hidden">
+              <div className="w-full bg-zinc-600 rounded-full h-3 overflow-hidden">
                 <div
                   className="bg-yellow-500 h-3 rounded-full transition-all duration-700"
                   style={{ width: `${pctCara}%` }}
@@ -172,38 +147,35 @@ export default function GeneradorMoneda() {
 
             <button
               onClick={() => setStats({ cara: 0, cruz: 0 })}
-              className="mt-4 w-full text-gray-600 hover:text-gray-400 text-xs transition-colors py-1"
+              className="mt-4 w-full text-zinc-600 hover:text-zinc-400 text-xs transition-colors py-1"
             >
-              Reiniciar estadísticas
+              {t.moneda.resetStats}
             </button>
           </div>
         )}
 
         {/* Info */}
-        <div className="bg-gray-800/30 border border-gray-700/50 rounded-xl p-5 text-gray-400 text-sm leading-relaxed mb-8">
-          <h2 className="text-white font-semibold mb-2">Perfecta para decisiones rápidas</h2>
-          <p>
-            Sin moneda física, sin debate. Usá el generador para resolver cualquier dilema del día a día:
-            quién paga el café, a qué lado del tablero empezar, o cualquier decisión que merezca una tirada justa.
-          </p>
+        <div className="bg-zinc-800/30 border border-zinc-700/50 rounded-xl p-5 text-zinc-400 text-sm leading-relaxed mb-8">
+          <h2 className="text-white font-semibold mb-2">{t.moneda.infoTitle}</h2>
+          <p>{t.moneda.infoText}</p>
         </div>
 
-        <FaqSection faqs={FAQS_MONEDA} titulo="Preguntas sobre Cara o Cruz" />
+        <FaqSection faqs={t.moneda.faqs} titulo={t.moneda.faqTitle} />
 
         {/* Contenido SEO */}
-        <div className="mt-6 bg-gray-800/30 border border-gray-700/50 rounded-xl p-6">
+        <div className="mt-6 bg-zinc-800/30 border border-zinc-700/50 rounded-xl p-6">
           <h2 className="text-white font-semibold mb-3">Cara o Cruz online para decisiones rápidas</h2>
-          <div className="text-gray-400 text-sm leading-relaxed space-y-3">
+          <div className="text-zinc-400 text-sm leading-relaxed space-y-3">
             <p>
-              Tirar una <strong className="text-gray-300">moneda virtual</strong> nunca fue tan fácil. Con este generador de{' '}
-              <strong className="text-gray-300">cara o cruz online</strong> resolvés cualquier dilema en un segundo, sin necesidad de buscar una moneda física ni ponerte de acuerdo con nadie sobre quién la lanza. El resultado es 100% aleatorio e imparcial: exactamente 50% de probabilidad para cada lado, siempre.
+              Tirar una <strong className="text-zinc-300">moneda virtual</strong> nunca fue tan fácil. Con este generador de{' '}
+              <strong className="text-zinc-300">cara o cruz online</strong> resolvés cualquier dilema en un segundo, sin necesidad de buscar una moneda física ni ponerte de acuerdo con nadie sobre quién la lanza. El resultado es 100% aleatorio e imparcial: exactamente 50% de probabilidad para cada lado, siempre.
             </p>
             <p>
-              Los usos más frecuentes son los más cotidianos: decidir <strong className="text-gray-300">quién paga el café</strong>, quién elige la película del viernes, quién arranca en un juego de mesa, o quién le toca lavar los platos. También sirve para sorteos entre dos personas cuando querés una forma justa y rápida de elegir sin discusiones. Tirá la moneda al azar y listo.
+              Los usos más frecuentes son los más cotidianos: decidir <strong className="text-zinc-300">quién paga el café</strong>, quién elige la película del viernes, quién arranca en un juego de mesa, o quién le toca lavar los platos. También sirve para sorteos entre dos personas cuando querés una forma justa y rápida de elegir sin discusiones. Tirá la moneda al azar y listo.
             </p>
             <p>
-              A diferencia de lanzar una moneda real, acá no hay forma de hacer trampa: no existe el "tiro mal" ni el "volvemos a tirar". Usá esta herramienta de <strong className="text-gray-300">cara o cruz gratis</strong> desde el celular o la computadora, sin instalar nada, sin registrarte. La próxima vez que necesités{' '}
-              <strong className="text-gray-300">tirar moneda online</strong>, ya sabés dónde venir.
+              A diferencia de lanzar una moneda real, acá no hay forma de hacer trampa: no existe el "tiro mal" ni el "volvemos a tirar". Usá esta herramienta de <strong className="text-zinc-300">cara o cruz gratis</strong> desde el celular o la computadora, sin instalar nada, sin registrarte. La próxima vez que necesités{' '}
+              <strong className="text-zinc-300">tirar moneda online</strong>, ya sabés dónde venir.
             </p>
           </div>
         </div>

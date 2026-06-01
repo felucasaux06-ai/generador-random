@@ -6,31 +6,10 @@ import FaqSection from '../../components/FaqSection'
 import FlagArg from '../../components/FlagArg'
 import { CHISTES_ARGENTINOS } from '../../lib/data'
 import { generarAleatorio, copiarAlPortapapeles } from '../../lib/utils'
-
-const FAQS = [
-  {
-    pregunta: '¿Son chistes argentinos de verdad?',
-    respuesta: 'Sí. Todos usan referencias auténticas: el mate, el asado, el fernet, la inflación, el psicoanálisis y el ego nacional. No son chistes genéricos traducidos al español.',
-  },
-  {
-    pregunta: '¿Qué es el lunfardo?',
-    respuesta: 'El lunfardo es el slang rioplatense. Una mezcla de español con italiano, africano y otras lenguas. Palabras como "pibe", "quilombo", "morfar" o "laburo" son lunfardo puro.',
-  },
-  {
-    pregunta: '¿Puedo compartirlos en WhatsApp?',
-    respuesta: 'Sí. El botón de WhatsApp abre una conversación con el chiste listo para enviar, con la bandera argentina y el link al sitio.',
-  },
-  {
-    pregunta: '¿Por qué los argentinos tienen tantos chistes sobre sí mismos?',
-    respuesta: 'Porque tienen sentido del humor. El humor de autodescubrimiento es una característica cultural argentina. Se burlan de su ego, de la crisis y de sus contradicciones con una mezcla única de orgullo e ironía.',
-  },
-  {
-    pregunta: '¿Hay chistes para adultos?',
-    respuesta: 'Sí, hay una sección de chistes desubicados mezclados con los demás. Todos mantienen el estilo argentino con doble sentido y referencias culturales locales.',
-  },
-]
+import { useLanguage } from '../../contexts/LanguageContext'
 
 export default function ChistesArgentinos() {
+  const { t } = useLanguage()
   const [chiste, setChiste] = useState<(typeof CHISTES_ARGENTINOS)[0] | null>(null)
   const [revelado, setRevelado] = useState(false)
   const [copiado, setCopiado] = useState(false)
@@ -79,21 +58,20 @@ export default function ChistesArgentinos() {
             <FlagArg className="w-16 h-11 rounded-md shadow-lg" />
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-            Chistes Argentinos
+            {t.chistesArg.title}
           </h1>
-          <p className="text-slate-400 text-sm md:text-base max-w-sm mx-auto">
-            Humor argentino de verdad. Mate, asado, inflación y ego. Sin filtro.
+          <p className="text-zinc-400 text-sm md:text-base max-w-sm mx-auto">
+            {t.chistesArg.subtitle}
           </p>
           <div className="flex flex-wrap justify-center gap-2 mt-4">
-            {['🧉 Mate', '🥩 Asado', '💸 Inflación', '🛋️ Psicoanalista'].map((t) => (
-              <span key={t} className="text-xs bg-slate-800 border border-slate-700 text-slate-400 px-3 py-1 rounded-full">
-                {t}
+            {['🧉 Mate', '🥩 Asado', '💸 Inflación', '🛋️ Psicoanalista'].map((tag) => (
+              <span key={tag} className="text-xs bg-zinc-800 border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full">
+                {tag}
               </span>
             ))}
           </div>
         </div>
 
-        {/* Ad superior */}
         <div className="ad-wrapper">
           <AdBlock slot="1122334455" />
         </div>
@@ -101,47 +79,43 @@ export default function ChistesArgentinos() {
         {/* Botón principal */}
         <button
           onClick={generar}
-          className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-6 rounded-2xl text-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-900/30 mb-5 flex items-center justify-center gap-2"
+          className="w-full bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-bold py-4 px-6 rounded-2xl text-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-fuchsia-900/30 mb-5 flex items-center justify-center gap-2"
           aria-label="Generar chiste argentino"
         >
           <FlagArg className="w-6 h-4" />
-          ¡Dame un chiste, boludo!
+          {t.chistesArg.generate}
         </button>
 
         {/* Chiste */}
         {chiste && (
-          <div className="bg-slate-900 border border-slate-700 rounded-2xl p-5 mb-5 animate-fade-in">
+          <div className="bg-zinc-900 border border-zinc-700 rounded-2xl p-5 mb-5 animate-fade-in">
 
-            {/* Setup */}
-            <p className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">La pregunta</p>
+            <p className="text-xs font-bold text-zinc-500 uppercase tracking-wider mb-2">{t.chistesArg.question}</p>
             <p className="text-white text-lg font-semibold leading-relaxed mb-5" aria-live="polite">
               {chiste.setup}
             </p>
 
-            {/* Punchline o botón reveal */}
             {!revelado ? (
               <button
                 onClick={() => setRevelado(true)}
-                className="w-full border-2 border-dashed border-blue-500/40 text-blue-400 hover:border-blue-500 hover:bg-blue-600/10 font-bold py-4 px-6 rounded-xl transition-all text-base active:scale-[0.98]"
+                className="w-full border-2 border-dashed border-fuchsia-500/40 text-fuchsia-400 hover:border-fuchsia-500 hover:bg-fuchsia-600/10 font-bold py-4 px-6 rounded-xl transition-all text-base active:scale-[0.98]"
               >
-                🎭 Mostrar remate
+                {t.chistesArg.reveal}
               </button>
             ) : (
-              <div className="bg-blue-950/40 border border-blue-800/50 rounded-xl p-4 animate-fade-in">
-                <p className="text-xs font-bold text-blue-500 uppercase tracking-wider mb-2">El remate</p>
-                <p className="text-blue-200 text-lg font-bold leading-relaxed" aria-live="polite">
+              <div className="bg-fuchsia-950/40 border border-fuchsia-800/50 rounded-xl p-4 animate-fade-in">
+                <p className="text-xs font-bold text-fuchsia-500 uppercase tracking-wider mb-2">{t.chistesArg.punchlineLabel}</p>
+                <p className="text-fuchsia-200 text-lg font-bold leading-relaxed" aria-live="polite">
                   {chiste.punchline} 😂
                 </p>
               </div>
             )}
 
-            {/* Acciones post-reveal */}
             {revelado && (
               <div className="mt-5 space-y-4 animate-fade-in">
 
-                {/* Votación */}
                 <div>
-                  <p className="text-slate-500 text-sm mb-3 text-center">¿Te mató o fue un bodrio?</p>
+                  <p className="text-zinc-500 text-sm mb-3 text-center">{t.chistesArg.vote}</p>
                   <div className="grid grid-cols-2 gap-3">
                     <button
                       onClick={() => { if (!voto) { setVoto('ri'); setStats((p) => ({ ...p, ri: p.ri + 1 })) } }}
@@ -150,11 +124,11 @@ export default function ChistesArgentinos() {
                         voto === 'ri'
                           ? 'border-emerald-500 bg-emerald-600/20 text-emerald-400'
                           : voto
-                          ? 'border-slate-700 bg-slate-800/50 text-slate-600 cursor-not-allowed'
-                          : 'border-slate-700 bg-slate-800 text-slate-300 hover:border-emerald-500 hover:text-emerald-400'
+                          ? 'border-zinc-700 bg-zinc-800/50 text-zinc-600 cursor-not-allowed'
+                          : 'border-zinc-700 bg-zinc-800 text-zinc-300 hover:border-emerald-500 hover:text-emerald-400'
                       }`}
                     >
-                      😂 ¡Me mató!
+                      {t.chistesArg.laughed}
                     </button>
                     <button
                       onClick={() => { if (!voto) { setVoto('noRi'); setStats((p) => ({ ...p, noRi: p.noRi + 1 })) } }}
@@ -163,40 +137,39 @@ export default function ChistesArgentinos() {
                         voto === 'noRi'
                           ? 'border-yellow-500 bg-yellow-600/20 text-yellow-400'
                           : voto
-                          ? 'border-slate-700 bg-slate-800/50 text-slate-600 cursor-not-allowed'
-                          : 'border-slate-700 bg-slate-800 text-slate-300 hover:border-yellow-500 hover:text-yellow-400'
+                          ? 'border-zinc-700 bg-zinc-800/50 text-zinc-600 cursor-not-allowed'
+                          : 'border-zinc-700 bg-zinc-800 text-zinc-300 hover:border-yellow-500 hover:text-yellow-400'
                       }`}
                     >
-                      😐 Bodrio
+                      {t.chistesArg.didntLaugh}
                     </button>
                   </div>
 
                   {total > 0 && (
-                    <div className="mt-3 p-3 bg-slate-800/50 rounded-xl">
-                      <div className="flex justify-between text-xs text-slate-500 mb-1.5">
+                    <div className="mt-3 p-3 bg-zinc-800/50 rounded-xl">
+                      <div className="flex justify-between text-xs text-zinc-500 mb-1.5">
                         <span>😂 {stats.ri}</span>
                         <span>{total} vistos</span>
                         <span>{stats.noRi} 😐</span>
                       </div>
-                      <div className="w-full bg-slate-700 rounded-full h-1.5">
+                      <div className="w-full bg-zinc-700 rounded-full h-1.5">
                         <div className="bg-emerald-500 h-1.5 rounded-full transition-all duration-500" style={{ width: `${pct}%` }} />
                       </div>
-                      <p className="text-xs text-center text-slate-500 mt-1">{pct}% de efectividad</p>
+                      <p className="text-xs text-center text-zinc-500 mt-1">{pct}% de efectividad</p>
                     </div>
                   )}
                 </div>
 
-                {/* Compartir */}
                 <div className="grid grid-cols-3 gap-2">
                   <button
                     onClick={copiar}
                     className={`py-2.5 rounded-xl font-semibold text-sm transition-all border-2 active:scale-[0.97] ${
                       copiado
                         ? 'border-emerald-500 bg-emerald-600/20 text-emerald-400'
-                        : 'border-slate-700 bg-slate-800 text-slate-300 hover:border-slate-600'
+                        : 'border-zinc-700 bg-zinc-800 text-zinc-300 hover:border-zinc-600'
                     }`}
                   >
-                    {copiado ? '✅' : '📋 Copiar'}
+                    {copiado ? t.chistesArg.copied : t.chistesArg.copy}
                   </button>
                   <button
                     onClick={compartirWhatsApp}
@@ -216,18 +189,15 @@ export default function ChistesArgentinos() {
           </div>
         )}
 
-        {/* Estado vacío */}
         {!chiste && (
-          <div className="text-center py-12 text-slate-600">
+          <div className="text-center py-12 text-zinc-600">
             <div className="text-5xl mb-3" aria-hidden="true">🧉</div>
-            <p>Preparate el mate y apretá el botón</p>
+            <p>{t.chistesArg.empty}</p>
           </div>
         )}
 
-        {/* FAQ */}
-        <FaqSection faqs={FAQS} titulo="Preguntas sobre los Chistes Argentinos" />
+        <FaqSection faqs={t.chistesArg.faqs} titulo={t.chistesArg.faqTitle} />
 
-        {/* Ad inferior */}
         <div className="ad-wrapper">
           <AdBlock slot="5544332211" />
         </div>

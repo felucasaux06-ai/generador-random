@@ -2,17 +2,27 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { useLanguage } from '../contexts/LanguageContext'
 
-const MOTIVOS = [
+const MOTIVOS_ES = [
   { value: 'error', label: '🐛 Reportar un error' },
   { value: 'sugerencia', label: '💡 Sugerir una herramienta' },
   { value: 'comercial', label: '🤝 Consulta comercial' },
   { value: 'otro', label: '💬 Otro motivo' },
 ]
 
+const MOTIVOS_EN = [
+  { value: 'error', label: '🐛 Report a bug' },
+  { value: 'sugerencia', label: '💡 Suggest a tool' },
+  { value: 'comercial', label: '🤝 Business inquiry' },
+  { value: 'otro', label: '💬 Other' },
+]
+
 export default function ContactoPage() {
+  const { lang, t } = useLanguage()
   const [estado, setEstado] = useState<'idle' | 'enviando' | 'ok' | 'error'>('idle')
   const [motivo, setMotivo] = useState('')
+  const MOTIVOS = lang === 'es' ? MOTIVOS_ES : MOTIVOS_EN
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -48,38 +58,33 @@ export default function ContactoPage() {
         {/* Header */}
         <div className="text-center mb-10">
           <div className="text-5xl mb-4" aria-hidden="true">✉️</div>
-          <h1 className="text-4xl font-extrabold text-white mb-3">Contacto</h1>
-          <p className="text-gray-400 text-lg">
-            Estamos para escucharte. Respondemos en menos de 48 horas hábiles.
-          </p>
+          <h1 className="text-4xl font-extrabold text-white mb-3">{t.contacto.title}</h1>
+          <p className="text-zinc-400 text-lg">{t.contacto.subtitle}</p>
         </div>
 
         {estado === 'ok' ? (
-          /* Mensaje de éxito */
           <div className="bg-emerald-900/20 border border-emerald-700/50 rounded-2xl p-10 text-center">
             <div className="text-5xl mb-4">✅</div>
-            <h2 className="text-white font-bold text-xl mb-2">¡Mensaje enviado!</h2>
-            <p className="text-gray-400 text-sm mb-6">
-              Recibimos tu mensaje. Te respondemos en menos de 48 horas hábiles.
-            </p>
+            <h2 className="text-white font-bold text-xl mb-2">{t.contacto.success}</h2>
+            <p className="text-zinc-400 text-sm mb-6">{t.contacto.successMsg}</p>
             <button
               onClick={() => setEstado('idle')}
-              className="text-blue-400 hover:text-blue-300 text-sm underline transition-colors"
+              className="text-fuchsia-400 hover:text-fuchsia-300 text-sm underline transition-colors"
             >
-              Enviar otro mensaje
+              {t.contacto.sendAnother}
             </button>
           </div>
         ) : (
-          <div className="bg-gray-800 border border-gray-700 rounded-2xl p-8">
+          <div className="bg-zinc-800 border border-zinc-700 rounded-2xl p-8">
 
             {/* Email directo */}
-            <div className="flex items-center gap-3 mb-6 p-4 bg-gray-700/40 rounded-xl">
+            <div className="flex items-center gap-3 mb-6 p-4 bg-zinc-700/40 rounded-xl">
               <span className="text-2xl">📬</span>
               <div>
-                <p className="text-gray-400 text-sm">También podés escribirnos directamente a</p>
+                <p className="text-zinc-400 text-sm">{t.contacto.directEmail}</p>
                 <a
                   href="mailto:generador.random@gmail.com"
-                  className="text-blue-400 hover:text-blue-300 font-semibold transition-colors"
+                  className="text-fuchsia-400 hover:text-fuchsia-300 font-semibold transition-colors"
                 >
                   generador.random@gmail.com
                 </a>
@@ -91,46 +96,46 @@ export default function ContactoPage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label htmlFor="name" className="block text-gray-300 text-sm font-medium mb-2">
-                    Tu nombre <span className="text-red-400">*</span>
+                  <label htmlFor="name" className="block text-zinc-300 text-sm font-medium mb-2">
+                    {t.contacto.name} <span className="text-red-400">*</span>
                   </label>
                   <input
                     id="name"
                     name="name"
                     type="text"
                     required
-                    placeholder="Juan García"
-                    className="w-full bg-gray-900 border border-gray-600 rounded-xl px-4 py-3 text-white placeholder-gray-600 text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                    placeholder={t.contacto.namePlaceholder}
+                    className="w-full bg-zinc-900 border border-zinc-600 rounded-xl px-4 py-3 text-white placeholder-zinc-600 text-sm focus:outline-none focus:border-fuchsia-500 transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-gray-300 text-sm font-medium mb-2">
-                    Tu email <span className="text-red-400">*</span>
+                  <label htmlFor="email" className="block text-zinc-300 text-sm font-medium mb-2">
+                    {t.contacto.email} <span className="text-red-400">*</span>
                   </label>
                   <input
                     id="email"
                     name="email"
                     type="email"
                     required
-                    placeholder="juan@ejemplo.com"
-                    className="w-full bg-gray-900 border border-gray-600 rounded-xl px-4 py-3 text-white placeholder-gray-600 text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                    placeholder={t.contacto.emailPlaceholder}
+                    className="w-full bg-zinc-900 border border-zinc-600 rounded-xl px-4 py-3 text-white placeholder-zinc-600 text-sm focus:outline-none focus:border-fuchsia-500 transition-colors"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="motivo" className="block text-gray-300 text-sm font-medium mb-2">
-                  Motivo de contacto
+                <label htmlFor="motivo" className="block text-zinc-300 text-sm font-medium mb-2">
+                  {t.contacto.subject}
                 </label>
                 <select
                   id="motivo"
                   name="motivo"
                   value={motivo}
                   onChange={e => setMotivo(e.target.value)}
-                  className="w-full bg-gray-900 border border-gray-600 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                  className="w-full bg-zinc-900 border border-zinc-600 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-fuchsia-500 transition-colors"
                 >
-                  <option value="">Seleccioná un motivo</option>
+                  <option value="">{t.contacto.subjectSelect}</option>
                   {MOTIVOS.map(m => (
                     <option key={m.value} value={m.label}>{m.label}</option>
                   ))}
@@ -138,36 +143,36 @@ export default function ContactoPage() {
               </div>
 
               <div>
-                <label htmlFor="asunto" className="block text-gray-300 text-sm font-medium mb-2">
-                  Asunto <span className="text-red-400">*</span>
+                <label htmlFor="asunto" className="block text-zinc-300 text-sm font-medium mb-2">
+                  {t.contacto.asunto} <span className="text-red-400">*</span>
                 </label>
                 <input
                   id="asunto"
                   name="asunto"
                   type="text"
                   required
-                  placeholder="Describí brevemente tu consulta"
-                  className="w-full bg-gray-900 border border-gray-600 rounded-xl px-4 py-3 text-white placeholder-gray-600 text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                  placeholder={t.contacto.asuntoPlaceholder}
+                  className="w-full bg-zinc-900 border border-zinc-600 rounded-xl px-4 py-3 text-white placeholder-zinc-600 text-sm focus:outline-none focus:border-fuchsia-500 transition-colors"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-gray-300 text-sm font-medium mb-2">
-                  Mensaje <span className="text-red-400">*</span>
+                <label htmlFor="message" className="block text-zinc-300 text-sm font-medium mb-2">
+                  {t.contacto.message} <span className="text-red-400">*</span>
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   required
                   rows={5}
-                  placeholder="Contanos en detalle tu consulta, sugerencia o reporte..."
-                  className="w-full bg-gray-900 border border-gray-600 rounded-xl px-4 py-3 text-white placeholder-gray-600 text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                  placeholder={t.contacto.messagePlaceholder}
+                  className="w-full bg-zinc-900 border border-zinc-600 rounded-xl px-4 py-3 text-white placeholder-zinc-600 text-sm focus:outline-none focus:border-fuchsia-500 transition-colors resize-none"
                 />
               </div>
 
               {estado === 'error' && (
                 <p className="text-red-400 text-sm">
-                  Hubo un error al enviar el mensaje. Por favor escribinos directamente a{' '}
+                  {t.contacto.errorMsg}{' '}
                   <a href="mailto:generador.random@gmail.com" className="underline">generador.random@gmail.com</a>.
                 </p>
               )}
@@ -175,15 +180,15 @@ export default function ContactoPage() {
               <button
                 type="submit"
                 disabled={estado === 'enviando'}
-                className="w-full bg-blue-600 hover:bg-blue-500 disabled:opacity-60 text-white font-bold py-3.5 rounded-xl text-sm transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                className="w-full bg-fuchsia-600 hover:bg-fuchsia-500 disabled:opacity-60 text-white font-bold py-3.5 rounded-xl text-sm transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
               >
-                {estado === 'enviando' ? 'Enviando...' : 'Enviar mensaje'}
+                {estado === 'enviando' ? t.contacto.sending : t.contacto.send}
               </button>
 
-              <p className="text-gray-600 text-xs text-center">
-                Al enviar aceptás nuestra{' '}
-                <Link href="/privacidad" className="text-blue-400 hover:underline">
-                  Política de Privacidad
+              <p className="text-zinc-600 text-xs text-center">
+                {t.contacto.privacy}{' '}
+                <Link href="/privacidad" className="text-fuchsia-400 hover:underline">
+                  {t.contacto.privacyLink}
                 </Link>.
               </p>
             </form>

@@ -45,20 +45,20 @@ export default function FaqSection({ faqs, titulo = 'Preguntas Frecuentes' }: Fa
         {faqs.map((faq, i) => (
           <div
             key={i}
-            className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden"
+            className="bg-zinc-800/60 border border-zinc-700 rounded-xl overflow-hidden"
           >
             <button
               onClick={() => setAbierto(abierto === i ? null : i)}
-              className="w-full flex items-center justify-between p-5 text-left hover:bg-gray-750 transition-colors"
+              className="w-full flex items-center justify-between p-5 text-left hover:bg-zinc-800 transition-colors"
               aria-expanded={abierto === i}
             >
               <span className="text-white font-medium pr-4">{faq.pregunta}</span>
-              <span className={`text-gray-400 text-xl flex-shrink-0 transition-transform duration-200 ${abierto === i ? 'rotate-45' : ''}`}>
+              <span className={`text-zinc-400 text-xl flex-shrink-0 transition-transform duration-200 ${abierto === i ? 'rotate-45' : ''}`}>
                 +
               </span>
             </button>
             {abierto === i && (
-              <div className="px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-gray-700 pt-4 animate-fade-in">
+              <div className="px-5 pb-5 text-zinc-400 text-sm leading-relaxed border-t border-zinc-700 pt-4 animate-fade-in">
                 {faq.respuesta}
               </div>
             )}
