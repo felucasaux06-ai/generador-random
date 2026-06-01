@@ -34,28 +34,46 @@ export default function FaqSection({ faqs, titulo = 'Preguntas Frecuentes' }: Fa
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      <p className="text-[11px] font-mono text-[#333] uppercase tracking-[0.2em] mb-3">// faq</p>
-      <h2 id="faq-titulo" className="text-2xl font-black text-white mb-8">
+      <p className="font-mono text-xs tracking-[0.25em] uppercase mb-3" style={{ color: '#4A3C2C' }}>
+        faq
+      </p>
+      <h2
+        id="faq-titulo"
+        className="font-display text-2xl mb-8"
+        style={{ color: '#F2E9D4' }}
+      >
         {titulo}
       </h2>
 
-      <div className="space-y-px bg-[#111]">
+      <div className="space-y-0 divide-y" style={{ borderColor: '#1E160D' }}>
         {faqs.map((faq, i) => (
-          <div key={i} className="bg-[#080808] overflow-hidden">
+          <div key={i} style={{ borderColor: '#1E160D' }}>
             <button
               onClick={() => setAbierto(abierto === i ? null : i)}
-              className="w-full flex items-center justify-between p-5 text-left hover:bg-[#0c0c0c] transition-colors group"
+              className="w-full flex items-center justify-between py-5 text-left group transition-colors"
               aria-expanded={abierto === i}
             >
-              <span className="text-[#ccc] font-medium pr-4 text-sm group-hover:text-white transition-colors">
+              <span
+                className="font-semibold text-sm uppercase tracking-wide pr-4 transition-colors"
+                style={{ color: abierto === i ? '#E8531E' : '#F2E9D4' }}
+              >
                 {faq.pregunta}
               </span>
-              <span className={`text-[#bbff00] text-lg flex-shrink-0 transition-transform duration-200 font-mono ${abierto === i ? 'rotate-45' : ''}`}>
+              <span
+                className="flex-shrink-0 font-mono text-lg transition-transform duration-200"
+                style={{
+                  color: '#E8531E',
+                  transform: abierto === i ? 'rotate(45deg)' : 'none',
+                }}
+              >
                 +
               </span>
             </button>
             {abierto === i && (
-              <div className="px-5 pb-5 text-[#444] text-sm leading-relaxed border-t border-[#111] pt-4 animate-fade-in">
+              <div
+                className="pb-5 text-sm leading-relaxed animate-fade-in"
+                style={{ color: '#6B5B45' }}
+              >
                 {faq.respuesta}
               </div>
             )}

@@ -11,45 +11,49 @@ export default function HomeContent() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden pt-14 pb-10 md:pt-24 md:pb-16 px-4">
-        {/* Grid decoration top-right */}
-        <div className="absolute top-0 right-0 w-72 h-72 md:w-96 md:h-96 pointer-events-none opacity-[0.04]" aria-hidden="true"
+      <section className="relative overflow-hidden pt-16 pb-14 md:pt-28 md:pb-20 px-5">
+        {/* Diagonal warm glow */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          aria-hidden="true"
           style={{
-            backgroundImage: 'linear-gradient(#bbff00 1px, transparent 1px), linear-gradient(90deg, #bbff00 1px, transparent 1px)',
-            backgroundSize: '32px 32px',
+            background: 'radial-gradient(ellipse 60% 50% at 80% 20%, rgba(232,83,30,0.07) 0%, transparent 70%)',
           }}
-        />
-        {/* Lime glow corner */}
-        <div className="absolute top-0 right-0 w-64 h-64 pointer-events-none" aria-hidden="true"
-          style={{ background: 'radial-gradient(circle at top right, rgba(187,255,0,0.06) 0%, transparent 70%)' }}
         />
 
         <div className="relative max-w-5xl mx-auto">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 border border-[#1f1f1f] px-3 py-1.5 text-[11px] font-mono text-[#444] mb-8 uppercase tracking-widest">
-            <span className="w-1.5 h-1.5 bg-[#bbff00] animate-pulse inline-block" aria-hidden="true" />
-            {t.home.badge}
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3 mb-10">
+            <span className="font-mono text-xs tracking-[0.25em] uppercase" style={{ color: '#4A3C2C' }}>
+              {t.home.badge}
+            </span>
+            <span className="h-px flex-1 max-w-[60px]" style={{ background: '#2C2015' }} aria-hidden="true" />
           </div>
 
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tight mb-6">
-            {t.home.heroTitle1}<br />
-            <span className="text-[#bbff00]">{t.home.heroTitle2}</span>
+          {/* H1 — Yeseva One serif, massive */}
+          <h1
+            className="font-display leading-none tracking-tight mb-8"
+            style={{ fontSize: 'clamp(3rem, 9vw, 7.5rem)', color: '#F2E9D4' }}
+          >
+            {t.home.heroTitle1}
+            <br />
+            <em style={{ color: '#E8531E', fontStyle: 'italic' }}>{t.home.heroTitle2}</em>
           </h1>
 
-          <p className="text-[#444] text-sm md:text-base mb-10 max-w-lg font-mono leading-relaxed">
-            <span className="text-[#bbff00]">$</span> {t.home.heroSubtitle}
+          <p
+            className="font-mono text-sm leading-relaxed mb-10 max-w-md"
+            style={{ color: '#4A3C2C' }}
+          >
+            {t.home.heroSubtitle}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link
-              href="/generadores/nombres"
-              className="btn-primary text-xs text-center uppercase tracking-widest"
-            >
+            <Link href="/generadores/nombres" className="btn-primary text-xs text-center">
               {t.home.cta}
             </Link>
             <Link
               href="/generadores/chistes-argentinos"
-              className="btn-secondary text-xs text-center flex items-center justify-center gap-2 uppercase tracking-widest"
+              className="btn-secondary text-xs text-center flex items-center justify-center gap-2"
             >
               <FlagArg className="w-5 h-3.5" />
               {t.home.tools.find(h => h.href === '/generadores/chistes-argentinos')?.title ?? 'Chistes Argentinos'}
@@ -59,70 +63,100 @@ export default function HomeContent() {
       </section>
 
       {/* Ad */}
-      <div className="max-w-4xl mx-auto px-4 ad-wrapper">
+      <div className="max-w-4xl mx-auto px-5 ad-wrapper">
         <AdBlock slot="1234567890" />
       </div>
 
-      {/* Grid herramientas */}
-      <section className="py-12 md:py-20 px-4" aria-labelledby="herramientas-h2">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-10 md:mb-14">
-            <p className="text-[11px] font-mono text-[#333] uppercase tracking-[0.2em] mb-3">// herramientas</p>
-            <h2 id="herramientas-h2" className="text-2xl md:text-4xl font-black text-white leading-tight">
-              {t.home.toolsTitle}
-            </h2>
-            <p className="text-[#333] text-sm mt-2 font-mono">{t.home.toolsSubtitle}</p>
+      {/* Herramientas — numbered editorial list */}
+      <section className="py-14 md:py-20 px-5" aria-labelledby="herramientas-h2">
+        <div className="max-w-5xl mx-auto">
+
+          <div className="flex items-end justify-between mb-12 border-b pb-6" style={{ borderColor: '#2C2015' }}>
+            <div>
+              <p className="font-mono text-xs tracking-[0.25em] uppercase mb-2" style={{ color: '#4A3C2C' }}>
+                herramientas
+              </p>
+              <h2
+                id="herramientas-h2"
+                className="font-display leading-tight"
+                style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', color: '#F2E9D4' }}
+              >
+                {t.home.toolsTitle}
+              </h2>
+            </div>
+            <span className="font-mono text-xs hidden sm:block" style={{ color: '#2C2015' }}>
+              {t.home.tools.length} tools
+            </span>
           </div>
 
-          {/* Mosaic grid — gap creates the border effect */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#141414]">
-            {t.home.tools.map((h) => (
+          <div className="divide-y" style={{ borderColor: '#1E160D' }}>
+            {t.home.tools.map((h, i) => (
               <Link
                 key={h.href}
                 href={h.href}
-                className="group relative bg-[#080808] p-6 md:p-7 transition-all duration-200 hover:bg-[#0c0c0c]"
+                className="group flex items-center gap-6 py-5 transition-all duration-200"
+                style={{ borderColor: '#1E160D' }}
               >
-                {/* Left border accent — reveals on hover */}
-                <span className="absolute left-0 top-0 bottom-0 w-0.5 bg-transparent group-hover:bg-[#bbff00] transition-all duration-200" aria-hidden="true" />
+                {/* Index */}
+                <span
+                  className="font-mono text-xs w-8 flex-shrink-0 transition-colors duration-200"
+                  style={{ color: '#2C2015' }}
+                >
+                  {String(i + 1).padStart(2, '0')}
+                </span>
 
-                <div className="flex items-start justify-between mb-5">
-                  <div className="text-3xl" aria-hidden="true">
-                    {h.flag ? <FlagArg className="w-8 h-5 mt-1" /> : h.emoji}
-                  </div>
-                  <span className="text-[10px] font-mono text-[#2a2a2a] uppercase tracking-widest border border-[#1a1a1a] px-2 py-1">
-                    {h.badge}
-                  </span>
+                {/* Emoji */}
+                <span className="text-xl w-8 flex-shrink-0 text-center" aria-hidden="true">
+                  {h.flag ? <FlagArg className="w-6 h-4" /> : h.emoji}
+                </span>
+
+                {/* Title + desc */}
+                <div className="flex-1 min-w-0">
+                  <p
+                    className="font-semibold text-sm uppercase tracking-wider transition-colors duration-200 group-hover:text-[#E8531E]"
+                    style={{ color: '#F2E9D4' }}
+                  >
+                    {h.title}
+                  </p>
+                  <p className="text-xs mt-0.5 truncate" style={{ color: '#4A3C2C' }}>{h.desc}</p>
                 </div>
 
-                <h3 className="text-white font-bold text-base mb-2 group-hover:text-[#bbff00] transition-colors duration-200">
-                  {h.title}
-                </h3>
-                <p className="text-[#3a3a3a] text-sm leading-relaxed">{h.desc}</p>
+                {/* Badge */}
+                <span
+                  className="font-mono text-xs hidden sm:block flex-shrink-0"
+                  style={{ color: '#2C2015' }}
+                >
+                  {h.badge}
+                </span>
 
-                <div className="mt-5 flex items-center gap-1.5 text-[11px] font-mono text-[#2a2a2a] group-hover:text-[#bbff00] transition-colors duration-200 uppercase tracking-widest">
-                  {t.home.open}
-                  <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
-                </div>
+                {/* Arrow */}
+                <span
+                  className="flex-shrink-0 transition-all duration-200 group-hover:translate-x-1"
+                  style={{ color: '#2C2015' }}
+                >
+                  →
+                </span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Por qué */}
-      <section className="py-12 md:py-16 px-4 border-y border-[#111]">
+      {/* Por qué — stats grandes */}
+      <section
+        className="py-14 md:py-20 px-5"
+        style={{ borderTop: '1px solid #1E160D', borderBottom: '1px solid #1E160D' }}
+      >
         <div className="max-w-5xl mx-auto">
-          <div className="mb-10">
-            <p className="text-[11px] font-mono text-[#333] uppercase tracking-[0.2em] mb-3">// por qué elegirnos</p>
-            <h2 className="text-2xl md:text-3xl font-black text-white">{t.home.whyTitle}</h2>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#111]">
+          <p className="font-mono text-xs tracking-[0.25em] uppercase mb-10" style={{ color: '#4A3C2C' }}>
+            {t.home.whyTitle}
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {t.home.features.map((item) => (
-              <div key={item.title} className="bg-[#080808] p-6 md:p-8">
-                <div className="text-2xl mb-4" aria-hidden="true">{item.icon}</div>
-                <h3 className="text-white font-bold text-sm mb-2">{item.title}</h3>
-                <p className="text-[#3a3a3a] text-xs leading-relaxed">{item.desc}</p>
+              <div key={item.title}>
+                <div className="text-3xl mb-4" aria-hidden="true">{item.icon}</div>
+                <p className="font-display text-lg mb-1" style={{ color: '#F2E9D4' }}>{item.title}</p>
+                <p className="text-xs leading-relaxed" style={{ color: '#4A3C2C' }}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -130,11 +164,15 @@ export default function HomeContent() {
       </section>
 
       {/* SEO */}
-      <section className="py-12 md:py-16 px-4">
+      <section className="py-14 md:py-16 px-5">
         <div className="max-w-3xl mx-auto">
-          <p className="text-[11px] font-mono text-[#333] uppercase tracking-[0.2em] mb-3">// info</p>
-          <h2 className="text-xl md:text-2xl font-black text-white mb-6">{t.home.seoTitle}</h2>
-          <div className="text-[#444] text-sm md:text-base leading-relaxed space-y-4">
+          <p className="font-mono text-xs tracking-[0.25em] uppercase mb-4" style={{ color: '#4A3C2C' }}>
+            info
+          </p>
+          <h2 className="font-display text-2xl md:text-3xl mb-6" style={{ color: '#F2E9D4' }}>
+            {t.home.seoTitle}
+          </h2>
+          <div className="text-sm leading-relaxed space-y-4" style={{ color: '#6B5B45' }}>
             <p>{t.home.seoP1}</p>
             <p>{t.home.seoP2}</p>
             <p>{t.home.seoP3}</p>
@@ -143,7 +181,7 @@ export default function HomeContent() {
       </section>
 
       {/* Ad inferior */}
-      <div className="max-w-4xl mx-auto px-4 ad-wrapper">
+      <div className="max-w-4xl mx-auto px-5 ad-wrapper">
         <AdBlock slot="0987654321" />
       </div>
     </div>

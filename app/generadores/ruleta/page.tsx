@@ -225,7 +225,7 @@ export default function GeneradorRuleta() {
 
             <label className="flex items-center gap-3 mt-5 cursor-pointer select-none">
               <div
-                className={`w-11 h-6 rounded-full transition-colors duration-480 flex-shrink-0 cursor-pointer ${removeAfterSpin ? 'bg-lime-400' : 'bg-zinc-600'}`}
+                className={`w-11 h-6 rounded-full transition-colors duration-480 flex-shrink-0 cursor-pointer ${removeAfterSpin ? 'bg-[#E8531E]' : 'bg-zinc-600'}`}
                 onClick={() => setRemoveAfterSpin(p => !p)}
                 role="switch"
                 aria-checked={removeAfterSpin}
@@ -262,13 +262,13 @@ export default function GeneradorRuleta() {
                 placeholder={t.ruleta.placeholder}
                 maxLength={40}
                 disabled={items.length >= 48 || isSpinning}
-                className="flex-1 bg-zinc-700 border border-zinc-600 rounded-xl px-4 py-2.5 text-white placeholder-zinc-500 focus:outline-none focus:border-lime-400 text-sm disabled:opacity-50"
+                className="flex-1 bg-zinc-700 border border-zinc-600 rounded-xl px-4 py-2.5 text-white placeholder-zinc-500 focus:outline-none focus:border-[#E8531E] text-sm disabled:opacity-50"
                 aria-label="Nueva opción para la ruleta"
               />
               <button
                 onClick={addItem}
                 disabled={!newItem.trim() || items.length >= 48 || isSpinning}
-                className="bg-lime-400 hover:bg-lime-300 disabled:bg-zinc-700 disabled:text-zinc-500 text-black font-semibold px-4 py-2.5 rounded-xl transition-colors text-sm whitespace-nowrap flex-shrink-0"
+                className="bg-[#E8531E] hover:bg-[#D4481A] disabled:bg-zinc-700 disabled:text-zinc-500 text-white font-semibold px-4 py-2.5 rounded-xl transition-colors text-sm whitespace-nowrap flex-shrink-0"
               >
                 {t.ruleta.add}
               </button>
@@ -303,7 +303,7 @@ export default function GeneradorRuleta() {
                       onBlur={saveEdit}
                       autoFocus
                       maxLength={40}
-                      className="flex-1 bg-zinc-600 rounded-lg px-2 py-1 text-white text-sm focus:outline-none focus:ring-1 focus:ring-lime-400"
+                      className="flex-1 bg-zinc-600 rounded-lg px-2 py-1 text-white text-sm focus:outline-none focus:ring-1 focus:ring-[#E8531E]"
                     />
                   ) : (
                     <span className="flex-1 text-zinc-300 text-sm truncate">{item}</span>

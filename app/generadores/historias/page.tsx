@@ -106,7 +106,7 @@ export default function GeneradorHistorias() {
               onClick={() => setTemaSeleccionado('todos')}
               className={`p-3 rounded-xl border-2 text-sm font-semibold transition-all ${
                 temaSeleccionado === 'todos'
-                  ? 'border-lime-400 bg-lime-400/10 text-lime-400'
+                  ? 'border-[#E8531E] bg-[#E8531E]/10 text-[#E8531E]'
                   : 'border-zinc-700 bg-zinc-800 text-zinc-400 hover:border-zinc-600 hover:text-white'
               }`}
               aria-pressed={temaSeleccionado === 'todos'}
@@ -178,7 +178,7 @@ export default function GeneradorHistorias() {
                   onClick={leerEnVozAlta}
                   className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold text-sm transition-all border-2 ${
                     leyendo
-                      ? 'border-lime-400 bg-lime-400/10 text-lime-400 animate-pulse'
+                      ? 'border-[#E8531E] bg-[#E8531E]/10 text-[#E8531E] animate-pulse'
                       : 'border-zinc-600 bg-zinc-700 text-zinc-300 hover:border-zinc-500 hover:text-white'
                   }`}
                   aria-label={leyendo ? 'Detener lectura' : 'Leer historia en voz alta'}

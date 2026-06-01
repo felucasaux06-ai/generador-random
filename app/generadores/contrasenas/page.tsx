@@ -41,7 +41,7 @@ export default function GeneradorContrasenas() {
   const COLORES_FUERZA: Record<string, string> = {
     'Débil': 'text-red-400',
     'Media': 'text-yellow-400',
-    'Fuerte': 'text-lime-400',
+    'Fuerte': 'text-[#E8531E]',
     'Muy fuerte': 'text-green-400',
   }
 
@@ -107,7 +107,7 @@ export default function GeneradorContrasenas() {
           <div className="flex flex-col sm:flex-row gap-3">
             <button
               onClick={generar}
-              className="flex-1 bg-lime-400 hover:bg-lime-300 text-black font-bold py-3 px-6 rounded-xl transition-all duration-200 hover:scale-105 active:scale-95"
+              className="flex-1 bg-[#E8531E] hover:bg-[#D4481A] text-white font-bold py-3 px-6 rounded-xl transition-all duration-200 hover:scale-105 active:scale-95"
               aria-label="Generar nueva contraseña"
             >
               {t.contrasenas.generate}
@@ -137,7 +137,7 @@ export default function GeneradorContrasenas() {
               <label htmlFor="longitud" className="text-zinc-300 font-medium">
                 {t.contrasenas.length}
               </label>
-              <span className="text-lime-400 font-bold text-xl">{longitud}</span>
+              <span className="text-[#E8531E] font-bold text-xl">{longitud}</span>
             </div>
             <input
               id="longitud"
@@ -146,7 +146,7 @@ export default function GeneradorContrasenas() {
               max={32}
               value={longitud}
               onChange={(e) => setLongitud(Number(e.target.value))}
-              className="w-full h-2 bg-zinc-700 rounded-full appearance-none cursor-pointer accent-lime-400"
+              className="w-full h-2 bg-zinc-700 rounded-full appearance-none cursor-pointer accent-[#E8531E]"
               aria-label={`Longitud de contraseña: ${longitud} caracteres`}
             />
             <div className="flex justify-between text-xs text-zinc-500 mt-1">
@@ -174,7 +174,7 @@ export default function GeneradorContrasenas() {
                     onChange={(e) => opt.setter(e.target.checked)}
                     className="sr-only"
                   />
-                  <div className={`w-12 h-6 rounded-full transition-colors duration-200 ${opt.value ? 'bg-lime-400' : 'bg-zinc-600'}`}>
+                  <div className={`w-12 h-6 rounded-full transition-colors duration-200 ${opt.value ? 'bg-[#E8531E]' : 'bg-zinc-600'}`}>
                     <div className={`w-5 h-5 bg-white rounded-full shadow-md transform transition-transform duration-200 mt-0.5 ${opt.value ? 'translate-x-6 ml-0.5' : 'translate-x-0.5'}`} />
                   </div>
                 </div>

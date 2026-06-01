@@ -107,7 +107,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="bg-[#080808] text-zinc-100 min-h-screen flex flex-col font-sans antialiased">
+      <body className="bg-[#0A0705] text-[#F2E9D4] min-h-screen flex flex-col font-sans antialiased">
         {GA_ID && (
           <>
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />

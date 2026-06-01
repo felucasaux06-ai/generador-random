@@ -9,11 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        acid: '#bbff00',
+        accent: '#E8531E',
       },
       fontFamily: {
-        sans: ['Syne', 'system-ui', 'sans-serif'],
-        mono: ['DM Mono', 'ui-monospace', 'monospace'],
+        sans:    ['Josefin Sans', 'system-ui', 'sans-serif'],
+        display: ['Yeseva One', 'Georgia', 'serif'],
+        mono:    ['Space Mono', 'ui-monospace', 'monospace'],
       },
     },
   },

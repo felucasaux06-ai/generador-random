@@ -33,30 +33,34 @@ export default function Footer() {
   const HERRAMIENTAS = lang === 'es' ? HERRAMIENTAS_ES : HERRAMIENTAS_EN
 
   return (
-    <footer className="border-t border-[#141414] bg-[#080808] mt-20" role="contentinfo">
-      <div className="max-w-6xl mx-auto px-4 py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
+    <footer className="mt-20" style={{ borderTop: '1px solid #2C2015', background: '#0A0705' }} role="contentinfo">
+      <div className="max-w-6xl mx-auto px-5 py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
 
         {/* Marca */}
         <div>
-          <div className="flex items-center gap-2 mb-5">
-            <span className="font-mono text-[#333] text-xs select-none">//</span>
-            <span className="font-black text-white text-sm tracking-tight">
-              GR<span className="text-[#bbff00]">.</span>
-            </span>
-            <span className="text-[#2a2a2a] font-mono text-[11px] select-none">generadorrandom.com</span>
-          </div>
-          <p className="text-[#333] text-sm leading-relaxed font-mono">
+          <p className="font-display text-2xl mb-4" style={{ color: '#F2E9D4' }}>
+            GR<span style={{ color: '#E8531E' }}>.</span>
+          </p>
+          <p className="text-sm leading-relaxed font-mono" style={{ color: '#4A3C2C' }}>
             {t.footer.tagline}
           </p>
         </div>
 
         {/* Herramientas */}
         <div>
-          <h3 className="text-[#2a2a2a] font-mono text-[11px] mb-5 uppercase tracking-[0.2em]">{t.footer.tools}</h3>
+          <h3 className="font-mono text-xs mb-5 uppercase tracking-[0.2em]" style={{ color: '#2C2015' }}>
+            {t.footer.tools}
+          </h3>
           <ul className="space-y-2.5">
             {HERRAMIENTAS.map((h) => (
               <li key={h.href}>
-                <Link href={h.href} className="text-[#333] hover:text-[#bbff00] text-sm transition-colors duration-150">
+                <Link
+                  href={h.href}
+                  className="text-sm transition-colors duration-150"
+                  style={{ color: '#4A3C2C' }}
+                  onMouseEnter={e => (e.currentTarget.style.color = '#E8531E')}
+                  onMouseLeave={e => (e.currentTarget.style.color = '#4A3C2C')}
+                >
                   {h.label}
                 </Link>
               </li>
@@ -64,25 +68,41 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Legal y sitio */}
+        {/* Legal */}
         <div>
-          <h3 className="text-[#2a2a2a] font-mono text-[11px] mb-5 uppercase tracking-[0.2em]">{t.footer.site}</h3>
+          <h3 className="font-mono text-xs mb-5 uppercase tracking-[0.2em]" style={{ color: '#2C2015' }}>
+            {t.footer.site}
+          </h3>
           <ul className="space-y-2.5">
-            <li><Link href="/blog"       className="text-[#333] hover:text-[#bbff00] text-sm transition-colors">Blog</Link></li>
-            <li><Link href="/acerca"     className="text-[#333] hover:text-[#bbff00] text-sm transition-colors">{t.footer.about}</Link></li>
-            <li><Link href="/contacto"   className="text-[#333] hover:text-[#bbff00] text-sm transition-colors">{t.footer.contact}</Link></li>
-            <li><Link href="/privacidad" className="text-[#333] hover:text-[#bbff00] text-sm transition-colors">{t.footer.privacy}</Link></li>
-            <li><Link href="/terminos"   className="text-[#333] hover:text-[#bbff00] text-sm transition-colors">{t.footer.terms}</Link></li>
-            <li><Link href="/disclaimer" className="text-[#333] hover:text-[#bbff00] text-sm transition-colors">{t.footer.disclaimer}</Link></li>
+            {[
+              { href: '/blog',       label: 'Blog' },
+              { href: '/acerca',     label: t.footer.about },
+              { href: '/contacto',   label: t.footer.contact },
+              { href: '/privacidad', label: t.footer.privacy },
+              { href: '/terminos',   label: t.footer.terms },
+              { href: '/disclaimer', label: t.footer.disclaimer },
+            ].map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="text-sm transition-colors duration-150"
+                  style={{ color: '#4A3C2C' }}
+                  onMouseEnter={e => (e.currentTarget.style.color = '#E8531E')}
+                  onMouseLeave={e => (e.currentTarget.style.color = '#4A3C2C')}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
-          <div className="mt-6 p-3 border border-[#1a1a1a] bg-[#0a0a0a]">
-            <p className="text-[#2a2a2a] text-xs font-mono">{t.footer.badges}</p>
+          <div className="mt-6 p-3" style={{ border: '1px solid #1E160D', background: '#0D0A06' }}>
+            <p className="text-xs font-mono" style={{ color: '#2C2015' }}>{t.footer.badges}</p>
           </div>
         </div>
       </div>
 
-      <div className="border-t border-[#111] py-5 px-4">
-        <p className="text-center text-[#222] text-xs font-mono">
+      <div className="py-5 px-5" style={{ borderTop: '1px solid #1E160D' }}>
+        <p className="text-center text-xs font-mono" style={{ color: '#2C2015' }}>
           {t.footer.copyright(year)}
         </p>
       </div>

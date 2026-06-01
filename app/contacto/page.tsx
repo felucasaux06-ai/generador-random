@@ -69,7 +69,7 @@ export default function ContactoPage() {
             <p className="text-zinc-400 text-sm mb-6">{t.contacto.successMsg}</p>
             <button
               onClick={() => setEstado('idle')}
-              className="text-lime-400 hover:text-lime-300 text-sm underline transition-colors"
+              className="text-[#E8531E] hover:text-[#F07050] text-sm underline transition-colors"
             >
               {t.contacto.sendAnother}
             </button>
@@ -84,7 +84,7 @@ export default function ContactoPage() {
                 <p className="text-zinc-400 text-sm">{t.contacto.directEmail}</p>
                 <a
                   href="mailto:generador.random@gmail.com"
-                  className="text-lime-400 hover:text-lime-300 font-semibold transition-colors"
+                  className="text-[#E8531E] hover:text-[#F07050] font-semibold transition-colors"
                 >
                   generador.random@gmail.com
                 </a>
@@ -105,7 +105,7 @@ export default function ContactoPage() {
                     type="text"
                     required
                     placeholder={t.contacto.namePlaceholder}
-                    className="w-full bg-zinc-900 border border-zinc-600 rounded-xl px-4 py-3 text-white placeholder-zinc-600 text-sm focus:outline-none focus:border-lime-400 transition-colors"
+                    className="w-full bg-zinc-900 border border-zinc-600 rounded-xl px-4 py-3 text-white placeholder-zinc-600 text-sm focus:outline-none focus:border-[#E8531E] transition-colors"
                   />
                 </div>
 
@@ -119,7 +119,7 @@ export default function ContactoPage() {
                     type="email"
                     required
                     placeholder={t.contacto.emailPlaceholder}
-                    className="w-full bg-zinc-900 border border-zinc-600 rounded-xl px-4 py-3 text-white placeholder-zinc-600 text-sm focus:outline-none focus:border-lime-400 transition-colors"
+                    className="w-full bg-zinc-900 border border-zinc-600 rounded-xl px-4 py-3 text-white placeholder-zinc-600 text-sm focus:outline-none focus:border-[#E8531E] transition-colors"
                   />
                 </div>
               </div>
@@ -133,7 +133,7 @@ export default function ContactoPage() {
                   name="motivo"
                   value={motivo}
                   onChange={e => setMotivo(e.target.value)}
-                  className="w-full bg-zinc-900 border border-zinc-600 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-lime-400 transition-colors"
+                  className="w-full bg-zinc-900 border border-zinc-600 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#E8531E] transition-colors"
                 >
                   <option value="">{t.contacto.subjectSelect}</option>
                   {MOTIVOS.map(m => (
@@ -152,7 +152,7 @@ export default function ContactoPage() {
                   type="text"
                   required
                   placeholder={t.contacto.asuntoPlaceholder}
-                  className="w-full bg-zinc-900 border border-zinc-600 rounded-xl px-4 py-3 text-white placeholder-zinc-600 text-sm focus:outline-none focus:border-lime-400 transition-colors"
+                  className="w-full bg-zinc-900 border border-zinc-600 rounded-xl px-4 py-3 text-white placeholder-zinc-600 text-sm focus:outline-none focus:border-[#E8531E] transition-colors"
                 />
               </div>
 
@@ -166,7 +166,7 @@ export default function ContactoPage() {
                   required
                   rows={5}
                   placeholder={t.contacto.messagePlaceholder}
-                  className="w-full bg-zinc-900 border border-zinc-600 rounded-xl px-4 py-3 text-white placeholder-zinc-600 text-sm focus:outline-none focus:border-lime-400 transition-colors resize-none"
+                  className="w-full bg-zinc-900 border border-zinc-600 rounded-xl px-4 py-3 text-white placeholder-zinc-600 text-sm focus:outline-none focus:border-[#E8531E] transition-colors resize-none"
                 />
               </div>
 
@@ -180,14 +180,14 @@ export default function ContactoPage() {
               <button
                 type="submit"
                 disabled={estado === 'enviando'}
-                className="w-full bg-lime-400 hover:bg-lime-300 disabled:opacity-60 text-black font-bold py-3.5 rounded-xl text-sm transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                className="w-full bg-[#E8531E] hover:bg-[#D4481A] disabled:opacity-60 text-white font-bold py-3.5 rounded-xl text-sm transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
               >
                 {estado === 'enviando' ? t.contacto.sending : t.contacto.send}
               </button>
 
               <p className="text-zinc-600 text-xs text-center">
                 {t.contacto.privacy}{' '}
-                <Link href="/privacidad" className="text-lime-400 hover:underline">
+                <Link href="/privacidad" className="text-[#E8531E] hover:underline">
                   {t.contacto.privacyLink}
                 </Link>.
               </p>
