@@ -24,10 +24,10 @@ export default function HomeContent() {
         <div className="relative max-w-5xl mx-auto">
           {/* Eyebrow */}
           <div className="flex items-center gap-3 mb-10">
-            <span className="font-mono text-xs tracking-[0.25em] uppercase" style={{ color: '#4A3C2C' }}>
+            <span className="font-mono text-xs tracking-[0.25em] uppercase" style={{ color: '#8A7862' }}>
               {t.home.badge}
             </span>
-            <span className="h-px flex-1 max-w-[60px]" style={{ background: '#2C2015' }} aria-hidden="true" />
+            <span className="h-px flex-1 max-w-[60px]" style={{ background: '#5A4A35' }} aria-hidden="true" />
           </div>
 
           {/* H1 — Yeseva One serif, massive */}
@@ -42,7 +42,7 @@ export default function HomeContent() {
 
           <p
             className="font-mono text-sm leading-relaxed mb-10 max-w-md"
-            style={{ color: '#4A3C2C' }}
+            style={{ color: '#8A7862' }}
           >
             {t.home.heroSubtitle}
           </p>
@@ -51,12 +51,8 @@ export default function HomeContent() {
             <Link href="/generadores/nombres" className="btn-primary text-xs text-center">
               {t.home.cta}
             </Link>
-            <Link
-              href="/generadores/chistes-argentinos"
-              className="btn-secondary text-xs text-center flex items-center justify-center gap-2"
-            >
-              <FlagArg className="w-5 h-3.5" />
-              {t.home.tools.find(h => h.href === '/generadores/chistes-argentinos')?.title ?? 'Chistes Argentinos'}
+            <Link href="/generadores/ruleta" className="btn-secondary text-xs text-center">
+              {t.home.tools.find(h => h.href === '/generadores/ruleta')?.title ?? 'Ruleta'}
             </Link>
           </div>
         </div>
@@ -71,9 +67,9 @@ export default function HomeContent() {
       <section className="py-14 md:py-20 px-5" aria-labelledby="herramientas-h2">
         <div className="max-w-5xl mx-auto">
 
-          <div className="flex items-end justify-between mb-12 border-b pb-6" style={{ borderColor: '#2C2015' }}>
+          <div className="flex items-end justify-between mb-12 border-b pb-6" style={{ borderColor: '#5A4A35' }}>
             <div>
-              <p className="font-mono text-xs tracking-[0.25em] uppercase mb-2" style={{ color: '#4A3C2C' }}>
+              <p className="font-mono text-xs tracking-[0.25em] uppercase mb-2" style={{ color: '#8A7862' }}>
                 herramientas
               </p>
               <h2
@@ -84,13 +80,13 @@ export default function HomeContent() {
                 {t.home.toolsTitle}
               </h2>
             </div>
-            <span className="font-mono text-xs hidden sm:block" style={{ color: '#2C2015' }}>
+            <span className="font-mono text-xs hidden sm:block" style={{ color: '#5A4A35' }}>
               {t.home.tools.length} tools
             </span>
           </div>
 
           <div className="divide-y" style={{ borderColor: '#1E160D' }}>
-            {t.home.tools.map((h, i) => (
+            {t.home.tools.filter(h => !h.href.includes('chistes')).map((h, i) => (
               <Link
                 key={h.href}
                 href={h.href}
@@ -100,7 +96,7 @@ export default function HomeContent() {
                 {/* Index */}
                 <span
                   className="font-mono text-xs w-8 flex-shrink-0 transition-colors duration-200"
-                  style={{ color: '#2C2015' }}
+                  style={{ color: '#5A4A35' }}
                 >
                   {String(i + 1).padStart(2, '0')}
                 </span>
@@ -118,13 +114,13 @@ export default function HomeContent() {
                   >
                     {h.title}
                   </p>
-                  <p className="text-xs mt-0.5 truncate" style={{ color: '#4A3C2C' }}>{h.desc}</p>
+                  <p className="text-xs mt-0.5 truncate" style={{ color: '#8A7862' }}>{h.desc}</p>
                 </div>
 
                 {/* Badge */}
                 <span
                   className="font-mono text-xs hidden sm:block flex-shrink-0"
-                  style={{ color: '#2C2015' }}
+                  style={{ color: '#5A4A35' }}
                 >
                   {h.badge}
                 </span>
@@ -132,7 +128,7 @@ export default function HomeContent() {
                 {/* Arrow */}
                 <span
                   className="flex-shrink-0 transition-all duration-200 group-hover:translate-x-1"
-                  style={{ color: '#2C2015' }}
+                  style={{ color: '#5A4A35' }}
                 >
                   →
                 </span>
@@ -148,7 +144,7 @@ export default function HomeContent() {
         style={{ borderTop: '1px solid #1E160D', borderBottom: '1px solid #1E160D' }}
       >
         <div className="max-w-5xl mx-auto">
-          <p className="font-mono text-xs tracking-[0.25em] uppercase mb-10" style={{ color: '#4A3C2C' }}>
+          <p className="font-mono text-xs tracking-[0.25em] uppercase mb-10" style={{ color: '#8A7862' }}>
             {t.home.whyTitle}
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -156,7 +152,7 @@ export default function HomeContent() {
               <div key={item.title}>
                 <div className="text-3xl mb-4" aria-hidden="true">{item.icon}</div>
                 <p className="font-display text-lg mb-1" style={{ color: '#F2E9D4' }}>{item.title}</p>
-                <p className="text-xs leading-relaxed" style={{ color: '#4A3C2C' }}>{item.desc}</p>
+                <p className="text-xs leading-relaxed" style={{ color: '#8A7862' }}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -166,13 +162,13 @@ export default function HomeContent() {
       {/* SEO */}
       <section className="py-14 md:py-16 px-5">
         <div className="max-w-3xl mx-auto">
-          <p className="font-mono text-xs tracking-[0.25em] uppercase mb-4" style={{ color: '#4A3C2C' }}>
+          <p className="font-mono text-xs tracking-[0.25em] uppercase mb-4" style={{ color: '#8A7862' }}>
             info
           </p>
           <h2 className="font-display text-2xl md:text-3xl mb-6" style={{ color: '#F2E9D4' }}>
             {t.home.seoTitle}
           </h2>
-          <div className="text-sm leading-relaxed space-y-4" style={{ color: '#6B5B45' }}>
+          <div className="text-sm leading-relaxed space-y-4" style={{ color: '#A09080' }}>
             <p>{t.home.seoP1}</p>
             <p>{t.home.seoP2}</p>
             <p>{t.home.seoP3}</p>

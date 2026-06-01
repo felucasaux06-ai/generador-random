@@ -11,8 +11,6 @@ const LINKS_ES = [
   { href: '/generadores/contrasenas',        label: 'Contraseñas',  emoji: '🔒', flag: false },
   { href: '/generadores/colores',            label: 'Colores',      emoji: '🎨', flag: false },
   { href: '/generadores/historias',          label: 'Historias',    emoji: '📖', flag: false },
-  { href: '/generadores/chistes',            label: 'Chistes',      emoji: '😂', flag: false },
-  { href: '/generadores/chistes-argentinos', label: 'Arg.',         emoji: '',   flag: true  },
   { href: '/generadores/ruleta',             label: 'Ruleta',       emoji: '🎡', flag: false },
   { href: '/generadores/numeros',            label: 'Números',      emoji: '🎲', flag: false },
   { href: '/generadores/moneda',             label: 'Moneda',       emoji: '🪙', flag: false },
@@ -24,8 +22,6 @@ const LINKS_EN = [
   { href: '/generadores/contrasenas',        label: 'Passwords',    emoji: '🔒', flag: false },
   { href: '/generadores/colores',            label: 'Colors',       emoji: '🎨', flag: false },
   { href: '/generadores/historias',          label: 'Stories',      emoji: '📖', flag: false },
-  { href: '/generadores/chistes',            label: 'Jokes',        emoji: '😂', flag: false },
-  { href: '/generadores/chistes-argentinos', label: 'Arg.',         emoji: '',   flag: true  },
   { href: '/generadores/ruleta',             label: 'Wheel',        emoji: '🎡', flag: false },
   { href: '/generadores/numeros',            label: 'Numbers',      emoji: '🎲', flag: false },
   { href: '/generadores/moneda',             label: 'Coin',         emoji: '🪙', flag: false },
@@ -66,7 +62,7 @@ export default function Navigation() {
                 key={l.href}
                 href={l.href}
                 className="relative flex items-center gap-1 px-2.5 py-5 text-xs font-semibold tracking-widest uppercase transition-all duration-150 whitespace-nowrap"
-                style={{ color: active ? '#E8531E' : '#4A3C2C' }}
+                style={{ color: active ? '#E8531E' : '#8A7862' }}
                 aria-current={active ? 'page' : undefined}
               >
                 {active && (
@@ -94,7 +90,7 @@ export default function Navigation() {
             className="h-7 px-3 text-xs font-bold font-mono tracking-widest transition-all duration-150"
             style={{
               border: '1px solid #2C2015',
-              color: '#4A3C2C',
+              color: '#8A7862',
               background: 'transparent',
             }}
             onMouseEnter={e => {
@@ -102,8 +98,8 @@ export default function Navigation() {
               ;(e.currentTarget as HTMLElement).style.borderColor = '#E8531E'
             }}
             onMouseLeave={e => {
-              (e.currentTarget as HTMLElement).style.color = '#4A3C2C'
-              ;(e.currentTarget as HTMLElement).style.borderColor = '#2C2015'
+              (e.currentTarget as HTMLElement).style.color = '#8A7862'
+              ;(e.currentTarget as HTMLElement).style.borderColor = '#5A4A35'
             }}
           >
             {t.nav.langToggle}
@@ -111,17 +107,17 @@ export default function Navigation() {
 
           <button
             className="md:hidden w-9 h-9 flex flex-col justify-center items-center gap-1.5 transition-colors"
-            style={{ color: '#4A3C2C' }}
+            style={{ color: '#8A7862' }}
             onClick={() => setOpen(!open)}
             aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
             aria-expanded={open}
           >
             <span className={`block w-5 h-px transition-all duration-200 origin-center`}
-              style={{ background: '#6B5B45', transform: open ? 'rotate(45deg) translateY(7px)' : 'none' }} />
+              style={{ background: '#A09080', transform: open ? 'rotate(45deg) translateY(7px)' : 'none' }} />
             <span className={`block w-5 h-px transition-all duration-200`}
-              style={{ background: '#6B5B45', opacity: open ? 0 : 1 }} />
+              style={{ background: '#A09080', opacity: open ? 0 : 1 }} />
             <span className={`block w-5 h-px transition-all duration-200 origin-center`}
-              style={{ background: '#6B5B45', transform: open ? 'rotate(-45deg) translateY(-7px)' : 'none' }} />
+              style={{ background: '#A09080', transform: open ? 'rotate(-45deg) translateY(-7px)' : 'none' }} />
           </button>
         </div>
       </div>
@@ -137,7 +133,7 @@ export default function Navigation() {
                 href={l.href}
                 className="flex items-center gap-3 px-4 py-3 text-sm font-semibold uppercase tracking-wider transition-all"
                 style={{
-                  color: active ? '#E8531E' : '#4A3C2C',
+                  color: active ? '#E8531E' : '#8A7862',
                   borderLeft: active ? '2px solid #E8531E' : '2px solid transparent',
                   background: active ? 'rgba(232, 83, 30, 0.06)' : 'transparent',
                 }}

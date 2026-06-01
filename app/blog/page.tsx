@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 }
 
 const CATEGORY_COLORS: Record<string, string> = {
-  'Guías': 'bg-blue-600/20 text-blue-400 border-blue-600/30',
-  'Ideas': 'bg-purple-600/20 text-purple-400 border-purple-600/30',
-  'Tecnología': 'bg-emerald-600/20 text-emerald-400 border-emerald-600/30',
+  'Guías': 'bg-[#E8531E]/15 text-[#E8531E] border-[#E8531E]/30',
+  'Ideas': 'bg-amber-600/15 text-amber-400 border-amber-600/30',
+  'Tecnología': 'bg-emerald-600/15 text-emerald-400 border-emerald-600/30',
 }
 
 export default function BlogPage() {
@@ -45,7 +45,7 @@ export default function BlogPage() {
             <Link
               key={article.slug}
               href={`/blog/${article.slug}`}
-              className="group bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden hover:border-blue-600/50 transition-all duration-200"
+              className="group bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden hover:border-[#E8531E]/40 transition-all duration-200"
             >
               {/* Thumbnail */}
               <div className="relative w-full h-48 overflow-hidden">
@@ -63,7 +63,7 @@ export default function BlogPage() {
 
               {/* Content */}
               <div className="p-6">
-                <h2 className="text-white font-bold text-lg leading-snug mb-2 group-hover:text-blue-400 transition-colors">
+                <h2 className="text-white font-bold text-lg leading-snug mb-2 group-hover:text-[#E8531E] transition-colors">
                   {article.title}
                 </h2>
 
@@ -77,7 +77,7 @@ export default function BlogPage() {
                     <span>·</span>
                     <span>{article.readTime} min</span>
                   </div>
-                  <span className="text-blue-400 text-sm font-medium group-hover:underline">
+                  <span className="text-[#E8531E] text-sm font-medium group-hover:underline">
                     Leer →
                   </span>
                 </div>
@@ -87,14 +87,14 @@ export default function BlogPage() {
         </div>
 
         {/* CTA */}
-        <div className="mt-12 bg-blue-600/10 border border-blue-600/30 rounded-2xl p-6 text-center">
+        <div className="mt-12 border-t border-zinc-800 pt-10 text-center">
           <h2 className="text-white font-bold text-lg mb-2">¿Querés probar las herramientas?</h2>
-          <p className="text-gray-400 text-sm mb-4">
+          <p className="text-zinc-500 text-sm mb-6">
             Todos los generadores son gratuitos, sin registro y funcionan directamente en tu navegador.
           </p>
           <Link
             href="/"
-            className="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-3 rounded-xl transition-all duration-200 hover:scale-105"
+            className="inline-block bg-[#E8531E] hover:bg-[#D4481A] text-white font-bold px-6 py-3 transition-all duration-200 hover:scale-105 uppercase tracking-widest text-xs"
           >
             Ver todas las herramientas
           </Link>

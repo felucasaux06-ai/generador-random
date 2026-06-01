@@ -34,7 +34,7 @@ export default function FaqSection({ faqs, titulo = 'Preguntas Frecuentes' }: Fa
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      <p className="font-mono text-xs tracking-[0.25em] uppercase mb-3" style={{ color: '#4A3C2C' }}>
+      <p className="font-mono text-xs tracking-[0.25em] uppercase mb-3" style={{ color: '#8A7862' }}>
         faq
       </p>
       <h2
@@ -72,7 +72,7 @@ export default function FaqSection({ faqs, titulo = 'Preguntas Frecuentes' }: Fa
             {abierto === i && (
               <div
                 className="pb-5 text-sm leading-relaxed animate-fade-in"
-                style={{ color: '#6B5B45' }}
+                style={{ color: '#A09080' }}
               >
                 {faq.respuesta}
               </div>
