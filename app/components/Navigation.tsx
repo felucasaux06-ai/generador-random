@@ -13,7 +13,7 @@ const LINKS_ES = [
   { href: '/generadores/historias',          label: 'Historias',    emoji: '📖', flag: false },
   { href: '/generadores/ruleta',             label: 'Ruleta',       emoji: '🎡', flag: false },
   { href: '/generadores/numeros',            label: 'Números',      emoji: '🎲', flag: false },
-  { href: '/generadores/moneda',             label: 'Moneda',       emoji: '🪙', flag: false },
+  { href: '/generadores/cara-o-cruz',             label: 'Moneda',       emoji: '🪙', flag: false },
   { href: '/blog',                           label: 'Blog',         emoji: '📝', flag: false },
 ]
 
@@ -24,7 +24,7 @@ const LINKS_EN = [
   { href: '/generadores/historias',          label: 'Stories',      emoji: '📖', flag: false },
   { href: '/generadores/ruleta',             label: 'Wheel',        emoji: '🎡', flag: false },
   { href: '/generadores/numeros',            label: 'Numbers',      emoji: '🎲', flag: false },
-  { href: '/generadores/moneda',             label: 'Coin',         emoji: '🪙', flag: false },
+  { href: '/generadores/cara-o-cruz',             label: 'Coin',         emoji: '🪙', flag: false },
   { href: '/blog',                           label: 'Blog',         emoji: '📝', flag: false },
 ]
 

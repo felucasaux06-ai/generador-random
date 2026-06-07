@@ -14,12 +14,12 @@ export const metadata: Metadata = {
     'moneda al azar',
     'sorteo cara o cruz',
   ],
-  alternates: { canonical: 'https://generadorrandom.com/generadores/moneda' },
+  alternates: { canonical: 'https://generadorrandom.com/generadores/cara-o-cruz' },
   openGraph: {
     title: 'Cara o Cruz Online — Moneda Virtual Gratis',
     description:
       '50/50 garantizado. Tirá la moneda virtual al instante. Con estadísticas de sesión.',
-    url: 'https://generadorrandom.com/generadores/moneda',
+    url: 'https://generadorrandom.com/generadores/cara-o-cruz',
     type: 'website',
   },
   twitter: {
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
   },
 }
 
-export default function MonedaLayout({ children }: { children: React.ReactNode }) {
+export default function CaraOCruzLayout({ children }: { children: React.ReactNode }) {
   const jsonLd = [
     {
       '@context': 'https://schema.org',
       '@type': 'SoftwareApplication',
       name: 'Cara o Cruz — Moneda Virtual',
-      url: 'https://generadorrandom.com/generadores/moneda',
+      url: 'https://generadorrandom.com/generadores/cara-o-cruz',
       applicationCategory: 'UtilitiesApplication',
       operatingSystem: 'Web',
       inLanguage: 'es',
@@ -49,7 +49,7 @@ export default function MonedaLayout({ children }: { children: React.ReactNode }
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://generadorrandom.com' },
-        { '@type': 'ListItem', position: 2, name: 'Cara o Cruz', item: 'https://generadorrandom.com/generadores/moneda' },
+        { '@type': 'ListItem', position: 2, name: 'Cara o Cruz', item: 'https://generadorrandom.com/generadores/cara-o-cruz' },
       ],
     },
   ]

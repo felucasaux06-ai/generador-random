@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/generadores/chistes-argentinos`, lastModified: may, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/generadores/ruleta`, lastModified: may, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/generadores/numeros`, lastModified: may, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${base}/generadores/moneda`, lastModified: jun, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${base}/generadores/cara-o-cruz`, lastModified: jun, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/blog`, lastModified: jun, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${base}/blog/para-que-sirve-un-generador-de-numeros-aleatorios`, lastModified: may, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/blog/10-usos-creativos-generadores-aleatorios`, lastModified: may, changeFrequency: 'monthly', priority: 0.7 },

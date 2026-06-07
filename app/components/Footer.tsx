@@ -10,7 +10,7 @@ const HERRAMIENTAS_ES = [
   { href: '/generadores/historias',          label: 'Generador de Historias' },
   { href: '/generadores/ruleta',             label: 'Ruleta Aleatoria' },
   { href: '/generadores/numeros',            label: 'Número al Azar' },
-  { href: '/generadores/moneda',             label: 'Cara o Cruz' },
+  { href: '/generadores/cara-o-cruz',             label: 'Cara o Cruz' },
 ]
 
 const HERRAMIENTAS_EN = [
@@ -20,7 +20,7 @@ const HERRAMIENTAS_EN = [
   { href: '/generadores/historias',          label: 'Story Generator' },
   { href: '/generadores/ruleta',             label: 'Spin the Wheel' },
   { href: '/generadores/numeros',            label: 'Random Number' },
-  { href: '/generadores/moneda',             label: 'Heads or Tails' },
+  { href: '/generadores/cara-o-cruz',             label: 'Heads or Tails' },
 ]
 
 export default function Footer() {

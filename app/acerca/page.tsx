@@ -16,7 +16,7 @@ const HERRAMIENTAS = [
   { href: '/generadores/chistes-argentinos', emoji: '🇦🇷', label: 'Chistes Argentinos',        desc: 'Humor rioplatense y cultura argentina' },
   { href: '/generadores/ruleta',             emoji: '🎡', label: 'Ruleta Aleatoria',           desc: 'Hasta 48 opciones, ideal para sorteos' },
   { href: '/generadores/numeros',            emoji: '🎲', label: 'Generador de Números',      desc: 'Cualquier rango, hasta 10 a la vez' },
-  { href: '/generadores/moneda',             emoji: '🪙', label: 'Cara o Cruz',                desc: 'Decisiones rápidas con estadísticas' },
+  { href: '/generadores/cara-o-cruz',             emoji: '🪙', label: 'Cara o Cruz',                desc: 'Decisiones rápidas con estadísticas' },
 ]
 
 export default function Acerca() {

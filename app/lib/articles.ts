@@ -159,7 +159,7 @@ export const ARTICLES: Article[] = [
 
 <h2>3. Cara o cruz para vencer la procrastinación</h2>
 
-<p>Tenés dos tareas importantes y no sabés cuál hacer primero. En vez de procrastinar analizando, usá el <a href="/generadores/moneda">cara o cruz</a>. El truco no es seguir el resultado ciegamente, sino observar tu reacción: si sentís alivio con el resultado, era lo que querías hacer. Si sentís resistencia, empezá por la otra tarea.</p>
+<p>Tenés dos tareas importantes y no sabés cuál hacer primero. En vez de procrastinar analizando, usá el <a href="/generadores/cara-o-cruz">cara o cruz</a>. El truco no es seguir el resultado ciegamente, sino observar tu reacción: si sentís alivio con el resultado, era lo que querías hacer. Si sentís resistencia, empezá por la otra tarea.</p>
 
 <p>Es una técnica usada en productividad para romper la parálisis por análisis sin gastar energía mental en la decisión.</p>
 
@@ -358,7 +358,7 @@ export const ARTICLES: Article[] = [
 
 <p>El generador más simple: dos opciones, probabilidad 50/50. Perfecto para decisiones binarias rápidas. Los mejores tienen animación de moneda y estadísticas acumuladas de la sesión (cuántas caras y cruces salieron).</p>
 
-<p><strong>Ideal para:</strong> Decisiones entre dos opciones, iniciar un partido, desempatar votaciones.<br><a href="/generadores/moneda">Usar cara o cruz →</a></p>
+<p><strong>Ideal para:</strong> Decisiones entre dos opciones, iniciar un partido, desempatar votaciones.<br><a href="/generadores/cara-o-cruz">Usar cara o cruz →</a></p>
 
 <h3>4. Generador de nombres</h3>
 
@@ -660,7 +660,7 @@ export const ARTICLES: Article[] = [
 
 <p><strong>Ideal para:</strong> cuando quedan dos finalistas y necesitás un desempate rápido.</p>
 
-<p>Usá el <a href="/generadores/moneda">generador de cara o cruz</a>. Antes de tirarlo, definí públicamente quién es "cara" y quién es "cruz". Compartí la pantalla y tirá. Simple, rápido, irrefutable.</p>
+<p>Usá el <a href="/generadores/cara-o-cruz">generador de cara o cruz</a>. Antes de tirarlo, definí públicamente quién es "cara" y quién es "cruz". Compartí la pantalla y tirá. Simple, rápido, irrefutable.</p>
 
 <h2>Cómo hacer un sorteo transparente en Instagram o WhatsApp</h2>
 
@@ -774,7 +774,7 @@ export const ARTICLES: Article[] = [
 
 <p>Suena demasiado simple para funcionar, pero tiene una base psicológica real. Asignale cara a una opción y cruz a la otra. Antes de ver el resultado, notá qué esperás que salga. Si al ver "cara" sentís alivio, eso es lo que querías. Si sentís decepción, también te está diciendo algo.</p>
 
-<p>La moneda no decide por vos: revela lo que ya sabías pero no te animabas a admitir. Podés usar el <a href="/generadores/moneda">generador de cara o cruz</a> para este ejercicio: tirás, observás tu reacción instintiva y ya tenés tu respuesta real.</p>
+<p>La moneda no decide por vos: revela lo que ya sabías pero no te animabas a admitir. Podés usar el <a href="/generadores/cara-o-cruz">generador de cara o cruz</a> para este ejercicio: tirás, observás tu reacción instintiva y ya tenés tu respuesta real.</p>
 
 <h3>5. Aceptá que la decisión perfecta no existe</h3>
 
@@ -837,7 +837,7 @@ export const ARTICLES: Article[] = [
 
 <p>Se forman equipos de dos o más personas. Un integrante recibe una palabra o frase (se la dicen en secreto o se la muestran en el celular) y tiene que hacer que su equipo la adivine usando solo gestos, sin hablar ni señalar objetos reales. Tiempo límite: 60 segundos.</p>
 
-<p>Para las categorías y el orden de los turnos, de nuevo la ruleta. Para decidir en caso de empate entre equipos, un cara o cruz con el <a href="/generadores/moneda">generador de moneda</a> es suficiente.</p>
+<p>Para las categorías y el orden de los turnos, de nuevo la ruleta. Para decidir en caso de empate entre equipos, un cara o cruz con el <a href="/generadores/cara-o-cruz">generador de moneda</a> es suficiente.</p>
 
 <h2>5. El juego de las asociaciones</h2>
 
@@ -967,7 +967,7 @@ export const ARTICLES: Article[] = [
 
 <p>Esto es lo más difícil: ya filtraste las opciones, te quedaron tres que te encantan, y no podés elegir ninguna. Hay un método que funciona mejor de lo que parece.</p>
 
-<p><strong>Si quedaron dos opciones:</strong> Usá el <a href="/generadores/moneda">cara o cruz</a>. Asignale una opción a cada lado, tirá, y observá tu reacción instintiva al resultado. Si al salir "cara" sentís alivio, ese era el nombre. Si sentís decepción, el que querías era el otro. La moneda no elige: revela lo que ya sabías.</p>
+<p><strong>Si quedaron dos opciones:</strong> Usá el <a href="/generadores/cara-o-cruz">cara o cruz</a>. Asignale una opción a cada lado, tirá, y observá tu reacción instintiva al resultado. Si al salir "cara" sentís alivio, ese era el nombre. Si sentís decepción, el que querías era el otro. La moneda no elige: revela lo que ya sabías.</p>
 
 <p><strong>Si quedaron tres o más opciones:</strong> Cargalas en la <a href="/generadores/ruleta">ruleta aleatoria</a> y girá. El mismo principio aplica: tu reacción emocional al resultado te dice más que cualquier análisis racional. Si el azar elige "Luna" y toda la familia sonríe, ahí está la respuesta.</p>
 
@@ -1049,7 +1049,7 @@ export const ARTICLES: Article[] = [
 
 <h2>El truco de la moneda para destinos en empate</h2>
 
-<p>Muchas veces el proceso termina con dos destinos que te gustan igual y que encajan perfecto en el presupuesto. Para este caso específico, el <a href="/generadores/moneda">cara o cruz</a> es la herramienta correcta.</p>
+<p>Muchas veces el proceso termina con dos destinos que te gustan igual y que encajan perfecto en el presupuesto. Para este caso específico, el <a href="/generadores/cara-o-cruz">cara o cruz</a> es la herramienta correcta.</p>
 
 <p>Asignale uno a cada lado, tirá, y prestá atención a tu reacción antes de analizar el resultado. Esa reacción instintiva —alivio, decepción, entusiasmo— es información más confiable que cualquier planilla comparativa.</p>
 

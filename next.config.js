@@ -7,8 +7,8 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/generadores/cara-o-cruz',
-        destination: '/generadores/moneda',
+        source: '/generadores/moneda',
+        destination: '/generadores/cara-o-cruz',
         permanent: true,
       },
     ]

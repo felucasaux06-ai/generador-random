@@ -5,7 +5,7 @@ import AdBlock from '../../components/AdBlock'
 import FaqSection from '../../components/FaqSection'
 import { useLanguage } from '../../contexts/LanguageContext'
 
-export default function GeneradorMoneda() {
+export default function GeneradorCaraOCruz() {
   const { t } = useLanguage()
   const [resultado, setResultado] = useState<'cara' | 'cruz' | null>(null)
   const [girando, setGirando] = useState(false)

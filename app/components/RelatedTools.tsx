@@ -7,7 +7,7 @@ const ALL_TOOLS = [
   { href: '/generadores/historias',   emoji: '📖', label: 'Generador de Historias', desc: 'Aventura, romance, misterio.' },
   { href: '/generadores/ruleta',      emoji: '🎡', label: 'Ruleta Aleatoria',      desc: 'Sorteos y decisiones al azar.' },
   { href: '/generadores/numeros',     emoji: '🎲', label: 'Número al Azar',        desc: 'Elegí el rango que quieras.' },
-  { href: '/generadores/moneda',      emoji: '🪙', label: 'Cara o Cruz',           desc: '50/50 garantizado.' },
+  { href: '/generadores/cara-o-cruz',      emoji: '🪙', label: 'Cara o Cruz',           desc: '50/50 garantizado.' },
 ]
 
 interface RelatedToolsProps {
