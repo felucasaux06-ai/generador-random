@@ -45,7 +45,19 @@ export default function ContactoPage() {
         body: JSON.stringify(data),
       })
       const json = await res.json()
-      setEstado(json.success ? 'ok' : 'error')
+      if (json.success) {
+        setEstado('ok')
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        if (typeof (window as any).gtag === 'function') {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          ;(window as any).gtag('event', 'ads_conversion_Enviar_formulario_de_cl_1', {
+            event_callback: () => {},
+            event_timeout: 2000,
+          })
+        }
+      } else {
+        setEstado('error')
+      }
     } catch {
       setEstado('error')
     }

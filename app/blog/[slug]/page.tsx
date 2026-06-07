@@ -38,9 +38,11 @@ export function generateMetadata({ params }: Props): Metadata {
 }
 
 const CATEGORY_COLORS: Record<string, string> = {
-  'Guías': 'bg-blue-600/20 text-blue-400 border-blue-600/30',
-  'Ideas': 'bg-purple-600/20 text-purple-400 border-purple-600/30',
-  'Tecnología': 'bg-emerald-600/20 text-emerald-400 border-emerald-600/30',
+  'Guías': 'bg-[#E8531E]/15 text-[#E8531E] border-[#E8531E]/30',
+  'Ideas': 'bg-amber-600/15 text-amber-400 border-amber-600/30',
+  'Tecnología': 'bg-emerald-600/15 text-emerald-400 border-emerald-600/30',
+  'Psicología': 'bg-violet-600/15 text-violet-400 border-violet-600/30',
+  'Entretenimiento': 'bg-sky-600/15 text-sky-400 border-sky-600/30',
 }
 
 export default function ArticlePage({ params }: Props) {

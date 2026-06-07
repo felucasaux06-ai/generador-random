@@ -889,6 +889,212 @@ export const ARTICLES: Article[] = [
 <p>Una noche de juegos en casa no necesita presupuesto ni preparación elaborada. Necesita buena compañía y un par de ideas para romper el hielo. Con esta lista, la ruleta para los forfaits y el cara o cruz para los desempates, tenés todo lo que precisás para una noche que dure hasta las tres de la mañana sin que nadie quiera irse.</p>
 `,
   },
+  {
+    slug: 'nombres-para-mascotas-y-perros',
+    title: 'Nombres para mascotas: más de 150 ideas y cómo elegir el mejor',
+    metaTitle: 'Nombres para mascotas y perros — 150+ ideas originales 2026',
+    description: 'Las mejores ideas de nombres para perros, gatos y otras mascotas. Originales, en español, por personalidad y raza. Más un truco infalible para decidir cuándo no podés elegir.',
+    date: '2026-06-04',
+    dateFormatted: '4 de junio de 2026',
+    readTime: 7,
+    keywords: ['nombres para mascotas', 'nombres para perros', 'nombres para gatos', 'nombres originales para perros', 'cómo elegir nombre para mascota'],
+    category: 'Ideas',
+    image: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Perro golden retriever mirando la cámara con cara curiosa',
+    content: `
+<p>Elegir el nombre de una mascota parece fácil hasta que te sentás a hacerlo. De repente tenés una lista de treinta opciones, toda la familia tiene su favorita, y el cachorro ya lleva tres días sin nombre porque nadie se pone de acuerdo. Lo conocemos.</p>
+
+<p>Esta guía te da más de 150 ideas organizadas por categoría y personalidad, más un método concreto para decidir cuando la indecisión se apodera del grupo familiar.</p>
+
+<h2>Por qué el nombre de tu mascota importa más de lo que pensás</h2>
+
+<p>Tu mascota va a escuchar su nombre miles de veces a lo largo de su vida. Lo van a gritar en el parque, lo van a escribir en el veterinario, lo van a decir con ternura cuando duerme y con exasperación cuando rompe algo. Tiene que ser un nombre que te guste pronunciar en todos esos contextos.</p>
+
+<p>Algunas reglas que funcionan bien en la práctica:</p>
+
+<ul>
+<li><strong>Una o dos sílabas:</strong> los animales responden mejor a nombres cortos. "Max" funciona mejor que "Maximiliano" (aunque Maximiliano es irresistible).</li>
+<li><strong>Terminación vocal o consonante fuerte:</strong> "Luna", "Rocky", "Coco" se escuchan claramente desde lejos. Evitá nombres que terminen en consonantes mudas.</li>
+<li><strong>Que no suene a comando:</strong> "Kit" suena a "sit", "Joe" suena a "no". En inglés especialmente esto genera confusión.</li>
+<li><strong>Que no cambie:</strong> el nombre que ponés de cachorro es el que va a tener de adulto. "Gordito" puede no funcionar si el perro crece flaco.</li>
+</ul>
+
+<h2>Nombres para perros: por personalidad</h2>
+
+<h3>Para los enérgicos e inquietos</h3>
+<p>Rayo, Turbo, Flash, Relámpago, Cometa, Cohete, Viento, Spark, Bolt, Tornado, Titan, Zeus, Thor, Ares, Atlas.</p>
+
+<h3>Para los tranquilos y amorosos</h3>
+<p>Luna, Nube, Brisa, Miel, Canela, Toffee, Brownie, Dulce, Coco, Pétalo, Sueño, Lulo, Pepo, Bombon, Almendra.</p>
+
+<h3>Para los inteligentes y astutos</h3>
+<p>Einstein, Newton, Tesla, Darwin, Turing, Copérnico, Archie, Sherlock, Watson, Loki, Riddick, Fox, Genio, Saga, Merlín.</p>
+
+<h3>Para los imponentes y majestuosos</h3>
+<p>Rex, Kaiser, Khan, Goliath, Príncipe, Barón, Conde, Aragorn, Leonidas, Ulises, Hércules, Odin, Neptuno, Cesar, Maximus.</p>
+
+<h3>Para los pícaros e irresistibles</h3>
+<p>Chispa, Poroto, Pimienta, Taco, Nacho, Churro, Empanada, Frodo, Gizmo, Hobbit, Pickle, Waffles, Mochi, Nugget, Cheeto.</p>
+
+<h2>Nombres para gatos: otra categoría en sí misma</h2>
+
+<p>Los gatos merecen nombres con cierta altura. Después de todo, ellos creen que son dioses egipcios con apartamento.</p>
+
+<h3>Clásicos elegantes</h3>
+<p>Mia, Nala, Cleo, Isis, Artemis, Athena, Minerva, Freya, Zara, Salem, Onyx, Poe, Mystic, Felix, Orion.</p>
+
+<h3>Con personalidad literaria</h3>
+<p>Dorian, Gatsby, Kafka, Poe, Borges, Cortázar, Camus, Keats, Byron, Neruda, Woolf, Sylvia, Lorca, Dalí, Picasso.</p>
+
+<h3>Para los gatos anaranjados (es una categoría especial)</h3>
+<p>Garfield, Cheeto, Naranja, Mandarina, Fanta, Dorito, Fuego, Sol, Salmón, Mango, Paprika, Cobre, Ámbar, Pelirrojo, Bronce.</p>
+
+<h2>Nombres para mascotas más inusuales</h2>
+
+<h3>Conejos</h3>
+<p>Pompón, Trébol, Biscuit, Algodón, Copos, Bunny, Velvet, Nieve, Caramelo, Mochi, Mochi, Fluffy, Zanahoría, Pétalo, Bruma.</p>
+
+<h3>Pájaros y loros</h3>
+<p>Loro José, Pepito, Panchito, Merengue, Papagayo, Coco, Polly, Mozart, Pájaro, Tango, Pimienta, Óscar, Cantor, Verde, Cielo.</p>
+
+<h3>Tortugas y reptiles</h3>
+<p>Yoda, Maestro, Sheldon, Shell, Rocky, Turbo, Zen, Gandalf, Oogway, Waldo, Ramón, Methuselah, Kronos, Pachorra, Calma.</p>
+
+<h3>Peces</h3>
+<p>Nemo, Dory, Poseidón, Neptuno, Flipper, Azul, Coral, Burbuja, Escama, Atlántico, Triton, Sirena, Ariel, Nadar, Goldie.</p>
+
+<h2>Cómo decidir cuando hay dos o más opciones que te gustan igual</h2>
+
+<p>Esto es lo más difícil: ya filtraste las opciones, te quedaron tres que te encantan, y no podés elegir ninguna. Hay un método que funciona mejor de lo que parece.</p>
+
+<p><strong>Si quedaron dos opciones:</strong> Usá el <a href="/generadores/moneda">cara o cruz</a>. Asignale una opción a cada lado, tirá, y observá tu reacción instintiva al resultado. Si al salir "cara" sentís alivio, ese era el nombre. Si sentís decepción, el que querías era el otro. La moneda no elige: revela lo que ya sabías.</p>
+
+<p><strong>Si quedaron tres o más opciones:</strong> Cargalas en la <a href="/generadores/ruleta">ruleta aleatoria</a> y girá. El mismo principio aplica: tu reacción emocional al resultado te dice más que cualquier análisis racional. Si el azar elige "Luna" y toda la familia sonríe, ahí está la respuesta.</p>
+
+<p>Y si todavía no tenés ideas y querés explorar opciones que no se te habrían ocurrido, el <a href="/generadores/nombres">generador de nombres</a> tiene una categoría de mascotas con decenas de opciones: generás hasta que algo hace click.</p>
+
+<h2>Los errores más comunes al ponerle nombre a una mascota</h2>
+
+<ul>
+<li><strong>Nombre irónicamente largo para animal pequeño:</strong> "Napoleón Bonaparte García" en un chihuahua es gracioso al principio y tedioso después de la décima vez que lo llamás en el veterinario.</li>
+<li><strong>Nombre de persona muy conocida en tu círculo:</strong> Si tenés un primo que se llama Marcelo y una abuela que también, llamar "Marcelo" al perro va a crear situaciones incómodas.</li>
+<li><strong>Nombre basado en una fase:</strong> "Game of Thrones" duró ocho temporadas. Tu perro va a durar quince años. Los perros llamados "Khaleesi" han sufrido mucho en este tema.</li>
+<li><strong>Nombre que todos pronuncian distinto:</strong> "Xaio" o "Aarav" pueden ser nombres hermosos, pero si el 80% de las personas que lo conocen no saben cómo pronunciarlo, vas a estar corrigiéndolos eternamente.</li>
+</ul>
+
+<h2>El nombre que elijan va a volverse perfecto</h2>
+
+<p>Hay algo que siempre pasa: el nombre que parecía apenas "bueno" se convierte en el nombre perfecto después de unos meses. Porque lo asociás con la personalidad real del animal, con sus mañas, con las historias que van acumulando juntos. "Pipo" empieza siendo un nombre cualquiera y termina siendo el nombre de esa criatura específica e irremplazable.</p>
+
+<p>No busques el nombre perfecto en abstracto. Buscá uno que suene bien, que sea fácil de pronunciar, y que tenga algo de la personalidad que intuís en tu mascota. El resto lo pone el tiempo.</p>
+`,
+  },
+
+  {
+    slug: 'como-elegir-destino-de-viaje',
+    title: 'Cómo elegir destino de viaje cuando no podés decidir: el método del azar',
+    metaTitle: 'Cómo elegir destino de viaje cuando no podés decidir — Guía 2026',
+    description: 'No podés elegir adónde viajar este año? Te explicamos cómo usar la aleatoriedad para salir del loop de decisión y encontrar el próximo viaje que no esperabas.',
+    date: '2026-06-06',
+    dateFormatted: '6 de junio de 2026',
+    readTime: 6,
+    keywords: ['cómo elegir destino de viaje', 'destino de viaje al azar', 'elegir viaje aleatoriamente', 'no puedo decidir a dónde viajar', 'destino viaje aleatorio'],
+    category: 'Ideas',
+    image: 'https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Maleta de viaje abierta con ropa colorida y mapa del mundo',
+    content: `
+<p>Tenés quince pestañas abiertas con destinos. Cuatro listas de "los mejores lugares para visitar en 2026". Un spreadsheet con pros y contras que empezaste a las once de la noche y dejaste a la una sin terminar. Y seguís sin saber adónde vas a ir.</p>
+
+<p>Bienvenido al problema del viajero moderno: demasiadas opciones, demasiada información, y la parálisis que viene con eso. Este artículo te da un método concreto para salir del loop y reservar un viaje que realmente querés hacer.</p>
+
+<h2>Por qué elegir destino es tan difícil</h2>
+
+<p>Antes de que existiera internet, las opciones de viaje dependían de lo que conocías, lo que te recomendaban amigos, o lo que ofrecía la agencia de viajes del barrio. El conjunto era pequeño y manejable.</p>
+
+<p>Hoy tenés acceso instantáneo a información sobre cualquier destino del planeta. Tokio, Lisboa, la Patagonia, Marrakech, Colombia, Vietnam, Islandia. Todo parece igualmente tentador. Todo parece igualmente posible. Y paradójicamente, esa abundancia hace que elegir sea más difícil, no más fácil.</p>
+
+<p>Los psicólogos lo llaman la paradoja de la elección: a más opciones, más difícil es elegir y más probable es que cualquier elección deje insatisfecho, porque siempre podés imaginar que "el otro destino" habría sido mejor.</p>
+
+<h2>El método del embudo: de infinitas opciones a una</h2>
+
+<p>En vez de evaluar todos los destinos simultáneamente, el método del embudo te lleva de lo general a lo específico en pasos manejables.</p>
+
+<h3>Paso 1: Definí el tipo de viaje (5 minutos)</h3>
+
+<p>Antes de elegir destino, elegí qué tipo de experiencia querés. Esto elimina automáticamente el 80% de las opciones:</p>
+
+<ul>
+<li>¿Ciudad o naturaleza?</li>
+<li>¿Playa o montaña?</li>
+<li>¿Cultura e historia o descanso total?</li>
+<li>¿Solo, en pareja, con familia o con amigos?</li>
+<li>¿Aventura física o gastronomía y arte?</li>
+</ul>
+
+<p>Respondé estas cinco preguntas y ya tenés un perfil de viaje claro que descarta destinos que no encajan.</p>
+
+<h3>Paso 2: El filtro de presupuesto</h3>
+
+<p>Definí un rango de presupuesto total (no por día, total). Esto elimina otro grupo de destinos por costo de vuelo + alojamiento. No es un cálculo exacto: es un filtro grueso para quedarte con las opciones realistas.</p>
+
+<h3>Paso 3: Armá una lista corta de 5 a 8 destinos</h3>
+
+<p>Con el perfil de viaje y el presupuesto definidos, buscá destinos que encajen en ambos. No más de 8. Si se te ocurren más, eliminá los que menos te entusiasmen hasta quedarte con esa cantidad.</p>
+
+<h3>Paso 4: Dejá que el azar decida</h3>
+
+<p>Cargá los 5-8 destinos en la <a href="/generadores/ruleta">ruleta aleatoria</a> y girá. No para seguir el resultado a ciegas, sino para observar tu reacción. Si la ruleta marca "Colombia" y tu primer pensamiento es "uf, no era ese", ahí tenés tu respuesta: Colombia no era una opción real para vos, estaba en la lista porque "sonaba bien".</p>
+
+<p>Si al salir "Lisboa" sentís un click de "sí, eso es", ya sabés a dónde vas. Reservá antes de que la mente analítica vuelva a dudar.</p>
+
+<h2>El truco de la moneda para destinos en empate</h2>
+
+<p>Muchas veces el proceso termina con dos destinos que te gustan igual y que encajan perfecto en el presupuesto. Para este caso específico, el <a href="/generadores/moneda">cara o cruz</a> es la herramienta correcta.</p>
+
+<p>Asignale uno a cada lado, tirá, y prestá atención a tu reacción antes de analizar el resultado. Esa reacción instintiva —alivio, decepción, entusiasmo— es información más confiable que cualquier planilla comparativa.</p>
+
+<h2>Destinos para cada tipo de viajero: ideas organizadas</h2>
+
+<h3>Si querés cultura e historia</h3>
+<p>Ciudad de México, Buenos Aires, Roma, Lisboa, Estambul, Cracovia, Cartagena de Indias, Cusco, Oaxaca, Sevilla. Ciudades con capas históricas que podés explorar a pie durante días sin agotar las opciones.</p>
+
+<h3>Si querés naturaleza extrema</h3>
+<p>La Patagonia argentina o chilena, Torres del Paine, el Parque Nacional Glaciares, las Cataratas del Iguazú, los Lençóis Maranhenses en Brasil, la Quebrada de Humahuaca, Islandia, Nueva Zelanda. Paisajes que cambian la perspectiva.</p>
+
+<h3>Si querés playa sin mucho estrés</h3>
+<p>Florianópolis, Arraial do Cabo en Brasil, las playas de Uruguay (José Ignacio, La Pedrera), el Caribe colombiano (Cartagena, Palomino), Tulum en México. Accesibles desde Argentina en tiempo y presupuesto.</p>
+
+<h3>Si querés gastronomía como eje central</h3>
+<p>Ciudad de México (la mejor cocina callejera del mundo por muchos rankings), Lima (epicentro de la gastronomía latinoamericana), Tokio, Barcelona, Bolonia, Ho Chi Minh City. Viajes donde el itinerario gira en torno a comer bien.</p>
+
+<h3>Si querés algo fuera de lo común</h3>
+<p>Generá un número al azar entre 1 y 195 (la cantidad de países del mundo) con el <a href="/generadores/numeros">generador de números</a>, buscá qué país ocupa ese número en un ranking alfabético, e investigalo. No para ir necesariamente, sino como ejercicio para salir de la burbuja de destinos que siempre considerás. A veces ese ejercicio revela un destino que nunca habrías considerado y que resulta ser perfecto.</p>
+
+<h2>Cómo organizarse para que el viaje no termine siendo un estrés</h2>
+
+<p>La elección del destino es solo el primer paso. Lo que convierte un viaje en una buena experiencia o en una serie de problemas es la organización.</p>
+
+<ul>
+<li><strong>Reservá vuelo y primer alojamiento antes de planificar el resto.</strong> Eso te da una fecha concreta y hace que el viaje sea real. Lo demás puede organizarse después.</li>
+<li><strong>No llenés cada día.</strong> Los mejores momentos de un viaje suelen ser los no planificados: una recomendación de alguien que conociste, un mercado que no estaba en ninguna guía, quedarte más tiempo en un lugar porque te enamoraste de él.</li>
+<li><strong>Para decidir actividades en el destino,</strong> la ruleta vuelve a ser útil. Si hay tres opciones para el día y todas parecen buenas, cargalas y girá. Libera energía mental que podés usar en disfrutar en vez de planificar.</li>
+</ul>
+
+<h2>El viaje que no esperabas suele ser el mejor</h2>
+
+<p>Hay algo que los viajeros frecuentes mencionan constantemente: los viajes más memorables rara vez fueron los más planeados. La escapada de último momento a un lugar que "sonaba bien", el destino que eligieron porque quedaba de paso, el lugar que visitaron "solo para ver cómo era" y terminaron amando.</p>
+
+<p>Eso no significa que hay que viajar sin planificación. Significa que la sobreplanificación —y la parálisis que viene con buscar el destino perfecto— le quita espontaneidad al proceso y genera expectativas tan altas que ningún lugar puede cumplir.</p>
+
+<p>Elegí un destino que genuinamente te atraiga, que entre en tu presupuesto, y que encaje con el tipo de experiencia que querés. Dejá que la ruleta o la moneda desempaten cuando no podés decidir. Reservá. Y después, que el viaje sea lo que quiera ser.</p>
+
+<h2>Conclusión</h2>
+
+<p>La próxima vez que estés con quince pestañas abiertas sin poder decidir, cerrá todo, contestá las cinco preguntas del tipo de viaje, listá ocho opciones que encajen, y cargalas en la <a href="/generadores/ruleta">ruleta</a>. La decisión que parecía imposible de tomar sola se vuelve fácil cuando el azar le da un primer empujón.</p>
+
+<p>El destino perfecto no existe. Existe el próximo viaje que todavía no reservaste.</p>
+`,
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
