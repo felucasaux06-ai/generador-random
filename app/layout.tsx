@@ -3,6 +3,7 @@ import Script from 'next/script'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import CookieBanner from './components/CookieBanner'
+import EzoicSPA from './components/EzoicSPA'
 import { LanguageProvider } from './contexts/LanguageContext'
 import './globals.css'
 
@@ -132,6 +133,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </>
         )}
         <LanguageProvider>
+          <EzoicSPA />
           <Navigation />
           <main className="flex-1" id="main-content">
             {children}
