@@ -4,6 +4,15 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/generadores/cara-o-cruz',
+        destination: '/generadores/moneda',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig

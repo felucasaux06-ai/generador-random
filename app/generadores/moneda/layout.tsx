@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Cara o Cruz Online — Lanzar Moneda Virtual Gratis',
+  title: 'Cara o Cruz Online - Lanzar Moneda Gratis | GeneradorRandom',
   description:
-    'Tirá una moneda virtual al instante. 50/50 garantizado. Estadísticas de sesión incluidas. Sin instalar apps ni registrarse. Funciona en el móvil.',
+    'Lanzá la moneda online con nuestro generador de cara o cruz gratis. Sin moneda física, resultado al instante. ¡Probalo ahora!',
   keywords: [
     'cara o cruz online',
     'tirar moneda virtual',
