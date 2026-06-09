@@ -2,79 +2,60 @@
 
 import Link from 'next/link'
 import AdBlock from './AdBlock'
+import FlagArg from './FlagArg'
 import { useLanguage } from '../contexts/LanguageContext'
-
-const TOOL_ICONS: Record<string, string> = {
-  '/generadores/nombres':     'person',
-  '/generadores/contrasenas': 'lock',
-  '/generadores/colores':     'palette',
-  '/generadores/historias':   'menu_book',
-  '/generadores/ruleta':      'casino',
-  '/generadores/numeros':     'pin',
-  '/generadores/cara-o-cruz': 'toll',
-}
-
-const TOOL_CTA: Record<string, string> = {
-  '/generadores/nombres':     'Explorar',
-  '/generadores/contrasenas': 'Generar',
-  '/generadores/colores':     'Visualizar',
-  '/generadores/historias':   'Escribir',
-  '/generadores/ruleta':      'Girar',
-  '/generadores/numeros':     'Generar',
-  '/generadores/cara-o-cruz': 'Lanzar',
-}
-
-const FEATURE_ICONS = ['bolt', 'security', 'smartphone', 'all_inclusive']
 
 export default function HomeContent() {
   const { t } = useLanguage()
-  const tools = t.home.tools.filter(h => !h.href.includes('chistes'))
 
   return (
     <div>
       {/* Hero */}
-      <section className="relative min-h-[800px] flex items-center justify-center overflow-hidden hero-gradient pt-20">
-        <div className="relative z-10 max-w-[1200px] mx-auto px-5 md:px-12 text-center">
+      <section className="relative overflow-hidden pt-16 pb-14 md:pt-28 md:pb-20 px-5">
+        {/* Diagonal warm glow */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          aria-hidden="true"
+          style={{
+            background: 'radial-gradient(ellipse 60% 50% at 80% 20%, rgba(232,83,30,0.07) 0%, transparent 70%)',
+          }}
+        />
 
-          {/* Pill badge */}
-          <div className="inline-flex items-center gap-2 mb-8 bg-surface-container-low px-4 py-1.5 rounded-full border border-outline-variant">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="font-mono text-xs text-on-surface-variant uppercase tracking-widest">
+        <div className="relative max-w-5xl mx-auto">
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3 mb-10">
+            <span className="font-mono text-xs tracking-[0.25em] uppercase" style={{ color: '#B8A898' }}>
               {t.home.badge}
             </span>
+            <span className="h-px flex-1 max-w-[60px]" style={{ background: '#7A6A55' }} aria-hidden="true" />
           </div>
 
-          {/* H1 */}
+          {/* H1 — Yeseva One serif, massive */}
           <h1
-            className="font-display font-extrabold tracking-tight leading-[1.1] mb-8 text-on-surface"
-            style={{ fontSize: 'clamp(2.8rem, 8vw, 6rem)' }}
+            className="font-display leading-none tracking-tight mb-8"
+            style={{ fontSize: 'clamp(3rem, 9vw, 7.5rem)', color: '#F2E9D4' }}
           >
             {t.home.heroTitle1}
             <br />
-            <em className="font-serif" style={{ color: '#ffb59e' }}>
-              {t.home.heroTitle2}
-            </em>
+            <em style={{ color: '#E8531E', fontStyle: 'italic' }}>{t.home.heroTitle2}</em>
           </h1>
 
-          <p className="text-lg text-on-surface-variant max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p
+            className="font-mono text-sm leading-relaxed mb-10 max-w-md"
+            style={{ color: '#B8A898' }}
+          >
             {t.home.heroSubtitle}
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/generadores/nombres"
-              className="group bg-primary-container text-white px-10 py-4 rounded-xl font-bold text-base hover:bg-glow-orange transition-all duration-300 shadow-xl active:scale-95 inline-flex items-center gap-2"
-            >
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link href="/generadores/nombres" className="btn-primary text-xs text-center">
               {t.home.cta}
-              <span className="transition-transform group-hover:translate-x-1">→</span>
             </Link>
-            <Link href="/generadores/ruleta" className="btn-secondary inline-block text-base text-center">
+            <Link href="/generadores/ruleta" className="btn-secondary text-xs text-center">
               {t.home.tools.find(h => h.href === '/generadores/ruleta')?.title ?? 'Ruleta'}
             </Link>
           </div>
         </div>
-
-        <div className="absolute -bottom-32 left-1/2 -translate-x-1/2 w-full max-w-5xl h-72 bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
       </section>
 
       {/* Ad */}
@@ -82,121 +63,115 @@ export default function HomeContent() {
         <AdBlock slot="1234567890" />
       </div>
 
-      {/* Tools grid */}
-      <section className="py-24 md:py-32 bg-surface" aria-labelledby="herramientas-h2">
-        <div className="max-w-[1200px] mx-auto px-5 md:px-12">
+      {/* Herramientas — numbered editorial list */}
+      <section className="py-14 md:py-20 px-5" aria-labelledby="herramientas-h2">
+        <div className="max-w-5xl mx-auto">
 
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+          <div className="flex items-end justify-between mb-12 border-b pb-6" style={{ borderColor: '#7A6A55' }}>
             <div>
-              <span className="font-mono text-xs text-primary uppercase tracking-[0.2em] mb-3 block">herramientas</span>
+              <p className="font-mono text-xs tracking-[0.25em] uppercase mb-2" style={{ color: '#B8A898' }}>
+                herramientas
+              </p>
               <h2
                 id="herramientas-h2"
-                className="font-display font-bold text-on-surface"
-                style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}
+                className="font-display leading-tight"
+                style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', color: '#F2E9D4' }}
               >
                 {t.home.toolsTitle}
               </h2>
             </div>
-            <span className="font-mono text-xs text-on-surface-variant border-b border-outline-variant pb-1">
-              {tools.length} tools ready to go
+            <span className="font-mono text-xs hidden sm:block" style={{ color: '#7A6A55' }}>
+              {t.home.tools.length} tools
             </span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {tools.map((h, i) => {
-              const icon = TOOL_ICONS[h.href] ?? 'auto_awesome'
-              const cta  = TOOL_CTA[h.href]  ?? 'Abrir'
-              return (
-                <div key={h.href} className="glass-card p-8 group relative overflow-hidden">
-                  <div className="flex justify-between items-start mb-10">
-                    <span className="font-mono text-xs text-on-surface-variant opacity-40">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                    <span className="bg-primary/10 text-primary px-3 py-1 rounded-full font-mono text-[11px] border border-primary/20">
-                      {h.badge}
-                    </span>
-                  </div>
+          <div className="divide-y" style={{ borderColor: '#2C2015' }}>
+            {t.home.tools.filter(h => !h.href.includes('chistes')).map((h, i) => (
+              <Link
+                key={h.href}
+                href={h.href}
+                className="group flex items-center gap-6 py-5 transition-all duration-200"
+                style={{ borderColor: '#2C2015' }}
+              >
+                {/* Index */}
+                <span
+                  className="font-mono text-xs w-8 flex-shrink-0 transition-colors duration-200"
+                  style={{ color: '#7A6A55' }}
+                >
+                  {String(i + 1).padStart(2, '0')}
+                </span>
 
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary transition-colors group-hover:bg-primary-container group-hover:text-white flex-shrink-0">
-                      <span className="material-symbols-outlined text-[22px]">{icon}</span>
-                    </div>
-                    <h3 className="font-bold text-lg text-on-surface">{h.title}</h3>
-                  </div>
+                {/* Emoji */}
+                <span className="text-xl w-8 flex-shrink-0 text-center" aria-hidden="true">
+                  {h.flag ? <FlagArg className="w-6 h-4" /> : h.emoji}
+                </span>
 
-                  <p className="text-on-surface-variant text-sm mb-8 leading-relaxed min-h-[40px]">
-                    {h.desc}
-                  </p>
-
-                  <Link
-                    href={h.href}
-                    className="inline-flex items-center text-primary font-semibold text-sm group/link hover:text-glow-orange transition-colors"
+                {/* Title + desc */}
+                <div className="flex-1 min-w-0">
+                  <p
+                    className="font-semibold text-sm uppercase tracking-wider transition-colors duration-200 group-hover:text-[#E8531E]"
+                    style={{ color: '#F2E9D4' }}
                   >
-                    {cta}
-                    <span className="material-symbols-outlined ml-1.5 text-[18px] transition-transform group-hover/link:translate-x-1">
-                      arrow_forward
-                    </span>
-                  </Link>
+                    {h.title}
+                  </p>
+                  <p className="text-sm mt-0.5 truncate" style={{ color: '#B8A898' }}>{h.desc}</p>
                 </div>
-              )
-            })}
+
+                {/* Badge */}
+                <span
+                  className="font-mono text-xs hidden sm:block flex-shrink-0"
+                  style={{ color: '#7A6A55' }}
+                >
+                  {h.badge}
+                </span>
+
+                {/* Arrow */}
+                <span
+                  className="flex-shrink-0 transition-all duration-200 group-hover:translate-x-1"
+                  style={{ color: '#7A6A55' }}
+                >
+                  →
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Features */}
-      <section className="py-20 bg-surface-container-low border-y border-outline-variant">
-        <div className="max-w-[1200px] mx-auto px-5 md:px-12">
-          <div className="text-center mb-14">
-            <h2 className="font-display font-bold text-2xl md:text-3xl text-on-surface">
-              {t.home.whyTitle}
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-            {t.home.features.map((item, i) => (
-              <div key={item.title} className="flex flex-col items-center text-center group">
-                <div className="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-5 border border-outline-variant transition-transform group-hover:scale-110">
-                  <span className="material-symbols-outlined text-primary" style={{ fontSize: '28px' }}>
-                    {FEATURE_ICONS[i] ?? 'star'}
-                  </span>
-                </div>
-                <h4 className="font-bold text-lg mb-2 text-on-surface">{item.title}</h4>
-                <p className="text-on-surface-variant text-sm leading-relaxed">{item.desc}</p>
+      {/* Por qué — stats grandes */}
+      <section
+        className="py-14 md:py-20 px-5"
+        style={{ borderTop: '1px solid #1E160D', borderBottom: '1px solid #1E160D' }}
+      >
+        <div className="max-w-5xl mx-auto">
+          <p className="font-mono text-xs tracking-[0.25em] uppercase mb-10" style={{ color: '#B8A898' }}>
+            {t.home.whyTitle}
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {t.home.features.map((item) => (
+              <div key={item.title}>
+                <div className="text-3xl mb-4" aria-hidden="true">{item.icon}</div>
+                <p className="font-display text-lg mb-1" style={{ color: '#F2E9D4' }}>{item.title}</p>
+                <p className="text-xs leading-relaxed" style={{ color: '#B8A898' }}>{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* About / SEO */}
-      <section className="py-24 md:py-32 relative overflow-hidden">
-        <div className="max-w-[1200px] mx-auto px-5 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7">
-            <span className="font-mono text-xs text-primary uppercase tracking-[0.2em] mb-4 block">Información</span>
-            <h2
-              className="font-display font-extrabold mb-8 text-on-surface leading-tight"
-              style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}
-            >
-              {t.home.seoTitle}
-            </h2>
-            <div className="space-y-5 text-on-surface-variant leading-relaxed">
-              <p>{t.home.seoP1}</p>
-              <p>{t.home.seoP2}</p>
-              <blockquote className="border-l-4 border-primary pl-6 py-2 italic bg-surface-container-low rounded-r-lg">
-                {t.home.seoP3}
-              </blockquote>
-            </div>
-          </div>
-
-          <div className="lg:col-span-5 relative">
-            <div className="aspect-square glass-card rounded-[40px] flex items-center justify-center overflow-hidden">
-              <span
-                className="font-display font-black text-primary select-none"
-                style={{ fontSize: 'clamp(6rem, 15vw, 10rem)', opacity: 0.15 }}
-                aria-hidden="true"
-              >?</span>
-            </div>
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 blur-[60px] rounded-full pointer-events-none" />
+      {/* SEO */}
+      <section className="py-14 md:py-16 px-5">
+        <div className="max-w-3xl mx-auto">
+          <p className="font-mono text-xs tracking-[0.25em] uppercase mb-4" style={{ color: '#B8A898' }}>
+            info
+          </p>
+          <h2 className="font-display text-2xl md:text-3xl mb-6" style={{ color: '#F2E9D4' }}>
+            {t.home.seoTitle}
+          </h2>
+          <div className="text-sm leading-relaxed space-y-4" style={{ color: '#C0AE9C' }}>
+            <p>{t.home.seoP1}</p>
+            <p>{t.home.seoP2}</p>
+            <p>{t.home.seoP3}</p>
           </div>
         </div>
       </section>
