@@ -4,6 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://generadorrandom.com'
   const may = new Date('2026-05-27')
   const jun = new Date('2026-06-07')
+  const jun2 = new Date('2026-06-10')
   return [
     { url: base, lastModified: jun, changeFrequency: 'weekly', priority: 1 },
     { url: `${base}/generadores/nombres`, lastModified: may, changeFrequency: 'monthly', priority: 0.9 },
@@ -15,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/generadores/ruleta`, lastModified: may, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/generadores/numeros`, lastModified: may, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/generadores/cara-o-cruz`, lastModified: jun, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${base}/blog`, lastModified: jun, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${base}/blog`, lastModified: jun2, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${base}/blog/para-que-sirve-un-generador-de-numeros-aleatorios`, lastModified: may, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/blog/10-usos-creativos-generadores-aleatorios`, lastModified: may, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/blog/como-funciona-la-generacion-aleatoria`, lastModified: may, changeFrequency: 'monthly', priority: 0.7 },
@@ -26,6 +27,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/noche-de-juegos-en-casa-con-amigos`, lastModified: may, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/blog/nombres-para-mascotas-y-perros`, lastModified: jun, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/blog/como-elegir-destino-de-viaje`, lastModified: jun, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/blog/como-hacer-un-sorteo-en-instagram`, lastModified: jun2, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/blog/ideas-de-nombres-de-usuario-nick`, lastModified: jun2, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/blog/que-pelicula-o-serie-ver-esta-noche`, lastModified: jun2, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/acerca`, lastModified: may, changeFrequency: 'yearly', priority: 0.4 },
     { url: `${base}/contacto`, lastModified: may, changeFrequency: 'yearly', priority: 0.4 },
     { url: `${base}/disclaimer`, lastModified: may, changeFrequency: 'yearly', priority: 0.3 },

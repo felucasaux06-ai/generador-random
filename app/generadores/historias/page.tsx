@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react'
 import AdBlock from '../../components/AdBlock'
 import FaqSection from '../../components/FaqSection'
+import RelatedTools from '../../components/RelatedTools'
 import {
   TEMPLATES_HISTORIAS,
   PROTAGONISTAS,
@@ -201,6 +202,8 @@ export default function GeneradorHistorias() {
         </div>
 
         <FaqSection faqs={t.historias.faqs} titulo={t.historias.faqTitle} />
+
+        <RelatedTools current="/generadores/historias" />
 
         <AdBlock slot="9012345678" />
       </div>

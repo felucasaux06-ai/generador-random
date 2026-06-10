@@ -7,15 +7,35 @@ const ALL_TOOLS = [
   { href: '/generadores/historias',   emoji: '📖', label: 'Generador de Historias', desc: 'Aventura, romance, misterio.' },
   { href: '/generadores/ruleta',      emoji: '🎡', label: 'Ruleta Aleatoria',      desc: 'Sorteos y decisiones al azar.' },
   { href: '/generadores/numeros',     emoji: '🎲', label: 'Número al Azar',        desc: 'Elegí el rango que quieras.' },
-  { href: '/generadores/cara-o-cruz',      emoji: '🪙', label: 'Cara o Cruz',           desc: '50/50 garantizado.' },
+  { href: '/generadores/cara-o-cruz', emoji: '🪙', label: 'Cara o Cruz',           desc: '50/50 garantizado.' },
+  { href: '/generadores/chistes',     emoji: '😂', label: 'Chistes Aleatorios',    desc: 'Para romper el hielo.' },
 ]
+
+// Clusters tematicos: cada herramienta enlaza primero a las mas afines
+const RELATED: Record<string, string[]> = {
+  '/generadores/nombres':     ['/generadores/historias', '/generadores/contrasenas', '/generadores/colores', '/generadores/ruleta'],
+  '/generadores/contrasenas': ['/generadores/numeros', '/generadores/nombres', '/generadores/colores', '/generadores/cara-o-cruz'],
+  '/generadores/colores':     ['/generadores/nombres', '/generadores/historias', '/generadores/numeros', '/generadores/ruleta'],
+  '/generadores/historias':   ['/generadores/nombres', '/generadores/colores', '/generadores/chistes', '/generadores/ruleta'],
+  '/generadores/ruleta':      ['/generadores/cara-o-cruz', '/generadores/numeros', '/generadores/nombres', '/generadores/historias'],
+  '/generadores/numeros':     ['/generadores/ruleta', '/generadores/cara-o-cruz', '/generadores/contrasenas', '/generadores/nombres'],
+  '/generadores/cara-o-cruz': ['/generadores/ruleta', '/generadores/numeros', '/generadores/nombres', '/generadores/chistes'],
+  '/generadores/chistes':     ['/generadores/historias', '/generadores/nombres', '/generadores/ruleta', '/generadores/cara-o-cruz'],
+  '/generadores/chistes-argentinos': ['/generadores/chistes', '/generadores/historias', '/generadores/nombres', '/generadores/ruleta'],
+}
 
 interface RelatedToolsProps {
   current: string
 }
 
 export default function RelatedTools({ current }: RelatedToolsProps) {
-  const tools = ALL_TOOLS.filter(t => t.href !== current).slice(0, 4)
+  const order = RELATED[current]
+  const tools = order
+    ? order
+        .map(href => ALL_TOOLS.find(t => t.href === href))
+        .filter((t): t is (typeof ALL_TOOLS)[number] => Boolean(t))
+        .slice(0, 4)
+    : ALL_TOOLS.filter(t => t.href !== current).slice(0, 4)
 
   return (
     <section className="mt-10" aria-label="Otras herramientas gratuitas">

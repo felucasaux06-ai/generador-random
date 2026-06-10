@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react'
 import AdBlock from '../../components/AdBlock'
 import FaqSection from '../../components/FaqSection'
+import RelatedTools from '../../components/RelatedTools'
 import { CHISTES } from '../../lib/data'
 import { generarAleatorio, copiarAlPortapapeles } from '../../lib/utils'
 import { useLanguage } from '../../contexts/LanguageContext'
@@ -224,6 +225,8 @@ export default function GeneradorChistes() {
         </div>
 
         <FaqSection faqs={t.chistes.faqs} titulo={t.chistes.faqTitle} />
+
+        <RelatedTools current="/generadores/chistes" />
 
         <AdBlock slot="1357924680" />
       </div>

@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import AdBlock from '../../components/AdBlock'
 import FaqSection from '../../components/FaqSection'
+import RelatedTools from '../../components/RelatedTools'
 import { generarPaleta, hexARgb, esColorClaro, copiarAlPortapapeles } from '../../lib/utils'
 import { useLanguage } from '../../contexts/LanguageContext'
 
@@ -215,6 +216,8 @@ export default function GeneradorColores() {
         </div>
 
         <FaqSection faqs={t.colores.faqs} titulo={t.colores.faqTitle} />
+
+        <RelatedTools current="/generadores/colores" />
 
         <AdBlock slot="7890123456" />
       </div>

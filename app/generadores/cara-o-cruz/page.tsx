@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import AdBlock from '../../components/AdBlock'
 import FaqSection from '../../components/FaqSection'
+import RelatedTools from '../../components/RelatedTools'
 import { useLanguage } from '../../contexts/LanguageContext'
 
 export default function GeneradorCaraOCruz() {
@@ -179,6 +180,8 @@ export default function GeneradorCaraOCruz() {
             </p>
           </div>
         </div>
+
+        <RelatedTools current="/generadores/cara-o-cruz" />
 
         <AdBlock slot="6677889900" className="mt-8" />
       </div>

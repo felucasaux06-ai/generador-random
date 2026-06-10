@@ -1095,6 +1095,244 @@ export const ARTICLES: Article[] = [
 <p>El destino perfecto no existe. Existe el próximo viaje que todavía no reservaste.</p>
 `,
   },
+  {
+    slug: 'como-hacer-un-sorteo-en-instagram',
+    title: 'Cómo hacer un sorteo en Instagram justo y transparente (paso a paso)',
+    metaTitle: 'Cómo hacer un sorteo en Instagram — Guía paso a paso 2026',
+    description: 'Aprendé a hacer un sorteo en Instagram justo y transparente con comentarios o seguidores. Métodos gratis para elegir ganador al azar sin trampas ni apps de pago.',
+    date: '2026-06-08',
+    dateFormatted: '8 de junio de 2026',
+    readTime: 7,
+    keywords: ['cómo hacer un sorteo en instagram', 'sorteo instagram', 'elegir ganador sorteo', 'sorteo entre comentarios', 'sortear seguidores instagram', 'cómo elegir ganador al azar'],
+    category: 'Guías',
+    image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Teléfono mostrando la aplicación de Instagram en la pantalla',
+    content: `
+<p>Hacer un sorteo en Instagram es una de las formas más efectivas de hacer crecer una cuenta, premiar a tu comunidad o lanzar un producto. Pero hay una parte que genera dudas a todo el mundo: <strong>cómo elegir el ganador de forma justa</strong> para que nadie sospeche que hubo trampa.</p>
+
+<p>En esta guía te explicamos, paso a paso, cómo organizar un sorteo en Instagram desde cero y cómo elegir al ganador al azar de manera transparente, sin pagar apps ni complicarte la vida.</p>
+
+<h2>Antes de empezar: las reglas de Instagram</h2>
+
+<p>Instagram permite los sorteos, pero pide que cumplas algunas condiciones para no arriesgar tu cuenta:</p>
+
+<ul>
+<li><strong>Aclarar que el sorteo no está patrocinado por Instagram.</strong> Tenés que incluir una frase como "Este sorteo no está asociado, administrado ni patrocinado por Instagram".</li>
+<li><strong>Definir reglas claras:</strong> fecha de cierre, requisitos para participar y cómo se anuncia el ganador.</li>
+<li><strong>No pedir cosas imposibles de verificar</strong> ni incentivar el etiquetado de personas inexistentes.</li>
+</ul>
+
+<p>Con eso cubierto, pasemos a lo importante.</p>
+
+<h2>Paso 1: Definí el objetivo del sorteo</h2>
+
+<p>Antes de publicar, tené claro qué querés conseguir, porque eso define los requisitos de participación:</p>
+
+<ul>
+<li><strong>Ganar seguidores:</strong> pedí seguir la cuenta + dar like.</li>
+<li><strong>Más alcance:</strong> pedí etiquetar amigos en los comentarios.</li>
+<li><strong>Más interacción:</strong> pedí un comentario respondiendo una pregunta.</li>
+</ul>
+
+<p>Cuanto más simple sea participar, más gente lo hará. No pidas diez requisitos: dos o tres es lo ideal.</p>
+
+<h2>Paso 2: Escribí las reglas en el post</h2>
+
+<p>Un buen post de sorteo deja todo claro de entrada: qué se sortea, cómo participar, hasta cuándo y cuándo se anuncia el ganador. La transparencia desde el primer momento es lo que genera confianza y evita reclamos después.</p>
+
+<h2>Paso 3: Recolectá los participantes</h2>
+
+<p>Cuando cierre el sorteo, necesitás una lista de todos los que participaron. Tenés dos caminos según el tipo de sorteo:</p>
+
+<h3>Si es por comentarios</h3>
+
+<p>Contá los comentarios válidos. Si tenés 80 comentarios que cumplen los requisitos, cada uno es un número del 1 al 80, según el orden en que aparecen.</p>
+
+<h3>Si es por lista de nombres</h3>
+
+<p>Anotá los nombres de usuario de todos los participantes en una lista.</p>
+
+<h2>Paso 4: Elegí el ganador al azar (la parte clave)</h2>
+
+<p>Acá es donde se define si tu sorteo es creíble o no. Hay dos métodos gratis y transparentes:</p>
+
+<h3>Método 1: Por número de comentario</h3>
+
+<p>Si tenés 80 comentarios, usá el <a href="/generadores/numeros">generador de números aleatorios</a>: configurás el rango del 1 al 80, generás un número y el comentario que ocupa esa posición es el ganador. Limpio, rápido e imposible de manipular.</p>
+
+<p>El truco de transparencia: <strong>grabá la pantalla mientras generás el número.</strong> Así podés mostrar el proceso completo en tus historias y nadie puede decir que elegiste a dedo.</p>
+
+<h3>Método 2: Por lista de nombres con ruleta</h3>
+
+<p>Si preferís algo más visual, cargá todos los nombres de usuario en la <a href="/generadores/ruleta">ruleta aleatoria</a> y girá. La ruleta da un resultado animado, perfecto para grabar y subir a historias: el público ve la ruleta dando vueltas y frenando en el ganador. Es la opción más entretenida y la que más confianza transmite, porque el momento del giro queda registrado.</p>
+
+<h2>Paso 5: Anunciá al ganador con la prueba</h2>
+
+<p>Publicá el resultado junto con la captura o el video del sorteo. Etiquetá al ganador, explicá cómo se va a contactar y agradecé a todos los que participaron. Esa prueba visual es lo que hace que tu próximo sorteo tenga todavía más participación.</p>
+
+<h2>Por qué no usar el "elegir a dedo" ni apps con sospechas</h2>
+
+<p>Elegir manualmente un ganador —aunque sea con buena intención— siempre deja la duda. Y muchas apps de sorteos cobran, piden permisos raros o muestran publicidad. Un generador aleatorio que funciona en tu navegador no guarda nada, no cuesta nada y el resultado es matemáticamente imparcial: exactamente lo que un sorteo necesita.</p>
+
+<h2>Errores comunes que arruinan un sorteo</h2>
+
+<ul>
+<li><strong>No definir fecha de cierre:</strong> genera confusión y reclamos.</li>
+<li><strong>Cambiar las reglas a mitad de camino:</strong> destruye la confianza al instante.</li>
+<li><strong>No mostrar cómo se eligió al ganador:</strong> la gente asume que hubo favoritismo.</li>
+<li><strong>Pedir demasiados requisitos:</strong> menos gente participa.</li>
+</ul>
+
+<h2>Conclusión</h2>
+
+<p>Hacer un sorteo en Instagram justo no requiere apps de pago ni complicaciones. Definí reglas claras, recolectá los participantes y elegí al ganador con el <a href="/generadores/numeros">generador de números</a> si es por comentarios o con la <a href="/generadores/ruleta">ruleta</a> si es por lista de nombres. Grabá el proceso, mostralo, y tu comunidad va a confiar en cada sorteo que hagas.</p>
+
+<p>La transparencia no es solo lo correcto: es lo que hace que tu próximo sorteo tenga el doble de participantes.</p>
+`,
+  },
+  {
+    slug: 'ideas-de-nombres-de-usuario-nick',
+    title: 'Ideas de nombres de usuario: cómo crear un nick original para juegos y redes',
+    metaTitle: 'Ideas de Nombres de Usuario — Crear un Nick Original 2026',
+    description: 'Ideas y trucos para crear un nombre de usuario original y disponible para juegos, Instagram, Discord o Twitch. Generá nicks únicos gratis y al instante.',
+    date: '2026-06-09',
+    dateFormatted: '9 de junio de 2026',
+    readTime: 6,
+    keywords: ['ideas de nombres de usuario', 'nombres de usuario', 'crear nick', 'nick para juegos', 'nombre de usuario original', 'gamertag ideas', 'nombre para instagram'],
+    category: 'Ideas',
+    image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Persona usando un teclado de computadora con luces de colores',
+    content: `
+<p>Elegir un nombre de usuario parece fácil hasta que abrís el formulario de registro y descubrís que todo lo que se te ocurre ya está ocupado. Tu nombre, tu apodo, tu equipo favorito seguido de tu año de nacimiento: todo tomado. Y terminás con algo como "juan_2847562" que ni vos te acordás.</p>
+
+<p>Esta guía te da ideas concretas y métodos para crear un <strong>nombre de usuario original</strong>, memorable y —lo más importante— que todavía esté disponible.</p>
+
+<h2>Qué hace que un buen nombre de usuario funcione</h2>
+
+<p>Un nick efectivo cumple tres cosas:</p>
+
+<ul>
+<li><strong>Es fácil de recordar y de decir en voz alta.</strong> Si tenés que deletrearlo cada vez, no sirve.</li>
+<li><strong>Refleja algo tuyo:</strong> tu personalidad, tu estilo de juego, tu marca.</li>
+<li><strong>Funciona en varias plataformas.</strong> Lo ideal es usar el mismo en todos lados para construir identidad.</li>
+</ul>
+
+<h2>Técnicas para crear un nick original</h2>
+
+<h3>1. Combiná dos palabras que no van juntas</h3>
+
+<p>Las combinaciones inesperadas son memorables: "CaféNocturno", "LoboDigital", "TostadaQuemada". El contraste entre las dos palabras hace que el nombre se quede en la cabeza.</p>
+
+<h3>2. Usá un nombre real como base</h3>
+
+<p>Un nombre propio poco común funciona genial como nick porque suena humano y es más fácil que esté libre. Si no se te ocurre ninguno, el <a href="/generadores/nombres">generador de nombres</a> te tira opciones al instante: generá varios, combiná el que te guste con una palabra que te represente y ya tenés una base original.</p>
+
+<h3>3. Jugá con idiomas</h3>
+
+<p>Una palabra en otro idioma que te guste —japonés, italiano, latín— suele estar más disponible y suena distinta. "Tempo", "Kaze", "Lumen", "Volk".</p>
+
+<h3>4. Agregá un patrón en vez de números al azar</h3>
+
+<p>Si tu nombre ideal está ocupado, en vez de pegarle números sin sentido, usá un patrón con significado: tu inicial, una palabra corta o un sufijo con estilo. "LoboHQ" se ve mejor que "lobo99281".</p>
+
+<h2>Ideas según la plataforma</h2>
+
+<h3>Para juegos (gamertag)</h3>
+<p>Acá lo que vende es la actitud. Nombres cortos, potentes y fáciles de gritar en una partida: combiná un sustantivo fuerte con un adjetivo o un prefijo. La regla de oro es que un compañero pueda decir tu nombre rápido en pleno juego.</p>
+
+<h3>Para Instagram o TikTok</h3>
+<p>Si es una cuenta personal o de marca, que el nombre diga de qué va o quién sos. Claridad sobre creatividad: que alguien que te encuentra entienda al toque qué va a ver.</p>
+
+<h3>Para Discord o Twitch</h3>
+<p>Comunidades más relajadas donde podés jugar con el humor y las referencias. Acá un nombre raro o gracioso suele funcionar mejor que uno serio.</p>
+
+<h2>El método rápido cuando no se te ocurre nada</h2>
+
+<p>Cuando estás en blanco, el azar destraba todo. Generá tres o cuatro nombres en el <a href="/generadores/nombres">generador de nombres</a>, elegí el que más te suene y sumale una palabra que te represente. En menos de un minuto tenés varias combinaciones para probar disponibilidad.</p>
+
+<p>Y si lo que estás creando es una cuenta nueva, no te olvides de protegerla: armá una clave fuerte con el <a href="/generadores/contrasenas">generador de contraseñas</a> en el mismo momento que elegís el nombre. Nombre original y cuenta segura, todo de una.</p>
+
+<h2>Cómo verificar disponibilidad rápido</h2>
+
+<ul>
+<li><strong>Probá el mismo nombre en todas las plataformas a la vez</strong> antes de decidir. No sirve de nada tenerlo en una red si en las demás está ocupado.</li>
+<li><strong>Tené dos o tres opciones de reserva.</strong> Difícilmente tu primera idea esté libre en todos lados.</li>
+<li><strong>Evitá caracteres especiales raros</strong> que después no podés escribir fácil desde el celular.</li>
+</ul>
+
+<h2>Conclusión</h2>
+
+<p>Un buen nombre de usuario es corto, memorable y dice algo de vos. Si tu idea está ocupada, no recurras a números al azar: combiná palabras, usá otro idioma o partí de un nombre real. Y cuando la inspiración no llega, el <a href="/generadores/nombres">generador de nombres</a> te da el punto de partida en segundos.</p>
+
+<p>El nick perfecto es el que todavía está libre y que dentro de un año seguís queriendo usar.</p>
+`,
+  },
+  {
+    slug: 'que-pelicula-o-serie-ver-esta-noche',
+    title: 'Qué película o serie ver esta noche: cómo decidir sin pasar una hora buscando',
+    metaTitle: 'Qué Película Ver Esta Noche — Cómo Decidir Rápido 2026',
+    description: 'Pasás más tiempo buscando que mirando? Te damos un método para decidir qué película o serie ver esta noche en minutos, usando el azar para cortar la indecisión.',
+    date: '2026-06-10',
+    dateFormatted: '10 de junio de 2026',
+    readTime: 5,
+    keywords: ['qué película ver esta noche', 'qué serie ver', 'no sé qué ver', 'decidir qué película ver', 'elegir película al azar', 'qué mirar en netflix'],
+    category: 'Entretenimiento',
+    image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Control remoto apuntando a un televisor con plataformas de streaming',
+    content: `
+<p>Son las nueve de la noche. Te sentás en el sillón, abrís la app de streaming y empezás a scrollear. Veinte minutos después seguís en el menú principal, ya leíste cuarenta sinopsis, agregaste seis títulos a "mi lista" y todavía no apretaste play. ¿Te suena?</p>
+
+<p>El problema no es que no haya nada para ver. Es que hay <strong>demasiado</strong> para ver. Esta guía te da un método para decidir qué mirar en minutos y volver a disfrutar la parte buena: ver algo, no buscarlo.</p>
+
+<h2>Por qué elegir qué ver se volvió tan difícil</h2>
+
+<p>Cuando había cuatro canales, elegir era simple: veías lo que estaban dando. Hoy tenés acceso a decenas de miles de títulos repartidos en varias plataformas, cada una con su propio catálogo. Esa abundancia infinita activa lo que los psicólogos llaman <strong>fatiga de decisión</strong>: cuantas más opciones, más difícil elegir y más insatisfecho quedás con cualquier elección.</p>
+
+<p>El resultado es la paradoja moderna del streaming: pagamos por tener todo disponible y terminamos sin ver nada.</p>
+
+<h2>El método de los 3 pasos para decidir rápido</h2>
+
+<h3>Paso 1: Definí el "tipo de noche" (30 segundos)</h3>
+
+<p>Antes de abrir cualquier app, decidí qué clima querés, no qué título. Esto recorta el 90% del catálogo de golpe:</p>
+
+<ul>
+<li>¿Algo liviano para reír o algo intenso que te atrape?</li>
+<li>¿Película (termina hoy) o serie (engancha para varios días)?</li>
+<li>¿Algo conocido y cómodo o algo nuevo?</li>
+</ul>
+
+<h3>Paso 2: Armá una lista corta de candidatos</h3>
+
+<p>Con el clima definido, anotá entre tres y seis títulos que encajen. No más. Si dudás entre veinte, nunca vas a elegir. Quedate solo con los que realmente te tientan esta noche.</p>
+
+<h3>Paso 3: Que el azar corte la indecisión</h3>
+
+<p>Acá está el truco que cambia todo. Cargá tus candidatos en la <a href="/generadores/ruleta">ruleta aleatoria</a> y girá. Lo importante no es obedecer al resultado a ciegas, sino observar tu reacción: si sale "esa comedia" y sentís un pequeño "uf, hoy no", ya descubriste que no era. Si sale y pensás "dale, esa", ya está decidido. Apretá play antes de dudar de nuevo.</p>
+
+<h2>El truco de la moneda para el empate clásico</h2>
+
+<p>El escenario más común: quedan dos títulos y no podés decidir entre ellos. Para eso, el <a href="/generadores/cara-o-cruz">cara o cruz</a> es perfecto. Asigná uno a cara y otro a cruz, tirá, y prestá atención a lo que sentís cuando ves el resultado. Esa reacción instintiva te dice cuál querías ver en realidad —incluso si después decidís ver el otro, ya sabés qué tenías ganas.</p>
+
+<h2>Para noches en grupo o pareja</h2>
+
+<p>Cuando hay varias personas, la indecisión se multiplica porque cada uno quiere algo distinto. La ruleta resuelve esto sin que nadie quede como el que "impuso" su elección: cada persona suma un título a la <a href="/generadores/ruleta">ruleta</a>, se gira una sola vez, y lo que salga manda. Es justo, rápido y le saca el drama a la negociación.</p>
+
+<p>Si quieren además sumarle diversión a la noche, antes de empezar pueden tirar unos <a href="/generadores/chistes">chistes</a> para arrancar de buen humor.</p>
+
+<h2>Por qué funciona dejar que el azar decida</h2>
+
+<p>Puede sonar raro dejar una decisión "importante" al azar, pero hay una razón psicológica sólida: cuando dos o más opciones te gustan parecido, seguir analizando no mejora la elección, solo gasta energía y tiempo. El azar te saca del análisis infinito y, sobre todo, te revela qué querías realmente a través de tu reacción al resultado.</p>
+
+<p>La mejor película para ver esta noche no es la "óptima" según ningún ranking. Es cualquiera de las que ya te tentaban, vista ahora en vez de dentro de una hora.</p>
+
+<h2>Conclusión</h2>
+
+<p>La próxima vez que caigas en el pozo del scroll infinito, frená. Definí el tipo de noche, anotá tres a seis candidatos y cargalos en la <a href="/generadores/ruleta">ruleta</a>. Si quedan dos, desempatá con <a href="/generadores/cara-o-cruz">cara o cruz</a>. En menos de dos minutos estás viendo algo en vez de buscándolo.</p>
+
+<p>El tiempo que ganás es tiempo de película. Que es para lo que te sentaste en el sillón.</p>
+`,
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -1102,5 +1340,15 @@ export function getArticle(slug: string): Article | undefined {
 }
 
 export function getRelatedArticles(slug: string, count = 3): Article[] {
-  return ARTICLES.filter(a => a.slug !== slug).slice(0, count)
+  const current = ARTICLES.find(a => a.slug === slug)
+  const others = ARTICLES.filter(a => a.slug !== slug)
+  if (!current) return others.slice(0, count)
+
+  // Priorizar articulos de la misma categoria (clusters tematicos),
+  // luego completar con el resto ordenado por fecha mas reciente.
+  const sameCategory = others.filter(a => a.category === current.category)
+  const rest = others.filter(a => a.category !== current.category)
+  const byDateDesc = (a: Article, b: Article) => b.date.localeCompare(a.date)
+
+  return [...sameCategory.sort(byDateDesc), ...rest.sort(byDateDesc)].slice(0, count)
 }
