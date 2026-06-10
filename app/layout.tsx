@@ -64,6 +64,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'VIzlNZPSjyi52nFDu732dMTe_wzHVrJ8amkFhCEtuWg',
+    other: {
+      'saashub-verification': 'l8qevorzn1o9',
+    },
   },
 }
 
